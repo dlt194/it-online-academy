@@ -1,0 +1,11 @@
+h1 {
+  font-size: 36px;
+  color: blueviolet;
+  font-family: "Courier New", Courier, monospace;
+}
+
+p {
+  font-size: 24px;
+  color: aquamarine;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

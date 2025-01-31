@@ -1,0 +1,35 @@
+h1 {
+  font-size: 36px;
+  color: blueviolet;
+  font-family: "Courier New", Courier, monospace;
+}
+
+p {
+  font-size: 24px;
+  color: aquamarine;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+  border: 5px outset blue;
+  padding: 30px;
+}
+
+#discovery {
+  border: 20px outset red;
+  padding: 10px;
+}
+
+#images {
+  border: 10px outset green;
+  padding: 10px;
+}
+
+.grey {
+  border: 10px outset #a7a7a7;
+  padding: 10px;
+}
+
+ul {
+  font-size: 20px;
+}

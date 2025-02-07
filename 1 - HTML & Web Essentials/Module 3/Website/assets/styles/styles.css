@@ -195,12 +195,12 @@ footer {
 
 .footer-social {
   margin-top: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
-i {
+.footer-social a {
   color: #e6e6e6;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
 }

@@ -104,6 +104,7 @@ nav a:hover {
   background-image: url("../images/yacht.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .container::before {
@@ -113,7 +114,10 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .header-content,

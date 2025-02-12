@@ -15,30 +15,39 @@
       <a href="tours.html">Tours</a>
       <a href="gallery.html">Gallery</a>
       <a href="about.html">About</a>
-      <a style="text-decoration: underline" href="contact.html">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <!-- This is our main division -->
 
-    <div class="contact">
-      <div class="contact-box">
-        <h2>Send us a message</h2>
-        <form action="form-handler.php" method="post">
-          <label for="firstName">First Name</label><br />
-          <input id="firstName" name="firstName" type="text" /><br />
-          <label for="surname">Surname</label><br />
-          <input id="surname" name="surname" type="text" /><br />
-          <label for="message">Message</label><br />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          ></textarea
-          ><br /><br />
-          <input type="submit" value="Submit" /><br />
-        </form>
-      </div>
-    </div>
+    <section class="table-section">
+      <h2>Example Table</h2>
+      <table class="custom-table">
+        <th class="table-heading-text">First Name</th>
+        <th class="table-heading-text">Surname</th>
+        <th class="table-heading-text">Email</th>
+        <tr>
+          <td>Dan</td>
+          <td>Thomas</td>
+          <td>dan@dlt.me.uk</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john.doe@example.com</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>jane.doe@example.com</td>
+        </tr>
+        <tr>
+          <td>Jim</td>
+          <td>Beam</td>
+          <td>jim.beam@example.com</td>
+        </tr>
+      </table>
+    </section>
 
     <!-- This is our footer -->
     <footer>

@@ -368,3 +368,58 @@ figcaption {
   color: #848484;
   font-weight: bold;
 }
+
+/* About Us Styles */
+
+.two-column-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+.column {
+  flex-basis: 48%;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.about-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin: 0px;
+}
+
+/* Call to Action Styles */
+.call-to-action {
+  background-color: rgba(0, 123, 203, 0.05);
+  text-align: center;
+  padding: 50px 20px;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}

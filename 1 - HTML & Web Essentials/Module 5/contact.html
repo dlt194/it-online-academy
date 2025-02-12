@@ -19,17 +19,21 @@
     </nav>
 
     <!-- This is our main division -->
-    <section class="grey">
-      <h1>Contact Us</h1>
-      <hr />
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-    </section>
+    <div class="contact">
+      <div class="contact-box">
+        <h2>Send us a message</h2>
+        <form action="form-handler.php" method="post">
+          <br />
+          <label for="firstName">First Name</label><br />
+          <input id="firstName" name="firstName" type="text" /><br />
+          <label for="surname">Surname</label><br />
+          <input id="surname" name="surname" type="text" /><br /><br />
+          <input type="submit" value="Submit" /><br />
+        </form>
+      </div>
+    </div>
+
     <!-- This is our footer -->
     <footer>
       <div class="footer-content">

@@ -423,3 +423,31 @@ figcaption {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
+
+.tour-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-button-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.tour-button {
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #1b1b20;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tour-button:hover {
+  background-color: #2b6289;
+}

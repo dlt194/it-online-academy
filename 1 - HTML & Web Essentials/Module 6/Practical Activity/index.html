@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <title>Embedded Content</title>
+  </header>
+  <body>
+    <aside></aside>
+    <main>
+      <section class="location-section">
+        <div>Our Location</div>
+        <div class="iframe-container">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?q=Colchester,+UK&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+            title="Google Maps Location"
+            width="600"
+            height="450"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+          >
+            <p>
+              Your browser does not support iframes. Please visit our
+              <a href="location-link">location page</a>.
+            </p>
+          </iframe>
+        </div>
+        <div class="iframe-controls">
+          <button onclick="reloadFrame()">Reload Content</button>
+          <button onclick="toggleFullscreen()">Fullscreen</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      function reloadFrame() {
+        const frame = document.querySelector("iframe");
+        frame.src = frame.src;
+      }
+
+      function toggleFullscreen() {
+        const frame = document.querySelector("iframe");
+        if (frame.requestFullscreen) {
+          frame.requestFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>

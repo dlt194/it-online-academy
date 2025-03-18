@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dan Thomas - Personal Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="https://dlt.me.uk" target="_blank">
+            <img
+              src="assets/logo/DLT.png"
+              alt="Logo"
+              width="100px"
+              height="100px"
+            />
+          </a>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html">HOME</a>
+          </li>
+          <li>
+            <a href="about.html">ABOUT</a>
+          </li>
+          <li>
+            <a href="skills.html">SKILLS</a>
+          </li>
+          <li>
+            <a href="projects.html">PROJECTS</a>
+          </li>
+          <li>
+            <a style="text-decoration: underline" href="contact.html"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+        <div class="socials">
+          <a
+            href="https://www.linkedin.com/in/dan-thomas-2b338b79/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:dan@dlt.me.uk" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="contact-content">
+          <h1>Contact Me</h1>
+          <div class="contact-socials">
+            <ul>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/dan-thomas-2b338b79/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <span>LinkedIn</span>
+              </li>
+              <li>
+                <a href="mailto:dan@dlt.me.uk" target="_blank"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+                <span>Email</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="index.html">HOME</a>
+            </li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <br />
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/in/dan-thomas-2b338b79/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:dan@dlt.me.uk" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript to toggle the nav menu on mobile -->
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navUl = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", () => {
+        navUl.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

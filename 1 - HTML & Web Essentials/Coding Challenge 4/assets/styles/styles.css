@@ -388,32 +388,32 @@ footer a:hover {
   }
 
   .hero-content {
-    min-width: 90%;
+    min-width: 75%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .about-content {
-    min-width: 90%;
+    min-width: 75%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .skills-content {
-    min-width: 90%;
+    min-width: 75%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .contact-content {
-    min-width: 90%;
+    min-width: 75%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

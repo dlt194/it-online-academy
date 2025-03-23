@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dan Thomas - Coding Challenge 6</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="assets/logo/logo.svg"
+            alt="Logo"
+            width="100px"
+            height="100px"
+          />
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li>
+            <a style="text-decoration: underline" href="index.html">HOME</a>
+          </li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="skills.html">PURCHASE</a></li>
+          <li><a href="projects.html">FEATURED</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="background-grid">
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_1.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_2.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_3.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_4.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_5.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_6.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_7.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_8.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_9.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_10.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_11.jpg')"
+          ></div>
+          <div
+            class="grid-item"
+            style="background-image: url('assets/images/image_12.jpg')"
+          ></div>
+        </div>
+      </div>
+      <div class="text-collection">
+        <div class="largest-text"><h1>You will read this first.</h1></div>
+        <div class="emphasised-text">
+          <p>At some point you may come back to read this line, or not.</p>
+        </div>
+        <div class="capitalised-text">
+          <p>And then you will read this line next.</p>
+        </div>
+      </div>
+      <div class="paragraph-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fuga
+          fugiat praesentium cum vitae impedit cupiditate commodi voluptate rem,
+          dignissimos et adipisci distinctio itaque ea tenetur rerum, tempore
+          deserunt placeat?
+        </p>
+      </div>
+      <div class="capitalised-text">
+        <p>You'll probably read this before the paragraph.</p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navUl = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", () => {
+        navUl.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

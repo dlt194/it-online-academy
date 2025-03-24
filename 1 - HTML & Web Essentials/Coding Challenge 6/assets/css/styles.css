@@ -62,23 +62,32 @@ nav a:hover {
 
 /* Main Styles */
 
-.background-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px; /* Adds space between items */
-  position: fixed;
-  top: 120px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 120px); /* Adjust height if needed */
-  z-index: -1; /* Place behind your other content */
+.container {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 250px);
+  gap: 10px;
 }
 
-.grid-item {
-  flex: 1 1 calc(25% - 5px); /* 4 items per row */
-  background-size: cover;
-  background-position: center;
-  aspect-ratio: 1 / 1; /* Keeps each item square */
+.largest-text {
+  font-size: 8rem;
+  font-weight: bolder;
+  color: var(--wenge);
+}
+
+.emphasised-text {
+  color: var(--cerulean);
+  font-style: italic;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.capitalised-text {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: var(--wenge);
 }
 
 /* Footer Styles */

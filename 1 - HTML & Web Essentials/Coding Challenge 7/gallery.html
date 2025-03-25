@@ -43,6 +43,16 @@
           <li><a href="projects.html">FEATURED</a></li>
           <li><a href="contact.html">CONTACT US</a></li>
         </ul>
+        <div class="search">
+          <form action="">
+            <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search" />
+            <button type="submit"><i class="fas fa-comment"></i></button>
+            <button type="submit">
+              <i class="fas fa-shopping-basket"></i>
+            </button>
+          </form>
+        </div>
       </nav>
     </header>
     <main>
@@ -51,51 +61,70 @@
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_1.jpg')"
+            id="image_1"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_2.jpg')"
+            id="image_2"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_3.jpg')"
+            id="image_3"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_4.jpg')"
+            id="image_4"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_5.jpg')"
+            id="image_5"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_6.jpg')"
+            id="image_6"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_7.jpg')"
+            id="image_7"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_8.jpg')"
+            id="image_8"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_9.jpg')"
+            id="image_9"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_10.jpg')"
+            id="image_10"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_11.jpg')"
+            id="image_11"
           ></div>
           <div
             class="grid-item"
             style="background-image: url('assets/images/image_12.jpg')"
+            id="image_12"
           ></div>
+        </div>
+
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Large image" />
+          </div>
         </div>
       </div>
     </main>
@@ -134,12 +163,44 @@
       </div>
     </footer>
     <script>
+      // Toggle navigation for smaller screens
       const menuToggle = document.querySelector(".menu-toggle");
       const navUl = document.querySelector("nav ul");
 
       menuToggle.addEventListener("click", () => {
         navUl.classList.toggle("active");
       });
+    </script>
+    <script>
+      // Modal functionality for displaying a larger image
+      var modal = document.getElementById("modal");
+      var modalImage = document.getElementById("modal-image");
+      var closeModal = document.getElementsByClassName("close")[0];
+
+      // Add click event listener to every grid item
+      var gridItems = document.querySelectorAll(".grid-item");
+
+      gridItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          var bg = item.style.backgroundImage;
+          // Extract URL from background-image style (e.g. "url('assets/images/image_1.jpg')")
+          var imageUrl = bg.slice(5, bg.length - 2);
+          modalImage.src = imageUrl;
+          modal.style.display = "block";
+        });
+      });
+
+      // Close the modal when the close button is clicked
+      closeModal.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close the modal if the user clicks outside the modal-content area
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>

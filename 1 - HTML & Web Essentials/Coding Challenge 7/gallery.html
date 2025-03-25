@@ -183,7 +183,7 @@
       gridItems.forEach(function (item) {
         item.addEventListener("click", function () {
           var bg = item.style.backgroundImage;
-          // Extract URL from background-image style (e.g. "url('assets/images/image_1.jpg')")
+          // Extract URL from background-image style
           var imageUrl = bg.slice(5, bg.length - 2);
           modalImage.src = imageUrl;
           modal.style.display = "block";

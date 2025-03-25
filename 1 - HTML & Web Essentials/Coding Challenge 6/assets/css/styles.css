@@ -65,15 +65,14 @@ nav a:hover {
 .container {
   padding-top: 120px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 250px);
   gap: 10px;
 }
 
 .largest-text {
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: bolder;
   color: var(--wenge);
+  margin: 0;
 }
 
 .emphasised-text {
@@ -88,6 +87,35 @@ nav a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   color: var(--wenge);
+  text-align: center;
+}
+
+.lower {
+  display: flex;
+}
+
+.paragraph-text {
+  max-width: 75%;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(--wenge);
+  line-height: 80%;
+}
+
+hr {
+  display: block;
+  background-color: var(--wenge);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.final-text {
+  text-transform: uppercase;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 1.5rem;
+  color: var(--wenge);
+  display: flex;
+  max-width: 25%;
 }
 
 /* Footer Styles */

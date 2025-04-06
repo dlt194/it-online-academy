@@ -1,44 +1,13 @@
-.header-image {
-  position: relative;
-  height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/header-image.jpg") no-repeat center/cover;
+header img {
+  padding: 10px;
 }
 
-.header-image img {
-  padding-top: 10px;
-  padding-left: 10px;
+#map {
+  height: 500px !important;
+  margin-top: 10px !important;
 }
 
-.filter-white {
-  filter: invert(23%) sepia(72%) saturate(3425%) hue-rotate(210deg)
-    brightness(89%) contrast(92%);
-}
-
-.header-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-.testimonials {
-  overflow: hidden;
-  white-space: nowrap;
-}
-.testimonials .card {
-  display: inline-block;
-  width: 30%;
-  margin-right: 1%;
-}
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px;
-}
-
-.footer i {
-  margin-right: 10px;
+.scrollable-column {
+  height: 100vh;
+  overflow-y: scroll;
 }

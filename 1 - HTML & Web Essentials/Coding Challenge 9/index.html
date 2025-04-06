@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Challenge 9</title>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -16,21 +18,204 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="bg-light">
-      <div class="position-relative">
-        <img
-          src="assets/images/logo/logo.svg"
-          alt="Logo"
-          class="me-auto filter-white"
-          height="50px"
-        />
-      </div>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <img src="assets/images/logo/logo.svg" alt="Logo" height="75px" />
+          <div
+            class="collapse navbar-collapse ml-20"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Search for Homes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Agents & Offices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Local Information</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <section class="container my-5"></section>
+    <section class="container-fluid mt-3 mx-0">
+      <div class="row">
+        <div class="col-5 scrollable-column">
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="card-header">
+              <h5 class="card-title">Spacious Cottage For Sale</h5>
+              <h6 class="card-subtitle">£2,600,000</h6>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="assets/images/listings/listing_1.jpg"
+                  class="img-fluid rounded-end object-fit-cover h-100"
+                  alt="..."
+                />
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text">
+                    THIS LOVELY PROPERTY IS NESTED BETWEE! THE HILLS OF TROLLS
+                    AND FORESTS OF FARRIES WITH 4 LUXURY BEDROOMS AMD 3 MODERN
+                    BATHROOMS, THIS SPACIOUS COTTAGE BAS EVERYTHING YOU AND YOUR
+                    FAMILY WILL EVER NEED
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Last updated 3 mins ago</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="card-header">
+              <h5 class="card-title">Spacious Cottage For Sale</h5>
+              <h6 class="card-subtitle">£2,600,000</h6>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="assets/images/listings/listing_2.jpg"
+                  class="img-fluid rounded-end object-fit-cover h-100"
+                  alt="..."
+                />
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text">
+                    THIS LOVELY PROPERTY IS NESTED BETWEE! THE HILLS OF TROLLS
+                    AND FORESTS OF FARRIES WITH 4 LUXURY BEDROOMS AMD 3 MODERN
+                    BATHROOMS, THIS SPACIOUS COTTAGE BAS EVERYTHING YOU AND YOUR
+                    FAMILY WILL EVER NEED
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Last updated 3 mins ago</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="card-header">
+              <h5 class="card-title">Spacious Cottage For Sale</h5>
+              <h6 class="card-subtitle">£2,600,000</h6>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="assets/images/listings/listing_3.jpg"
+                  class="img-fluid rounded-end object-fit-cover h-100"
+                  alt="..."
+                />
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text">
+                    THIS LOVELY PROPERTY IS NESTED BETWEE! THE HILLS OF TROLLS
+                    AND FORESTS OF FARRIES WITH 4 LUXURY BEDROOMS AMD 3 MODERN
+                    BATHROOMS, THIS SPACIOUS COTTAGE BAS EVERYTHING YOU AND YOUR
+                    FAMILY WILL EVER NEED
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Last updated 3 mins ago</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="card-header">
+              <h5 class="card-title">Spacious Cottage For Sale</h5>
+              <h6 class="card-subtitle">£2,600,000</h6>
+            </div>
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="assets/images/listings/listing_4.jpg"
+                  class="img-fluid rounded-end object-fit-cover h-100"
+                  alt="..."
+                />
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text">
+                    THIS LOVELY PROPERTY IS NESTED BETWEE! THE HILLS OF TROLLS
+                    AND FORESTS OF FARRIES WITH 4 LUXURY BEDROOMS AMD 3 MODERN
+                    BATHROOMS, THIS SPACIOUS COTTAGE BAS EVERYTHING YOU AND YOUR
+                    FAMILY WILL EVER NEED
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Last updated 3 mins ago</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="input-group mb-3">
+            <input
+              id="searchBox"
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search..."
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="searchBtn"
+            >
+              Search
+            </button>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="assets/images/maps/map_1.png"
+                alt="map image 1"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer position-absolute bottom-0 w-100">
+    <footer class="footer position-absolute bottom-0 w-100 bg-light">
       <div class="text-center mt-3">
         <p class="bottom-0">&copy; 2025 Dan Thomas. All rights reserved.</p>
       </div>

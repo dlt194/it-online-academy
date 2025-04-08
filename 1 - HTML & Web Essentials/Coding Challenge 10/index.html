@@ -15,12 +15,17 @@
     <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
   <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#maincontent" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+
     <!-- Header -->
-    <header class="bg-light">
+    <header class="bg-light" role="banner">
       <div class="header-image position-relative text-center">
         <img
           src="assets/images/logo/logo.svg"
-          alt="Logo"
+          alt="Dan's Kitchen Logo"
           class="me-auto filter-white"
           height="50px"
         />
@@ -30,305 +35,341 @@
           <h1 class="display-4">Dan's Kitchen</h1>
           <p class="lead">Discover our services and explore our gallery</p>
         </div>
-        <button class="btn btn-primary header-button mt-3">Learn More</button>
+        <a
+          class="btn btn-primary header-button mt-3"
+          type="button"
+          href="#maincontent"
+        >
+          Learn More
+        </a>
       </div>
     </header>
 
-    <!-- Services Section -->
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Our Services</h2>
-      <div class="row text-center">
-        <div class="col-md-3">
-          <i class="fas fa-school"></i>
-          <h4>Learn</h4>
-          <p>
-            We offer classes to build basic knowledge in cooking. We have
-            professional chefs and all the equipment you would find in a
-            restaurant kitchen.
-          </p>
+    <!-- Main Content -->
+    <main id="maincontent">
+      <!-- Services Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <i class="fas fa-school" aria-hidden="true"></i>
+            <h4>Learn</h4>
+            <p>
+              We offer classes to build basic knowledge in cooking. We have
+              professional chefs and all the equipment you would find in a
+              restaurant kitchen.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-ghost" aria-hidden="true"></i>
+            <h4>Ghost Kitchen</h4>
+            <p>
+              Hire our equipment and use our kitchen for your food delivery
+              company.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            <h4>Photography</h4>
+            <p>
+              Hire our Kitchen as a set for photographing your dishes. Use a
+              real kitchen to add authenticity.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <i class="fas fa-wine-glass-alt" aria-hidden="true"></i>
+            <h4>Fine Dining Experience</h4>
+            <p>
+              Attend a personal fine dining experience for parties up to 6. Our
+              chefs will design a personal menu for your experience and our
+              sommelier will complete the experience with a wine pairing.
+            </p>
+          </div>
         </div>
-        <div class="col-md-3">
-          <i class="fas fa-ghost"></i>
-          <h4>Ghost Kitchen</h4>
-          <p>
-            Hire our equipment and use our kitchen for your food delivery
-            company.
-          </p>
-        </div>
-        <div class="col-md-3">
-          <i class="fas fa-camera"></i>
-          <h4>Photography</h4>
-          <p>
-            Hire our Kitchen as a set for photographing your dishes. Use a real
-            kitchen to add authenticity.
-          </p>
-        </div>
-        <div class="col-md-3">
-          <i class="fas fa-wine-glass-alt"></i>
-          <h4>Fine Dining Experience</h4>
-          <p>
-            Attend a personal fine dining experience for parties up to 6. Our
-            chefs will design a personal menu for your experience and our
-            sommelier will complete the experience with a wine pairing.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Gallery Section -->
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Gallery</h2>
-      <div class="row gallery">
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_1.jpg"
-            alt="Gallery Image 1"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
+      <!-- Gallery Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Gallery</h2>
+        <div class="row gallery">
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_1.jpg"
+              alt="Rice & Vegetable Dish"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_2.jpg"
+              alt="Pancake Stack topped with Berries"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_3.jpg"
+              alt="Burger & Fries"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_4.jpg"
+              alt="Fresh Fruit Acai Bowl"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_5.jpg"
+              alt="Pasta Dish with fresh Tomato"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="assets/images/image_6.jpg"
+              alt="Sweet Potato Fries with Guacamole Dressing"
+              class="rounded"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_2.jpg"
-            alt="Gallery Image 2"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_3.jpg"
-            alt="Gallery Image 3"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_4.jpg"
-            alt="Gallery Image 4"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_5.jpg"
-            alt="Gallery Image 5"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
-        </div>
-        <div class="col-md-4 mb-4">
-          <img
-            src="assets/images/image_6.jpg"
-            alt="Gallery Image 6"
-            class="rounded"
-            style="width: 100%; height: 200px; object-fit: cover"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Testimonials</h2>
-      <div
-        id="testimonialsCarousel"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">John Doe</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        John's testimonial goes here, sharing her experience.
-                      </p>
-                    </blockquote>
+      <!-- Testimonials Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4">Testimonials</h2>
+        <div
+          id="testimonialsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          aria-label="Testimonials Carousel"
+        >
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="Slide 1 of 4"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">John Doe</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          John's testimonial goes here, sharing his experience.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Jane Doe</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Jane's testimonial goes here, sharing her experience.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Michael Johnson</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Michael's testimonial goes here, highlighting his
+                          thoughts.
+                        </p>
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Jane Doe</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Jane's testimonial goes here, sharing her experience.
-                      </p>
-                    </blockquote>
+            </div>
+
+            <div
+              class="carousel-item"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="Slide 2 of 4"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Emily Davis</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Emily's testimonial goes here, describing her
+                          satisfaction.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Chris Brown</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Chris's testimonial goes here, sharing his positive
+                          feedback.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Sarah Wilson</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Sarah's testimonial goes here, expressing her
+                          gratitude.
+                        </p>
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Michael Johnson</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Michael's testimonial goes here, highlighting his
-                        thoughts.
-                      </p>
-                    </blockquote>
+            </div>
+
+            <div
+              class="carousel-item"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="Slide 3 of 4"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">David Martinez</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          David's testimonial goes here, detailing his
+                          experience.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Laura Garcia</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Laura's testimonial goes here, praising the service.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">James Anderson</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          James's testimonial goes here, sharing his thoughts.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="carousel-item"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="Slide 4 of 4"
+            >
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Sophia Thomas</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Sophia's testimonial goes here, expressing her
+                          satisfaction.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Daniel Lee</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Daniel's testimonial goes here, highlighting his
+                          experience.
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">Olivia Harris</div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0 text-wrap">
+                        <p>
+                          Olivia's testimonial goes here, sharing her positive
+                          feedback.
+                        </p>
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Emily Davis</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Emily's testimonial goes here, describing her
-                        satisfaction.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Chris Brown</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Chris's testimonial goes here, sharing his positive
-                        feedback.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Sarah Wilson</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Sarah's testimonial goes here, expressing her gratitude.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">David Martinez</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        David's testimonial goes here, detailing his experience.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Laura Garcia</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Laura's testimonial goes here, praising the service.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">James Anderson</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        James's testimonial goes here, sharing his thoughts.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Sophia Thomas</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Sophia's testimonial goes here, expressing her
-                        satisfaction.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Daniel Lee</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Daniel's testimonial goes here, highlighting his
-                        experience.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-header">Olivia Harris</div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0 text-wrap">
-                      <p>
-                        Olivia's testimonial goes here, sharing her positive
-                        feedback.
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#testimonialsCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#testimonialsCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -356,30 +397,34 @@
           </div>
           <div class="col-md-4 text-center">
             <h5>Site Map</h5>
-            <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <nav aria-label="Footer Navigation">
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="col-md-4 text-center">
             <img
               src="assets/images/logo/logo.svg"
-              alt="Logo"
+              alt="Dan's Kitchen Logo"
               width="50px"
               class="mb-3"
             />
             <br />
-            <span class="mb-3"
-              ><a href="tel:+441234567890">
-                <i class="fas fa-phone"></i>+44 (0) 1234567890</a
+            <span class="mb-3">
+              <a href="tel:+441234567890">
+                <i class="fas fa-phone" aria-hidden="true"></i>+44 (0)
+                1234567890</a
               >
             </span>
             <br />
-            <span class="mb-3"
-              ><a href="mailto:contact@example.com">
-                <i class="fas fa-envelope"></i>contact@example.com</a
+            <span class="mb-3">
+              <a href="mailto:contact@example.com">
+                <i class="fas fa-envelope" aria-hidden="true"></i
+                >contact@example.com</a
               >
             </span>
           </div>

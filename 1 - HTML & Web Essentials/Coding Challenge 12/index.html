@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | Coding Challenge 12</title>
+    <meta
+      name="description"
+      content="
+      Challenge: Design and code an HTML email template that is compatible with various email clients and devices.
+      Requirements: Consider email design best practices, such as inline CSS, table-based layout, and responsive design techniques. Test the template across different email clients and devices to ensure compatibility."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style type="text/css">
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+        }
+        .responsive-table {
+          width: 100% !important;
+        }
+        .stack-column {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #eeeeee">
+    <!-- Wrapper table -->
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      style="background-color: #eeeeee; padding: 20px 0"
+    >
+      <tr>
+        <td align="center">
+          <!-- Main container table -->
+          <table
+            width="600"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            class="container"
+            style="width: 600px; max-width: 600px"
+          >
+            <!-- Section 1: Dark Background -->
+            <tr>
+              <td
+                style="background-color: #333333; color: #ffffff; padding: 20px"
+              >
+                <!-- Logo (Centered) -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px">
+                      <img
+                        src="assets/logo/logo.svg"
+                        alt="Logo"
+                        style="
+                          display: block;
+                          border: 0;
+                          width: 150px;
+                          height: auto;
+                          filter: brightness(0) saturate(100%) invert(100%)
+                            sepia(2%) saturate(2008%) hue-rotate(224deg)
+                            brightness(126%) contrast(87%);
+                        "
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <!-- Heading -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 24px;
+                        font-weight: bold;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      Our Products &amp; Services
+                    </td>
+                  </tr>
+                </table>
+                <!-- Main Image -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="padding-bottom: 10px">
+                      <img
+                        src="assets/images/image_1.jpg"
+                        alt="Product Image"
+                        style="
+                          display: block;
+                          border: 0;
+                          width: 100%;
+                          height: auto;
+                          border-radius: 5%;
+                        "
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <!-- Button -->
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  align="center"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="background-color: #007bff; border-radius: 5px"
+                    >
+                      <a
+                        href="#"
+                        style="
+                          font-family: Arial, sans-serif;
+                          font-size: 16px;
+                          color: #ffffff;
+                          text-decoration: none;
+                          padding: 10px 20px;
+                          display: block;
+                        "
+                        >Read More</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Section 2: Light Background -->
+            <tr>
+              <td
+                style="background-color: #f2f2f2; color: #333333; padding: 20px"
+              >
+                <!-- Feature Title and Description -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 22px;
+                        font-weight: bold;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      Featured Product
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        line-height: 22px;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      Discover our latest featured product delivering
+                      exceptional quality.
+                    </td>
+                  </tr>
+                </table>
+                <!-- Two-Column Layout: Image on Left, Text on Right -->
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  class="responsive-table"
+                >
+                  <tr>
+                    <!-- Image Column -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      class="stack-column"
+                      style="padding-right: 10px"
+                    >
+                      <img
+                        src="assets/images/image_2.jpg"
+                        alt="Feature Image"
+                        style="
+                          display: block;
+                          border: 0;
+                          width: 100%;
+                          height: auto;
+                          border-radius: 5%;
+                        "
+                      />
+                    </td>
+                    <!-- Text Column -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      class="stack-column"
+                      style="padding-left: 10px"
+                    >
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              font-family: Arial, sans-serif;
+                              font-size: 18px;
+                              font-weight: bold;
+                              padding-bottom: 10px;
+                            "
+                          >
+                            Innovative Kitchen
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 22px;
+                              padding-bottom: 10px;
+                            "
+                          >
+                            Our innovative kitchen is tailored to meet your
+                            needs, offering high performance and quality.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="
+                                    background-color: #007bff;
+                                    border-radius: 5px;
+                                  "
+                                >
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-family: Arial, sans-serif;
+                                      font-size: 16px;
+                                      color: #ffffff;
+                                      text-decoration: none;
+                                      padding: 8px 16px;
+                                      display: block;
+                                    "
+                                    >Read More</a
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Section 3: Dark Background -->
+            <tr>
+              <td
+                style="background-color: #333333; color: #ffffff; padding: 20px"
+              >
+                <!-- Secondary Sub Heading and Description -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 22px;
+                        font-weight: bold;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      Secondary Feature
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        line-height: 22px;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      Explore our secondary feature that complements our main
+                      offerings.
+                    </td>
+                  </tr>
+                </table>
+                <!-- Two-Column Layout (Flipped): Text on Left, Image on Right -->
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  class="responsive-table"
+                >
+                  <tr>
+                    <!-- Text Column -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      class="stack-column"
+                      style="padding-right: 10px"
+                    >
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              font-family: Arial, sans-serif;
+                              font-size: 18px;
+                              font-weight: bold;
+                              padding-bottom: 10px;
+                            "
+                          >
+                            Enhanced Experience
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-family: Arial, sans-serif;
+                              font-size: 16px;
+                              line-height: 22px;
+                              padding-bottom: 10px;
+                            "
+                          >
+                            Enjoy a seamless experience with features designed
+                            to elevate your workflow.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                            >
+                              <tr>
+                                <td
+                                  align="center"
+                                  style="
+                                    background-color: #007bff;
+                                    border-radius: 5px;
+                                  "
+                                >
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-family: Arial, sans-serif;
+                                      font-size: 16px;
+                                      color: #ffffff;
+                                      text-decoration: none;
+                                      padding: 8px 16px;
+                                      display: block;
+                                    "
+                                    >Read More</a
+                                  >
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <!-- Image Column -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      class="stack-column"
+                      style="padding-left: 10px"
+                    >
+                      <img
+                        src="assets/images/image_3.jpg"
+                        alt="Secondary Image"
+                        style="
+                          display: block;
+                          border: 0;
+                          width: 100%;
+                          height: auto;
+                          border-radius: 5%;
+                        "
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Section 4: Footer (Light Background) -->
+            <tr>
+              <td
+                style="background-color: #f2f2f2; color: #333333; padding: 20px"
+              >
+                <!-- Top Footer: Logo, Company Name & Twitter Follow -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <!-- Company Info -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      style="text-align: center; padding-bottom: 10px"
+                    >
+                      <img
+                        src="assets/logo/logo.svg"
+                        alt="Logo"
+                        style="
+                          display: block;
+                          border: 0;
+                          margin: 0 auto;
+                          width: 150px;
+                          height: auto;
+                          filter: brightness(0) saturate(100%) invert(12%)
+                            sepia(6%) saturate(183%) hue-rotate(315deg)
+                            brightness(94%) contrast(78%);
+                        "
+                      />
+                      <div
+                        style="
+                          font-family: Arial, sans-serif;
+                          font-size: 18px;
+                          font-weight: bold;
+                          padding-top: 5px;
+                        "
+                      >
+                        Dan's Kitchen
+                      </div>
+                    </td>
+                    <!-- Twitter Follow -->
+                    <td
+                      width="50%"
+                      valign="top"
+                      style="text-align: center; padding-bottom: 10px"
+                    >
+                      <table
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        align="center"
+                        style="display: inline-block"
+                      >
+                        <tr>
+                          <td align="center" style="padding: 10px">
+                            <div style="text-align: center">
+                              <!-- Icon and Follow Button Container -->
+                              <div>
+                                <!-- Twitter Icon -->
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    margin-right: 8px;
+                                  "
+                                >
+                                  <i
+                                    class="fab fa-twitter"
+                                    style="font-size: 16px; color: #1da1f2"
+                                  ></i>
+                                </span>
+                                <!-- Follow Button -->
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    background-color: #1da1f2;
+                                    border-radius: 5px;
+                                  "
+                                >
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-family: Arial, sans-serif;
+                                      font-size: 14px;
+                                      color: #ffffff;
+                                      text-decoration: none;
+                                      padding: 6px 12px;
+                                      display: block;
+                                    "
+                                    >Follow</a
+                                  >
+                                </span>
+                              </div>
+                              <!-- Twitter Stats Container -->
+                              <div
+                                style="
+                                  margin-top: 8px;
+                                  font-family: Arial, sans-serif;
+                                  font-size: 14px;
+                                  line-height: 20px;
+                                  color: #333333;
+                                "
+                              >
+                                Tweets: 123 &nbsp;&bull;&nbsp; Followers: 456
+                                &nbsp;&bull;&nbsp; Following: 78
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Company Motto -->
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  style="padding-top: 10px"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: italic;
+                      "
+                    >
+                      "Innovation, Quality, Excellence."
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of Main Container Table -->
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

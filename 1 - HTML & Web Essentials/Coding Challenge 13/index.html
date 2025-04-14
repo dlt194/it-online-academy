@@ -21,8 +21,291 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header class="bg-dark-subtle py-3">
+      <div class="container-fluid p-0 m-0">
+        <div class="d-flex align-items-center justify-content-between ms-3">
+          <!-- Logo -->
+          <a href="#" class="d-flex align-items-center">
+            <img src="assets/logo/logo.svg" alt="Logo" width="100px" />
+          </a>
+
+          <!-- Search Bar -->
+          <form
+            class="d-flex flex-grow-1 align-items-center justify-content-center"
+          >
+            <span style="color: #394149">
+              <i class="fas fa-search me-1"></i>
+            </span>
+            <input
+              class="form-control me-2 w-50"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+
+          <!-- User Profile -->
+          <div class="d-flex align-items-center me-3">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="d-flex align-items-center button"
+                data-bs-toggle="dropdown"
+              >
+                <span style="color: #394149">
+                  <i class="fas fa-user"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item disabled" aria-disabled="true">
+                  <span class="d-block text-muted fw-bold">Dan</span>
+                  <span class="d-block text-muted">dan@dlt.me.uk</span>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Notifications</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Sign Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-4">
+      <!-- Header Section -->
+      <div class="d-flex justify-content-between align-items-center my-4">
+        <h2 class="fw-bold">Dashboard</h2>
+        <div>
+          <input
+            type="text"
+            class="form-control w-200"
+            id="datePicker"
+            placeholder="Select Date"
+            value="Current Week"
+          />
+        </div>
+      </div>
+
+      <!-- Button Group Section -->
+      <div
+        class="btn-group mb-4"
+        role="group"
+        aria-label="Dashboard Navigation"
+      >
+        <button type="button" class="btn active" aria-current="page">
+          Overview
+        </button>
+        <button type="button" class="btn btn-outline-secondary">
+          Analytics
+        </button>
+        <button type="button" class="btn btn-outline-secondary">Reports</button>
+        <button type="button" class="btn btn-outline-secondary">
+          Notifications
+        </button>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="row mb-4">
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-header">Total Revenue</div>
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold">£45,231.89</h5>
+            </div>
+            <div class="card-footer text-body-secondary">
+              +20.1% from last month
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-header">Subscriptions</div>
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold">+2350</h5>
+            </div>
+            <div class="card-footer text-body-secondary">
+              +180.1% from last month
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-header">Sales</div>
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold">+12,234</h5>
+            </div>
+            <div class="card-footer text-body-secondary">
+              +19% from last month
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-header">Active Leads</div>
+            <div class="card-body">
+              <h5 class="card-title fs-4 fw-bold">+573</h5>
+            </div>
+            <div class="card-footer text-body-secondary">
+              +201 since last hour
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph and Recent Sales Section -->
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sales Overview</h5>
+              <canvas id="salesChart" style="min-height: 650px"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Recent Sales</h5>
+              <ul
+                class="list-group"
+                style="max-height: 650px; overflow-y: auto"
+              >
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>John Doe</strong>
+                    <p class="mb-0 text-muted">john.doe@example.com</p>
+                  </div>
+                  <span>£500</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Jane Smith</strong>
+                    <p class="mb-0 text-muted">jane.smith@example.com</p>
+                  </div>
+                  <span>£300</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Michael Brown</strong>
+                    <p class="mb-0 text-muted">michael.brown@example.com</p>
+                  </div>
+                  <span>£450</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Emily Davis</strong>
+                    <p class="mb-0 text-muted">emily.davis@example.com</p>
+                  </div>
+                  <span>£600</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Chris Wilson</strong>
+                    <p class="mb-0 text-muted">chris.wilson@example.com</p>
+                  </div>
+                  <span>£250</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Sarah Johnson</strong>
+                    <p class="mb-0 text-muted">sarah.johnson@example.com</p>
+                  </div>
+                  <span>£700</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>David Lee</strong>
+                    <p class="mb-0 text-muted">david.lee@example.com</p>
+                  </div>
+                  <span>£400</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Anna White</strong>
+                    <p class="mb-0 text-muted">anna.white@example.com</p>
+                  </div>
+                  <span>£350</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>James Taylor</strong>
+                    <p class="mb-0 text-muted">james.taylor@example.com</p>
+                  </div>
+                  <span>£500</span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <strong>Olivia Martin</strong>
+                    <p class="mb-0 text-muted">olivia.martin@example.com</p>
+                  </div>
+                  <span>£550</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Example JavaScript for initializing a date picker and chart
+        document
+          .getElementById("datePicker")
+          .addEventListener("focus", function () {
+            this.type = "date";
+          });
+
+        const ctx = document.getElementById("salesChart").getContext("2d");
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            datasets: [
+              {
+                label: "Sales",
+                data: [1200, 1900, 3000, 5000, 2000, 3000, 4000],
+                borderColor: "rgba(75, 192, 192, 1)",
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+          },
+        });
+      </script>
+    </main>
+
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>

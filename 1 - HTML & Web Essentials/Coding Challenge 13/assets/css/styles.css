@@ -1,0 +1,7 @@
+#salesOverviewChart .column {
+  --color: #ced4da;
+}
+
+#salesOverviewChart .row {
+  --color: #fff;
+}

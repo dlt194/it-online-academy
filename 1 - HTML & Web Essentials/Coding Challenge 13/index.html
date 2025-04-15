@@ -18,6 +18,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -162,8 +167,92 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Sales Overview</h5>
-              <canvas id="salesChart" style="min-height: 650px"></canvas>
+              <div id="salesOverviewChart">
+                <table
+                  class="charts-css column show-heading show-labels data-spacing-5"
+                >
+                  <caption>
+                    Sales Overview
+                  </caption>
+
+                  <tr>
+                    <th scope="row">Jan</th>
+                    <td style="--size: 0.4">
+                      <span class="data"> £ 23.0K </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Feb</th>
+                    <td style="--size: 0.6">
+                      <span class="data"> £ 28.8K </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Mar</th>
+                    <td style="--size: 0.8">
+                      <span class="data"> £ 36.1K </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Apr</th>
+                    <td style="--size: 1">
+                      <span class="data"> £ 45.2K </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">May</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Jun</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Jul</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Aug</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Sep</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Oct</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nov</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Dec</th>
+                    <td style="--size: 0.1">
+                      <span class="data"> £ 0 </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -272,37 +361,11 @@
       </div>
 
       <script>
-        // Example JavaScript for initializing a date picker and chart
         document
           .getElementById("datePicker")
           .addEventListener("focus", function () {
             this.type = "date";
           });
-
-        const ctx = document.getElementById("salesChart").getContext("2d");
-        new Chart(ctx, {
-          type: "line",
-          data: {
-            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-            datasets: [
-              {
-                label: "Sales",
-                data: [1200, 1900, 3000, 5000, 2000, 3000, 4000],
-                borderColor: "rgba(75, 192, 192, 1)",
-                backgroundColor: "rgba(75, 192, 192, 0.2)",
-                tension: 0.4,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                display: false,
-              },
-            },
-          },
-        });
       </script>
     </main>
 

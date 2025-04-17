@@ -1,10 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-  border: 1px solid #000;
-  margin: 10px;
-  background-color: #f5f5dc;
-  border-radius: 10px;
   padding: 10px;
   text-decoration: underline;
+  text-align: center;
 }
 
 h2 {
@@ -30,7 +32,26 @@ footer {
   width: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+header {
+  border: 1px solid #000;
+  margin: 10px;
+  background-color: #f5f5dc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+#backgrounds ul {
+  list-style-type: decimal;
 }

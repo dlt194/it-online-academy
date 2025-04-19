@@ -195,7 +195,305 @@
       </section>
       <section id="fonts">
         <h2>CSS Fonts</h2>
-        <div class="content"></div>
+        <div class="content">
+          <ul>
+            <h3>Font Selection is Important</h3>
+            <li style="list-style-type: none">
+              <p>
+                Choosing the right font has a huge impact on how the readers
+                experience a website.
+              </p>
+              <p>The right font can create a strong identity for your brand.</p>
+              <p>
+                Using a font that is easy to read is important. The font adds
+                value to your text. It is also important to choose the correct
+                color and text size for the font.
+              </p>
+            </li>
+            <h3>Generic Font Families</h3>
+            <li style="list-style-type: none">
+              <p>In CSS there are five generic font families:</p>
+              <ul>
+                <li>
+                  Serif - Fonts have a small stroke at the edges of each letter.
+                  They create a sense of formality and elegance.
+                </li>
+                <li>
+                  Sans-serif - Fonts have clean lines (no small strokes
+                  attached). They create a modern and minimalistic look.
+                </li>
+                <li>
+                  Monospace - all the letters have the same fixed width. They
+                  create a mechanical look.
+                </li>
+                <li>Cursive - Imitate human handwriting</li>
+                <li>Fantasy - Decorative/Playful fonts</li>
+              </ul>
+            </li>
+            <h3>CSS Font-Family Property</h3>
+            <li style="list-style-type: none">
+              <p>
+                We use the <code>font-family</code> property to specify the font
+                of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { font-family: Arial, sans-serif; }</code><p style="font-family: Arial, sans-serif; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+            <h3>Font Web Safe</h3>
+            <li style="list-style-type: none">
+              <p>
+                Web safe fonts are fonts that are universally installed across
+                all browsers and devices.
+              </p>
+              <p>
+                However, there are no 100% completely web safe fonts. There is
+                always a chance that a font is not found or is not installed
+                properly.
+              </p>
+              <p>
+                Therefore, it is very important to always use fallback fonts.
+              </p>
+              <p>
+                This means that you should add a list of similar "backup fonts"
+                in the font-family property. If the first font does not work,
+                the browser will try the next one, and the next one, and so on.
+                Always end the list with a generic font family name.
+              </p>
+              <pre>e.g.,
+        <code>p { font-family: Arial, Helvetica, sans-serif; }</code><p style="font-family: Arial, Helvetica, sans-serif; max-width: 200px;">Example</p>
+              </pre>
+              <p>Best Web Safe Fonts for HTML and CSS</p>
+              <ul>
+                <li>Arial (sans-serif)</li>
+                <li>Verdana (sans-serif)</li>
+                <li>Tahoma (sans-serif)</li>
+                <li>Trebuchet MS (sans-serif)</li>
+                <li>Times New Roman (serif)</li>
+                <li>Georgia (serif)</li>
+                <li>Garamond (serif)</li>
+                <li>Courier New (monospace)</li>
+                <li>Brush Script MT (cursive)</li>
+              </ul>
+            </li>
+            <h3>Font Fallbacks</h3>
+            <li style="list-style-type: none">
+              <p>
+                Below are some commonly used font fallbacks, organized by the 5
+                generic font families:
+              </p>
+              <ul>
+                <li>Serif</li>
+                <li>Sans-serif</li>
+                <li>Monospace</li>
+                <li>Cursive</li>
+                <li>Fantasy</li>
+              </ul>
+            </li>
+            <h3>Font Styles</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>font-style</code> property is mostly used to specify
+                italic text.
+              </p>
+              <ul>
+                <li>
+                  <code>normal</code>
+                  <p>The text is shown normally</p>
+                  <pre>e.g.,
+        <code>p { font-style: normal; }</code><p style="font-style: normal">Example</p>
+                </pre>
+                </li>
+                <li>
+                  <code>italic</code>
+                  <p>The text is shown in italics</p>
+                  <pre>e.g.,
+        <code>p { font-style: italic; }</code><p style="font-style: italic">Example</p>
+                </pre>
+                </li>
+                <li>
+                  <code>oblique</code>
+                  <p>
+                    The text is "leaning" (oblique is very similar to italic,
+                    but less supported)
+                  </p>
+                  <pre>
+                  e.g.,
+        <code>p { font-style: oblique; }</code><p style="font-style: oblique">Example</p>
+                </pre>
+
+                  <p>
+                    The <code>font-weight</code> property specifies the weight
+                    of a font.
+                  </p>
+                  <pre>e.g.,
+        <code>p { font-weight: normal; }</code><p style="font-weight: normal">Example</p>
+        <code>p { font-weight: bold; }</code><p style="font-weight: bold">Example</p>
+        <code>p { font-weight: bolder; }</code><p style="font-weight: bolder">Example</p>
+        <code>p { font-weight: 100; }</code><p style="font-weight: 100">Example</p>
+        <code>p { font-weight: 200; }</code><p style="font-weight: 200">Example</p>
+                  </pre>
+                  <p>
+                    The <code>font-variant</code> property is used to specify
+                    whether a text should be shown in small-caps.
+                  </p>
+                  <pre>e.g.,
+        <code>p { font-variant: normal; }</code><p style="font-variant: normal">Example</p>
+        <code>p { font-variant: small-caps; }</code><p style="font-variant: small-caps">Example</p>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <h3>Font Size</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>font-size</code> property is used to set the size of a
+                font.
+              </p>
+              <p>The font-size value can be an absolute, or relative size.</p>
+              <p>Absolute size</p>
+              <ul>
+                <li>Sets the text to a specified size</li>
+                <li>
+                  Does not change when the user changes the text size in their
+                  browser settings (bad for accessibility)
+                </li>
+                <li>
+                  Absolute size is useful when the physical size of the output
+                  is known
+                </li>
+              </ul>
+              <p>Relative Size</p>
+              <ul>
+                <li>Sets the size relative to surrounding elements</li>
+                <li>Allows a user to change the text size in browsers</li>
+              </ul>
+
+              <pre>e.g.,
+        <code>p { font-size: 12px; }</code><p style="font-size: 12px">Example</p>
+        <code>p { font-size: 18px; }</code><p style="font-size: 18px">Example</p>
+        <code>p { font-size: 1em; }</code><p style="font-size: 1em">Example</p>
+        <code>p { font-size: 100%; }</code><p style="font-size: 100%">Example</p>
+        <code>p { font-size: 1.5em; }</code><p style="font-size: 1.5em">Example</p>
+              </pre>
+              <p>
+                To allow users to resize the text (in the browser menu), many
+                developers use em instead of pixels.
+              </p>
+              <p>
+                1em is equal to the current font size. The default text size in
+                browsers is 16px. So, the default size of 1em is 16px.
+              </p>
+              <p>
+                The size can be calculated from pixels to em using this formula:
+                pixels/16=em
+              </p>
+              <pre>e.g.,
+        <code>p { font-size: 2.5em; /* 40px/16=2.5em */; }</code><p style="font-size: 2.5em">Example</p>
+              </pre>
+            </li>
+            <h3>Font Google</h3>
+            <li style="list-style-type: none">
+              <p>
+                If you do not want to use any of the standard fonts in HTML, you
+                can use Google Fonts.
+              </p>
+              <p>
+                Google Fonts are free to use, and have more than 1000 fonts to
+                choose from.
+              </p>
+              <p>
+                Just add a special style sheet link in the &#60;head&#62;
+                section and then refer to the font in the CSS.
+              </p>
+              <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"&gt;</code>
+                <p style="font-family: 'Roboto', sans-serif; max-width: 200px;">Example</p>
+                </pre>
+            </li>
+            <h3>Font Pairing</h3>
+            <li style="list-style-type: none">
+              <p>Here are some basic rules to create great font pairings:</p>
+              <ul style="list-style-type: decimal">
+                <li>
+                  Complement
+                  <p>
+                    It is always safe to find font pairings that complement one
+                    another. A great font combination should harmonize, without
+                    being too similar or too different.
+                  </p>
+                </li>
+                <li>
+                  Use Font Superfamilies
+                  <p>
+                    A font superfamily is a set of fonts designed to work well
+                    together. So, using different fonts within the same
+                    superfamily is safe. For example, the Lucida superfamily
+                    contains the following fonts: Lucida Sans, Lucida Serif,
+                    Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida
+                    Math.
+                  </p>
+                </li>
+                <li>
+                  Contrast is King
+                  <p>
+                    Two fonts that are too similar will often conflict. However,
+                    contrasts, done the right way, brings out the best in each
+                    font. Example: Combining serif with sans serif is a well
+                    known combination. A strong superfamily includes both serif
+                    and sans serif variations of the same font (e.g. Lucida and
+                    Lucida Sans).
+                  </p>
+                </li>
+                <li>
+                  Choose Only One Boss
+                  <p>
+                    One font should be the boss. This establishes a hierarchy
+                    for the fonts on your page. This can be achieved by varying
+                    the size, weight and color.
+                  </p>
+                </li>
+                <pre>e.g.,
+        <code>body {
+                background-color: black;
+                font-family: Verdana, sans-serif;
+                font-size: 16px;
+                color: gray;
+              }
+              h1 {
+                font-family: Georgia, serif;
+                font-size: 60px;
+                color: white;
+              }
+            
+              </code>
+                </pre>
+              </ul>
+            </li>
+            <h3>Font Shorthand</h3>
+            <li style="list-style-type: none">
+              <p>
+                To shorten the code, it is also possible to specify all the
+                individual font properties in one property.
+              </p>
+              <p>The <code>font</code> property is a shorthand property for:</p>
+              <ul>
+                <li><code>font-style</code></li>
+                <li><code>font-varient</code></li>
+                <li><code>font-weight</code></li>
+                <li><code>font-size/line-height</code></li>
+                <li><code>font-family</code></li>
+              </ul>
+              <p>
+                N.B. The font-size and font-family values are required. If one
+                of the other values is missing, their default value are used.
+              </p>
+            </li>
+            <pre>e.g.,
+        <code>p { font: italic small-caps bold 16px/30px Georgia, serif; }</code><p style="font: italic small-caps bold 16px/30px Georgia, serif; max-width: 200px;">Example</p>
+            </pre>
+          </ul>
+        </div>
       </section>
       <section id="icons">
         <h2>CSS Icons</h2>

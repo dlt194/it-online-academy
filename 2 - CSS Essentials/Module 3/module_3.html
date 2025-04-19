@@ -37,7 +37,161 @@
     <main>
       <section id="text">
         <h2>CSS Text</h2>
-        <div class="content"></div>
+        <div class="content">
+          <ul>
+            <h3>CSS Text</h3>
+            <li style="list-style-type: none">
+              <p></p>
+              <ul>
+                <li>
+                  <p>background-color</p>
+                  <pre>e.g., <code>p {
+       background-color: red;
+      }</code><p style="background-color: red; max-width: 200px;">Example</p>
+            </pre>
+                </li>
+              </ul>
+            </li>
+            <h3>CSS Text Colour</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>color</code> property is used to set the color of the
+                text. The color is specified by:
+              </p>
+              <ul>
+                <li>a color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>a RGB value - like "rgb(255, 0, 0)"</li>
+              </ul>
+              <pre>e.g.,
+        <code>p { color: red; }</code><p style="color: red">Example</p>
+        <code>p { color: #ff0000; }</code><p style="color: #ff0000">Example</p>
+        <code>p { color: rgb(255, 0, 0); }</code><p style="color: rgb(255, 0, 0)">Example</p>
+              </pre>
+              <p>
+                In this example, we define both the
+                <code>background-color</code> and <code>color</code> properties
+              </p>
+              <pre>e.g.,
+                <code>p { background-color: lightgrey; color: blue;}</code><p style="background-color: lightgrey; color: blue; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+
+            <h3>Text Alignment</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-align</code> property is used to set the
+                horizontal alignment of a text.
+              </p>
+              <p>
+                A text can be left or right aligned, centered, or justified.
+              </p>
+
+              <div style="max-width: 500px">
+                <pre>e.g., 
+        <code>p { text-align: left; }</code><p style="text-align: left;">Example</p>
+        <code>p { text-align: center; }</code><p style="text-align: center;">Example</p>
+        <code>p { text-align: right; }</code><p style="text-align: right;">Example</p>
+        <code>p { text-align: justified; }</code>
+              </pre>
+              </div>
+              <p style="max-width: 300px; text-align: justify">
+                When the text-align property is set to "justify", each line is
+                stretched so that every line has equal width, and the left and
+                right margins are straight (like in magazines and newspapers)
+              </p>
+            </li>
+            <h3>Text Decoration</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-decoration</code> property is a shorthand
+                property for:
+              </p>
+              <ul>
+                <li>text-decoration-color</li>
+                <li>text-decoration-line</li>
+                <li>text-decoration-style</li>
+                <li>text-decoration-thickness</li>
+              </ul>
+
+              <pre>e.g.,
+        <code>p { text-decoration: none; }</code><p style="text-decoration: none;">Example</p>
+        <code>p { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+        <code>p { text-decoration: underline red; }</code><p style="text-decoration: underline red">Example</p>
+        <code>p { text-decoration: underline red double; }</code> <p style="text-decoration: underline red double">Example</p>
+        <code>p { text-decoration: underline red double 5px; }</code><p style="text-decoration: underline red double 5px">Example</p>
+              </pre>
+            </li>
+            <h3>Text Transformation</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-transform</code> property is used to specify
+                uppercase and lowercase letters in a text.
+              </p>
+              <p>
+                It can be used to turn everything into uppercase or lowercase
+                letters, or capitalize the first letter of each word
+              </p>
+
+              <pre>e.g.,
+        <code>p { text-transform: uppercase; }</code><p style="text-transform: uppercase">Example</p>
+        <code>p { text-transform: lowercase; }</code><p style="text-transform: lowercase">Example</p>
+        <code>p { text-transform: capitalize; }</code><p style="text-transform: capitalize">Example</p>
+        <code>p { text-transform: none; }</code><p style="text-transform: none">Example</p>
+              </pre>
+            </li>
+            <h3>Text Spacing</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-indent</code> property is used to specify the
+                indentation of the first line of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { text-indent: 50px; }</code><p style="text-indent: 50px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>letter-spacing</code> property is used to specify the
+                space between characters in a text.
+              </p>
+              <pre>e.g.,
+        <code>p { letter-spacing: 5px; }</code><p style="letter-spacing: 5px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>line-height</code> property is used to specify the
+                line height of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { line-height: 1.5; }</code><p style="line-height: 1.5; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>word-spacing</code> property is used to specify the
+                space between words in a text.
+              </p>
+              <pre>e.g.,
+        <code>p { word-spacing: 5px; }</code><p style="word-spacing: 5px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>white-space</code> property is used to specify how
+                white-space inside an element is handled.
+              </p>
+              <pre>e.g.,
+        <code>p { white-space: nowrap; }</code><p style="white-space: nowrap; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+
+            <h3>Text Shadow</h3>
+            <li style="list-style-type: none">
+              <p>The text-shadow property adds shadow to text.</p>
+              <p>
+                In its simplest use, you only specify the horizontal shadow
+                (2px) and the vertical shadow (2px).
+              </p>
+              <pre>e.g.,
+        <code>p { text-shadow: 2px 2px 5px red; }</code><p style="text-shadow: 2px 2px 5px red; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="fonts">
         <h2>CSS Fonts</h2>

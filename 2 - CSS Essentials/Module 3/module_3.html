@@ -9,6 +9,18 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <header>
@@ -497,15 +509,207 @@
       </section>
       <section id="icons">
         <h2>CSS Icons</h2>
-        <div class="content"></div>
+        <div class="content">
+          <p>
+            The simplest way to add an icon to your HTML page, is with an icon
+            library, such as Font Awesome, Bootstrap or Google Icons
+          </p>
+
+          <p>
+            To use the Font Awesome icons, go to fontawesome.com, sign in, and
+            get a code to add in the &#60;head&#62; section of your HTML page:
+          </p>
+          <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css""&gt;</code>
+      </pre>
+          <i class="fas fa-cloud"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-car"></i>
+          <i class="fas fa-file"></i>
+          <i class="fas fa-bars"></i>
+
+          <p>
+            To use the Bootstrap glyphicons, add the following line inside the
+            &#60;head&#62; section of your HTML page
+          </p>
+          <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;</code>
+          </pre>
+          <i class="glyphicon glyphicon-cloud"></i>
+          <i class="glyphicon glyphicon-remove"></i>
+          <i class="glyphicon glyphicon-user"></i>
+          <i class="glyphicon glyphicon-envelope"></i>
+          <i class="glyphicon glyphicon-thumbs-up"></i>
+          <p>
+            To use the Google icons, add the following line inside the
+            &#60;head&#62; section of your HTML page:
+          </p>
+          <pre>e.g.,
+          <code
+            >&lt;link rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code
+          >
+        </pre>
+          <i class="material-icons">cloud</i>
+          <i class="material-icons">favorite</i>
+          <i class="material-icons">attachment</i>
+          <i class="material-icons">computer</i>
+          <i class="material-icons">traffic</i>
+        </div>
       </section>
       <section id="links">
         <h2>CSS Links</h2>
-        <div class="content"></div>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <p>With CSS, links can be styled in many different ways.</p>
+              <p>
+                Links can be styled with any CSS property (e.g.
+                <code>color</code>, <code>font-family</code>,
+                <code>background</code>, etc.).
+              </p>
+              <pre>e.g., <code>a { color: red; }</code><p style="color: red">Example</p>
+              </pre>
+              <p>
+                In addition, links can be styled differently depending on what
+                state they are in.
+              </p>
+              <p>There are four states of a link:</p>
+              <ul>
+                <li><code>link</code> - a normal unvisited link</li>
+                <li><code>visited</code> - a visited link</li>
+                <li>
+                  <code>hover</code> - a link when the mouse hovers over it
+                </li>
+                <li><code>active</code> - a link that is being clicked on</li>
+              </ul>
+              <pre>e.g.,
+        <code>a:link { color: red; }</code><p style="color: red">Example</p>
+        <code>a:visited { color: green; }</code><p style="color: green">Example</p>
+        <code>a:hover { color: blue; }</code><p style="color: blue">Example</p>
+        <code>a:active { color: yellow; }</code><p style="color: yellow">Example</p>
+              </pre>
+              <p>
+                The order of the states is important. The order must be:
+                <code>link</code>, <code>visited</code>, <code>hover</code>, and
+                <code>active</code>. Otherwise, the CSS will not work.
+              </p>
+              <p>
+                The <code>text-decoration</code> property is most commonly used
+                to remove underlines from links
+              </p>
+              <pre>e.g.,
+        <code>a { text-decoration: none; }</code><p style="text-decoration: none">Example</p>
+        <code>a:hover { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+        <code>a:active { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+              </pre>
+              <p>
+                The <code>text-decoration-color</code> property is used to set
+                the color of the underline.
+              </p>
+              <pre>e.g.,
+        <code>a { text-decoration-color: red; }</code><p style="text-decoration: underline; text-decoration-color: red">Example</p>
+              </pre>
+              <p>
+                The <code>background-color</code> property is used to specify a
+                background color for links.
+              </p>
+              <pre>e.g.,
+        <code>a { background-color: yellow; }</code><p style="background-color: yellow">Example</p>
+              </pre>
+              <p>
+                This example demonstrates a more advanced example where we
+                combine several CSS properties to display links as boxes/buttons
+              </p>
+              <pre>e.g.,
+        <code>a:link, a:visited {
+          background-color: #f44336;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        a:hover, a:active {
+          background-color: red;
+        }</code>
+        
+        <a id="linkButton" style="background-color: #f44336;color: white;padding: 14px 25px;text-align: center;text-decoration: none;display: inline-block;">Example</a>
+              </pre>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="lists">
         <h2>CSS Lists</h2>
-        <div class="content"></div>
+        <div class="content">
+          <p>In HTML, there are two main types of lists:</p>
+          <ul>
+            <li>
+              unordered lists (&lt;ul&gt;) - the list items are marked with
+              bullets
+            </li>
+            <li>
+              ordered lists (&lt;ol&gt;) - the list items are marked with
+              numbers or letters
+            </li>
+            <p>The CSS list properties allow you to:</p>
+            <ul>
+              <li>Set different list item markers for ordered lists</li>
+              <li>Set different list item markers for unordered lists</li>
+              <li>Set an image as the list item marker</li>
+              <li>Add background colors to lists and list items</li>
+            </ul>
+
+            <p>
+              The <code>list-style-type</code> property specifies the type of
+              list item marker.
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-type: square; }</code><ul><li style="list-style-type: square">Example</li></ul>
+        <code>ul { list-style-type: circle; }</code><ul><li style="list-style-type: circle">Example</li></ul>
+        <code>ul { list-style-type: upper-roman; }</code><ul><li style="list-style-type: upper-roman">Example</li></ul>
+        <code>ul { list-style-type: none; }</code><ul><li style="list-style-type: none">Example</li></ul>
+            </pre>
+            <p>
+              The <code>list-style-position</code> property specifies the
+              position of the list-item markers (bullet points).
+            </p>
+            <p>
+              "list-style-position: outside;" means that the bullet points will
+              be outside the list item. The start of each line of a list item
+              will be aligned vertically. This is default:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-position: outside; }</code><ul><li style="list-style-position: outside">Example</li></ul>
+            </pre>
+            <p>
+              "list-style-position: inside;" means that the bullet points will
+              be inside the list item. As it is part of the list item, it will
+              be part of the text and push the text at the start:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-position: inside; }</code><ul><li style="list-style-position: inside">Example</li></ul>
+            </pre>
+            <p>
+              The list-style-type:none property can also be used to remove the
+              markers/bullets. Note that the list also has default margin and
+              padding. To remove this, add margin:0 and padding:0 to &lt;ul&gt;
+              or &lt;ol&gt;:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-type: none; margin: 0; padding: 0; }</code><ul><li style="list-style-type: none; margin: 0; padding: 0;">Example</li></ul>
+            </pre>
+            <p>
+              The list-style property is a shorthand property. It is used to set
+              all the list properties in one declaration
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style: square inside; }</code><ul><li style="list-style: square inside">Example</li></ul>
+            </pre>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>

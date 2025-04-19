@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | CSS Essentials - Module 3</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Essentials - Module 3</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Module 1</a>
+          </li>
+          <li>
+            <a href="module_2.html">Module 2</a>
+          </li>
+          <li>
+            <a href="module_3.html">Module 3</a>
+          </li>
+          <li>
+            <a href="#">Module 4</a>
+          </li>
+          <li>
+            <a href="#">Module 5</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="text">
+        <h2>CSS Text</h2>
+        <div class="content">
+          <ul>
+            <h3>CSS Text</h3>
+            <li style="list-style-type: none">
+              <p></p>
+              <ul>
+                <li>
+                  <p>background-color</p>
+                  <pre>e.g., <code>p {
+       background-color: red;
+      }</code><p style="background-color: red; max-width: 200px;">Example</p>
+            </pre>
+                </li>
+              </ul>
+            </li>
+            <h3>CSS Text Colour</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>color</code> property is used to set the color of the
+                text. The color is specified by:
+              </p>
+              <ul>
+                <li>a color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>a RGB value - like "rgb(255, 0, 0)"</li>
+              </ul>
+              <pre>e.g.,
+        <code>p { color: red; }</code><p style="color: red">Example</p>
+        <code>p { color: #ff0000; }</code><p style="color: #ff0000">Example</p>
+        <code>p { color: rgb(255, 0, 0); }</code><p style="color: rgb(255, 0, 0)">Example</p>
+              </pre>
+              <p>
+                In this example, we define both the
+                <code>background-color</code> and <code>color</code> properties
+              </p>
+              <pre>e.g.,
+                <code>p { background-color: lightgrey; color: blue;}</code><p style="background-color: lightgrey; color: blue; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+
+            <h3>Text Alignment</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-align</code> property is used to set the
+                horizontal alignment of a text.
+              </p>
+              <p>
+                A text can be left or right aligned, centered, or justified.
+              </p>
+
+              <div style="max-width: 500px">
+                <pre>e.g., 
+        <code>p { text-align: left; }</code><p style="text-align: left;">Example</p>
+        <code>p { text-align: center; }</code><p style="text-align: center;">Example</p>
+        <code>p { text-align: right; }</code><p style="text-align: right;">Example</p>
+        <code>p { text-align: justified; }</code>
+              </pre>
+              </div>
+              <p style="max-width: 300px; text-align: justify">
+                When the text-align property is set to "justify", each line is
+                stretched so that every line has equal width, and the left and
+                right margins are straight (like in magazines and newspapers)
+              </p>
+            </li>
+            <h3>Text Decoration</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-decoration</code> property is a shorthand
+                property for:
+              </p>
+              <ul>
+                <li>text-decoration-color</li>
+                <li>text-decoration-line</li>
+                <li>text-decoration-style</li>
+                <li>text-decoration-thickness</li>
+              </ul>
+
+              <pre>e.g.,
+        <code>p { text-decoration: none; }</code><p style="text-decoration: none;">Example</p>
+        <code>p { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+        <code>p { text-decoration: underline red; }</code><p style="text-decoration: underline red">Example</p>
+        <code>p { text-decoration: underline red double; }</code> <p style="text-decoration: underline red double">Example</p>
+        <code>p { text-decoration: underline red double 5px; }</code><p style="text-decoration: underline red double 5px">Example</p>
+              </pre>
+            </li>
+            <h3>Text Transformation</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-transform</code> property is used to specify
+                uppercase and lowercase letters in a text.
+              </p>
+              <p>
+                It can be used to turn everything into uppercase or lowercase
+                letters, or capitalize the first letter of each word
+              </p>
+
+              <pre>e.g.,
+        <code>p { text-transform: uppercase; }</code><p style="text-transform: uppercase">Example</p>
+        <code>p { text-transform: lowercase; }</code><p style="text-transform: lowercase">Example</p>
+        <code>p { text-transform: capitalize; }</code><p style="text-transform: capitalize">Example</p>
+        <code>p { text-transform: none; }</code><p style="text-transform: none">Example</p>
+              </pre>
+            </li>
+            <h3>Text Spacing</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>text-indent</code> property is used to specify the
+                indentation of the first line of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { text-indent: 50px; }</code><p style="text-indent: 50px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>letter-spacing</code> property is used to specify the
+                space between characters in a text.
+              </p>
+              <pre>e.g.,
+        <code>p { letter-spacing: 5px; }</code><p style="letter-spacing: 5px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>line-height</code> property is used to specify the
+                line height of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { line-height: 1.5; }</code><p style="line-height: 1.5; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>word-spacing</code> property is used to specify the
+                space between words in a text.
+              </p>
+              <pre>e.g.,
+        <code>p { word-spacing: 5px; }</code><p style="word-spacing: 5px; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+              <p>
+                The <code>white-space</code> property is used to specify how
+                white-space inside an element is handled.
+              </p>
+              <pre>e.g.,
+        <code>p { white-space: nowrap; }</code><p style="white-space: nowrap; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+
+            <h3>Text Shadow</h3>
+            <li style="list-style-type: none">
+              <p>The text-shadow property adds shadow to text.</p>
+              <p>
+                In its simplest use, you only specify the horizontal shadow
+                (2px) and the vertical shadow (2px).
+              </p>
+              <pre>e.g.,
+        <code>p { text-shadow: 2px 2px 5px red; }</code><p style="text-shadow: 2px 2px 5px red; background-color: antiquewhite; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="fonts">
+        <h2>CSS Fonts</h2>
+        <div class="content">
+          <ul>
+            <h3>Font Selection is Important</h3>
+            <li style="list-style-type: none">
+              <p>
+                Choosing the right font has a huge impact on how the readers
+                experience a website.
+              </p>
+              <p>The right font can create a strong identity for your brand.</p>
+              <p>
+                Using a font that is easy to read is important. The font adds
+                value to your text. It is also important to choose the correct
+                color and text size for the font.
+              </p>
+            </li>
+            <h3>Generic Font Families</h3>
+            <li style="list-style-type: none">
+              <p>In CSS there are five generic font families:</p>
+              <ul>
+                <li>
+                  Serif - Fonts have a small stroke at the edges of each letter.
+                  They create a sense of formality and elegance.
+                </li>
+                <li>
+                  Sans-serif - Fonts have clean lines (no small strokes
+                  attached). They create a modern and minimalistic look.
+                </li>
+                <li>
+                  Monospace - all the letters have the same fixed width. They
+                  create a mechanical look.
+                </li>
+                <li>Cursive - Imitate human handwriting</li>
+                <li>Fantasy - Decorative/Playful fonts</li>
+              </ul>
+            </li>
+            <h3>CSS Font-Family Property</h3>
+            <li style="list-style-type: none">
+              <p>
+                We use the <code>font-family</code> property to specify the font
+                of a text.
+              </p>
+              <pre>e.g.,
+        <code>p { font-family: Arial, sans-serif; }</code><p style="font-family: Arial, sans-serif; max-width: 200px;">Example</p>
+              </pre>
+            </li>
+            <h3>Font Web Safe</h3>
+            <li style="list-style-type: none">
+              <p>
+                Web safe fonts are fonts that are universally installed across
+                all browsers and devices.
+              </p>
+              <p>
+                However, there are no 100% completely web safe fonts. There is
+                always a chance that a font is not found or is not installed
+                properly.
+              </p>
+              <p>
+                Therefore, it is very important to always use fallback fonts.
+              </p>
+              <p>
+                This means that you should add a list of similar "backup fonts"
+                in the font-family property. If the first font does not work,
+                the browser will try the next one, and the next one, and so on.
+                Always end the list with a generic font family name.
+              </p>
+              <pre>e.g.,
+        <code>p { font-family: Arial, Helvetica, sans-serif; }</code><p style="font-family: Arial, Helvetica, sans-serif; max-width: 200px;">Example</p>
+              </pre>
+              <p>Best Web Safe Fonts for HTML and CSS</p>
+              <ul>
+                <li>Arial (sans-serif)</li>
+                <li>Verdana (sans-serif)</li>
+                <li>Tahoma (sans-serif)</li>
+                <li>Trebuchet MS (sans-serif)</li>
+                <li>Times New Roman (serif)</li>
+                <li>Georgia (serif)</li>
+                <li>Garamond (serif)</li>
+                <li>Courier New (monospace)</li>
+                <li>Brush Script MT (cursive)</li>
+              </ul>
+            </li>
+            <h3>Font Fallbacks</h3>
+            <li style="list-style-type: none">
+              <p>
+                Below are some commonly used font fallbacks, organized by the 5
+                generic font families:
+              </p>
+              <ul>
+                <li>Serif</li>
+                <li>Sans-serif</li>
+                <li>Monospace</li>
+                <li>Cursive</li>
+                <li>Fantasy</li>
+              </ul>
+            </li>
+            <h3>Font Styles</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>font-style</code> property is mostly used to specify
+                italic text.
+              </p>
+              <ul>
+                <li>
+                  <code>normal</code>
+                  <p>The text is shown normally</p>
+                  <pre>e.g.,
+        <code>p { font-style: normal; }</code><p style="font-style: normal">Example</p>
+                </pre>
+                </li>
+                <li>
+                  <code>italic</code>
+                  <p>The text is shown in italics</p>
+                  <pre>e.g.,
+        <code>p { font-style: italic; }</code><p style="font-style: italic">Example</p>
+                </pre>
+                </li>
+                <li>
+                  <code>oblique</code>
+                  <p>
+                    The text is "leaning" (oblique is very similar to italic,
+                    but less supported)
+                  </p>
+                  <pre>
+                  e.g.,
+        <code>p { font-style: oblique; }</code><p style="font-style: oblique">Example</p>
+                </pre>
+
+                  <p>
+                    The <code>font-weight</code> property specifies the weight
+                    of a font.
+                  </p>
+                  <pre>e.g.,
+        <code>p { font-weight: normal; }</code><p style="font-weight: normal">Example</p>
+        <code>p { font-weight: bold; }</code><p style="font-weight: bold">Example</p>
+        <code>p { font-weight: bolder; }</code><p style="font-weight: bolder">Example</p>
+        <code>p { font-weight: 100; }</code><p style="font-weight: 100">Example</p>
+        <code>p { font-weight: 200; }</code><p style="font-weight: 200">Example</p>
+                  </pre>
+                  <p>
+                    The <code>font-variant</code> property is used to specify
+                    whether a text should be shown in small-caps.
+                  </p>
+                  <pre>e.g.,
+        <code>p { font-variant: normal; }</code><p style="font-variant: normal">Example</p>
+        <code>p { font-variant: small-caps; }</code><p style="font-variant: small-caps">Example</p>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <h3>Font Size</h3>
+            <li style="list-style-type: none">
+              <p>
+                The <code>font-size</code> property is used to set the size of a
+                font.
+              </p>
+              <p>The font-size value can be an absolute, or relative size.</p>
+              <p>Absolute size</p>
+              <ul>
+                <li>Sets the text to a specified size</li>
+                <li>
+                  Does not change when the user changes the text size in their
+                  browser settings (bad for accessibility)
+                </li>
+                <li>
+                  Absolute size is useful when the physical size of the output
+                  is known
+                </li>
+              </ul>
+              <p>Relative Size</p>
+              <ul>
+                <li>Sets the size relative to surrounding elements</li>
+                <li>Allows a user to change the text size in browsers</li>
+              </ul>
+
+              <pre>e.g.,
+        <code>p { font-size: 12px; }</code><p style="font-size: 12px">Example</p>
+        <code>p { font-size: 18px; }</code><p style="font-size: 18px">Example</p>
+        <code>p { font-size: 1em; }</code><p style="font-size: 1em">Example</p>
+        <code>p { font-size: 100%; }</code><p style="font-size: 100%">Example</p>
+        <code>p { font-size: 1.5em; }</code><p style="font-size: 1.5em">Example</p>
+              </pre>
+              <p>
+                To allow users to resize the text (in the browser menu), many
+                developers use em instead of pixels.
+              </p>
+              <p>
+                1em is equal to the current font size. The default text size in
+                browsers is 16px. So, the default size of 1em is 16px.
+              </p>
+              <p>
+                The size can be calculated from pixels to em using this formula:
+                pixels/16=em
+              </p>
+              <pre>e.g.,
+        <code>p { font-size: 2.5em; /* 40px/16=2.5em */; }</code><p style="font-size: 2.5em">Example</p>
+              </pre>
+            </li>
+            <h3>Font Google</h3>
+            <li style="list-style-type: none">
+              <p>
+                If you do not want to use any of the standard fonts in HTML, you
+                can use Google Fonts.
+              </p>
+              <p>
+                Google Fonts are free to use, and have more than 1000 fonts to
+                choose from.
+              </p>
+              <p>
+                Just add a special style sheet link in the &#60;head&#62;
+                section and then refer to the font in the CSS.
+              </p>
+              <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"&gt;</code>
+                <p style="font-family: 'Roboto', sans-serif; max-width: 200px;">Example</p>
+                </pre>
+            </li>
+            <h3>Font Pairing</h3>
+            <li style="list-style-type: none">
+              <p>Here are some basic rules to create great font pairings:</p>
+              <ul style="list-style-type: decimal">
+                <li>
+                  Complement
+                  <p>
+                    It is always safe to find font pairings that complement one
+                    another. A great font combination should harmonize, without
+                    being too similar or too different.
+                  </p>
+                </li>
+                <li>
+                  Use Font Superfamilies
+                  <p>
+                    A font superfamily is a set of fonts designed to work well
+                    together. So, using different fonts within the same
+                    superfamily is safe. For example, the Lucida superfamily
+                    contains the following fonts: Lucida Sans, Lucida Serif,
+                    Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida
+                    Math.
+                  </p>
+                </li>
+                <li>
+                  Contrast is King
+                  <p>
+                    Two fonts that are too similar will often conflict. However,
+                    contrasts, done the right way, brings out the best in each
+                    font. Example: Combining serif with sans serif is a well
+                    known combination. A strong superfamily includes both serif
+                    and sans serif variations of the same font (e.g. Lucida and
+                    Lucida Sans).
+                  </p>
+                </li>
+                <li>
+                  Choose Only One Boss
+                  <p>
+                    One font should be the boss. This establishes a hierarchy
+                    for the fonts on your page. This can be achieved by varying
+                    the size, weight and color.
+                  </p>
+                </li>
+                <pre>e.g.,
+        <code>body {
+                background-color: black;
+                font-family: Verdana, sans-serif;
+                font-size: 16px;
+                color: gray;
+              }
+              h1 {
+                font-family: Georgia, serif;
+                font-size: 60px;
+                color: white;
+              }
+            
+              </code>
+                </pre>
+              </ul>
+            </li>
+            <h3>Font Shorthand</h3>
+            <li style="list-style-type: none">
+              <p>
+                To shorten the code, it is also possible to specify all the
+                individual font properties in one property.
+              </p>
+              <p>The <code>font</code> property is a shorthand property for:</p>
+              <ul>
+                <li><code>font-style</code></li>
+                <li><code>font-varient</code></li>
+                <li><code>font-weight</code></li>
+                <li><code>font-size/line-height</code></li>
+                <li><code>font-family</code></li>
+              </ul>
+              <p>
+                N.B. The font-size and font-family values are required. If one
+                of the other values is missing, their default value are used.
+              </p>
+            </li>
+            <pre>e.g.,
+        <code>p { font: italic small-caps bold 16px/30px Georgia, serif; }</code><p style="font: italic small-caps bold 16px/30px Georgia, serif; max-width: 200px;">Example</p>
+            </pre>
+          </ul>
+        </div>
+      </section>
+      <section id="icons">
+        <h2>CSS Icons</h2>
+        <div class="content">
+          <p>
+            The simplest way to add an icon to your HTML page, is with an icon
+            library, such as Font Awesome, Bootstrap or Google Icons
+          </p>
+
+          <p>
+            To use the Font Awesome icons, go to fontawesome.com, sign in, and
+            get a code to add in the &#60;head&#62; section of your HTML page:
+          </p>
+          <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css""&gt;</code>
+      </pre>
+          <i class="fas fa-cloud"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-car"></i>
+          <i class="fas fa-file"></i>
+          <i class="fas fa-bars"></i>
+
+          <p>
+            To use the Bootstrap glyphicons, add the following line inside the
+            &#60;head&#62; section of your HTML page
+          </p>
+          <pre>e.g.,
+        <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;</code>
+          </pre>
+          <i class="glyphicon glyphicon-cloud"></i>
+          <i class="glyphicon glyphicon-remove"></i>
+          <i class="glyphicon glyphicon-user"></i>
+          <i class="glyphicon glyphicon-envelope"></i>
+          <i class="glyphicon glyphicon-thumbs-up"></i>
+          <p>
+            To use the Google icons, add the following line inside the
+            &#60;head&#62; section of your HTML page:
+          </p>
+          <pre>e.g.,
+          <code
+            >&lt;link rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code
+          >
+        </pre>
+          <i class="material-icons">cloud</i>
+          <i class="material-icons">favorite</i>
+          <i class="material-icons">attachment</i>
+          <i class="material-icons">computer</i>
+          <i class="material-icons">traffic</i>
+        </div>
+      </section>
+      <section id="links">
+        <h2>CSS Links</h2>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <p>With CSS, links can be styled in many different ways.</p>
+              <p>
+                Links can be styled with any CSS property (e.g.
+                <code>color</code>, <code>font-family</code>,
+                <code>background</code>, etc.).
+              </p>
+              <pre>e.g., <code>a { color: red; }</code><p style="color: red">Example</p>
+              </pre>
+              <p>
+                In addition, links can be styled differently depending on what
+                state they are in.
+              </p>
+              <p>There are four states of a link:</p>
+              <ul>
+                <li><code>link</code> - a normal unvisited link</li>
+                <li><code>visited</code> - a visited link</li>
+                <li>
+                  <code>hover</code> - a link when the mouse hovers over it
+                </li>
+                <li><code>active</code> - a link that is being clicked on</li>
+              </ul>
+              <pre>e.g.,
+        <code>a:link { color: red; }</code><p style="color: red">Example</p>
+        <code>a:visited { color: green; }</code><p style="color: green">Example</p>
+        <code>a:hover { color: blue; }</code><p style="color: blue">Example</p>
+        <code>a:active { color: yellow; }</code><p style="color: yellow">Example</p>
+              </pre>
+              <p>
+                The order of the states is important. The order must be:
+                <code>link</code>, <code>visited</code>, <code>hover</code>, and
+                <code>active</code>. Otherwise, the CSS will not work.
+              </p>
+              <p>
+                The <code>text-decoration</code> property is most commonly used
+                to remove underlines from links
+              </p>
+              <pre>e.g.,
+        <code>a { text-decoration: none; }</code><p style="text-decoration: none">Example</p>
+        <code>a:hover { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+        <code>a:active { text-decoration: underline; }</code><p style="text-decoration: underline">Example</p>
+              </pre>
+              <p>
+                The <code>text-decoration-color</code> property is used to set
+                the color of the underline.
+              </p>
+              <pre>e.g.,
+        <code>a { text-decoration-color: red; }</code><p style="text-decoration: underline; text-decoration-color: red">Example</p>
+              </pre>
+              <p>
+                The <code>background-color</code> property is used to specify a
+                background color for links.
+              </p>
+              <pre>e.g.,
+        <code>a { background-color: yellow; }</code><p style="background-color: yellow">Example</p>
+              </pre>
+              <p>
+                This example demonstrates a more advanced example where we
+                combine several CSS properties to display links as boxes/buttons
+              </p>
+              <pre>e.g.,
+        <code>a:link, a:visited {
+          background-color: #f44336;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        a:hover, a:active {
+          background-color: red;
+        }</code>
+        
+        <a id="linkButton" style="background-color: #f44336;color: white;padding: 14px 25px;text-align: center;text-decoration: none;display: inline-block;">Example</a>
+              </pre>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="lists">
+        <h2>CSS Lists</h2>
+        <div class="content">
+          <p>In HTML, there are two main types of lists:</p>
+          <ul>
+            <li>
+              unordered lists (&lt;ul&gt;) - the list items are marked with
+              bullets
+            </li>
+            <li>
+              ordered lists (&lt;ol&gt;) - the list items are marked with
+              numbers or letters
+            </li>
+            <p>The CSS list properties allow you to:</p>
+            <ul>
+              <li>Set different list item markers for ordered lists</li>
+              <li>Set different list item markers for unordered lists</li>
+              <li>Set an image as the list item marker</li>
+              <li>Add background colors to lists and list items</li>
+            </ul>
+
+            <p>
+              The <code>list-style-type</code> property specifies the type of
+              list item marker.
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-type: square; }</code><ul><li style="list-style-type: square">Example</li></ul>
+        <code>ul { list-style-type: circle; }</code><ul><li style="list-style-type: circle">Example</li></ul>
+        <code>ul { list-style-type: upper-roman; }</code><ul><li style="list-style-type: upper-roman">Example</li></ul>
+        <code>ul { list-style-type: none; }</code><ul><li style="list-style-type: none">Example</li></ul>
+            </pre>
+            <p>
+              The <code>list-style-position</code> property specifies the
+              position of the list-item markers (bullet points).
+            </p>
+            <p>
+              "list-style-position: outside;" means that the bullet points will
+              be outside the list item. The start of each line of a list item
+              will be aligned vertically. This is default:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-position: outside; }</code><ul><li style="list-style-position: outside">Example</li></ul>
+            </pre>
+            <p>
+              "list-style-position: inside;" means that the bullet points will
+              be inside the list item. As it is part of the list item, it will
+              be part of the text and push the text at the start:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-position: inside; }</code><ul><li style="list-style-position: inside">Example</li></ul>
+            </pre>
+            <p>
+              The list-style-type:none property can also be used to remove the
+              markers/bullets. Note that the list also has default margin and
+              padding. To remove this, add margin:0 and padding:0 to &lt;ul&gt;
+              or &lt;ol&gt;:
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style-type: none; margin: 0; padding: 0; }</code><ul><li style="list-style-type: none; margin: 0; padding: 0;">Example</li></ul>
+            </pre>
+            <p>
+              The list-style property is a shorthand property. It is used to set
+              all the list properties in one declaration
+            </p>
+            <pre>e.g.,
+        <code>ul { list-style: square inside; }</code><ul><li style="list-style: square inside">Example</li></ul>
+            </pre>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | CSS Essentials - Module 2</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Essentials - Module 2</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Module 1</a>
+          </li>
+          <li>
+            <a href="module_2.html">Module 2</a>
+          </li>
+          <li>
+            <a href="module_3.html">Module 3</a>
+          </li>
+          <li>
+            <a href="#">Module 4</a>
+          </li>
+          <li>
+            <a href="#">Module 5</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="backgrounds">
+        <h2>CSS Backgrounds</h2>
+        <div class="content">
+          <p>
+            There are Multiple ways to set a background colour in CSS. The most
+            common methods are:
+          </p>
+          <ul>
+            <li>
+              <p>background-color</p>
+              <pre>e.g., <code>div {
+       background-color: red;
+      }</code>
+            </pre>
+              <p>
+                With <code>background-color</code>, you can specify the colour
+                in multiple ways.
+              </p>
+              <ul>
+                <li>Colour Name e.g., <code>red</code></li>
+                <li>Hexadecimal e.g., <code>#FF0000</code></li>
+                <li>RGB e.g., <code>rgb(255, 0, 0)</code></li>
+                <li>RGBA e.g., <code>rgba(255, 0, 0, 0.5)</code></li>
+                <li>HSL e.g., <code>hsl(0, 100%, 50%)</code></li>
+                <li>HSLA e.g., <code>hsla(0, 100%, 50%, 0.5)</code></li>
+              </ul>
+            </li>
+            <li>
+              <p>Background Image</p>
+              <pre>e.g,<code> div {
+      background-image: url('image.jpg');
+     }</code>
+              </pre>
+              <p>
+                With <code>background-image</code> you need to use the url() to
+                specify where the image is located. This can be an online
+                resource or a local resource with a relative path. The
+                <code>background-image</code> has additional properties that can
+                be used, see them
+                <a
+                  href="https://www.w3schools.com/cssref/pr_background-image.php"
+                  >Here</a
+                >.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="borders">
+        <h2>CSS Border Styles</h2>
+        <div class="content">
+          <p>The border property is a shorthand property for:</p>
+          <ul>
+            <li><code>border-width</code></li>
+            <li><code>border-style</code> (required)</li>
+            <li><code>border-color</code></li>
+          </ul>
+          <pre>e.g., <code>div {
+       border: 10px solid red;
+      }</code></pre>
+          <p>
+            If <code>border-color</code> is omitted, the colour applied will be
+            the color of the text.
+          </p>
+          <p>
+            The <code>border-style</code> property sets the style of an
+            element's four borders. This property can have from one to four
+            values.
+          </p>
+          <ul>
+            <li><code>border-style: dotted solid double dashed</code></li>
+            <ul>
+              <li>top border is dotted</li>
+              <li>right border is solid</li>
+              <li>bottom border is double</li>
+              <li>left border is dashed</li>
+            </ul>
+            <br />
+            <li>
+              <code>border-style: dotted solid double</code>
+              <ul>
+                <li>top border is dotted</li>
+                <li>right and left borders are solid</li>
+                <li>bottom border is double</li>
+              </ul>
+            </li>
+            <li>
+              <code>border-style: dotted solid</code>
+              <ul>
+                <li>top and bottom borders are dotted</li>
+                <li>right and left borders are solid</li>
+              </ul>
+            </li>
+            <li>
+              <code>border-style: dotted</code>
+              <ul>
+                <li>all four borders are dotted</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="margins">
+        <h2>CSS Margins</h2>
+        <div class="content">
+          <p>
+            <code>margin</code> controls the space between the border and
+            content of an element.
+          </p>
+          <p>
+            The <code>margin</code> property sets the margins for an element,
+            and is a shorthand property for the following properties:
+          </p>
+          <ul>
+            <li><code>margin-top</code></li>
+            <li><code>margin-right</code></li>
+            <li><code>margin-bottom</code></li>
+            <li><code>margin-left</code></li>
+          </ul>
+          <p>
+            All the <code>margin</code> properties can have the following
+            values:
+          </p>
+          <ul>
+            <li>auto - the browser calculates the margin</li>
+            <li>length - specifies a margin in px, pt, cm etc.</li>
+            <li>
+              percent - specifies a margin in % of the width of the containing
+              element
+            </li>
+            <li>
+              inherit - specifies that the margin should be inherited from the
+              parent
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="padding">
+        <h2>CSS Padding</h2>
+        <div class="content">
+          <p>
+            An element's padding is the space between its content and its
+            border.
+          </p>
+          <p>The <code>padding</code> property is a shorthand property for:</p>
+          <ul>
+            <li><code>padding-top</code></li>
+            <li><code>padding-right</code></li>
+            <li><code>padding-bottom</code></li>
+            <li><code>padding-left</code></li>
+          </ul>
+          <p>
+            Padding creates extra space within an element, while margin creates
+            extra space around an element.
+          </p>
+          <p>This property can have from one to four values.</p>
+          <ul>
+            <li>
+              <code>padding: 10px 20px 30px 40px;</code>
+              <ul>
+                <li>top padding is 10px</li>
+                <li>right padding is 20px</li>
+                <li>bottom padding is 30px</li>
+                <li>left padding is 40px</li>
+              </ul>
+            </li>
+            <li>
+              <code>padding: 10px 20px;</code>
+              <ul>
+                <li>top and bottom padding are 10px</li>
+                <li>right and left padding are 20px</li>
+              </ul>
+            </li>
+            <li>
+              <code>padding: 10px;</code>
+              <ul>
+                <li>all four padding are 10px</li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+          <p>
+            Negative values are allowed, they can be used to decrease the space
+            around an element
+          </p>
+        </div>
+      </section>
+      <section id="sizing">
+        <h2>CSS Height, Width & Max-Width</h2>
+        <div class="content">
+          <p>The height property sets the height of an element.</p>
+          <p>
+            The height of an element does not include padding, borders, or
+            margins.
+          </p>
+          <p>
+            If height: <code>auto</code>; the element will automatically adjust
+            its height to allow its content to be displayed correctly.
+          </p>
+          <p>
+            If height is set to a numeric value (like pixels, (r)em,
+            percentages) then if the content does not fit within the specified
+            height, it will overflow. How the container will handle the
+            overflowing content is defined by the overflow property.
+          </p>
+          <p>
+            <strong>Note:</strong> <code>min-height</code> and
+            <code>max-height</code> properties override the height property.
+          </p>
+          <hr />
+          <p>
+            The <code>max-height</code> property is used to set the maximum
+            height of an element. It prevents the height of the element from
+            exceeding the specified value.
+          </p>
+          <p>
+            The <code>min-height</code> property is used to set the minimum
+            height of an element. It prevents the height of the element from
+            being less than the specified value.
+          </p>
+
+          <hr />
+          <p>The width property sets the width of an element.</p>
+          <p>
+            The width of an element does not include padding, borders, or
+            margins
+          </p>
+          <p>
+            <strong>Note:</strong> The <code>min-width</code> and
+            <code>max-width</code> properties override the width property.
+          </p>
+          <hr />
+          <p>
+            The <code>max-width</code> property is used to set the maximum width
+            of an element. It prevents the width of the element from exceeding
+            the specified value.
+          </p>
+          <p>
+            The <code>min-width</code> property is used to set the minimum width
+            of an element. It prevents the width of the element from being less
+            than the specified value.
+          </p>
+          <hr />
+          <p>
+            Negative values are allowed, they can be used to decrease the space
+            around an element
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -392,7 +392,112 @@
         <h2>CSS Display</h2>
         <div class="content">
           <ul>
-            <li style="list-style-type: none"></li>
+            <li style="list-style-type: none">
+              <h3>The display Property</h3>
+              <p>
+                The <code>display</code> property is the most important CSS
+                property for controlling layout.
+              </p>
+              <p>
+                Every HTML element has a default display value, depending on
+                what type of element it is. The default display value for most
+                elements is <code>block</code> or <code>inline</code>.
+              </p>
+              <p>
+                The <code>display</code> property is used to change the default
+                display behavior of HTML elements.
+              </p>
+              <h3>Block Level Elements</h3>
+              <p>
+                A block-level element ALWAYS starts on a new line and takes up
+                the full width available (stretches out to the left and right as
+                far as it can).
+              </p>
+              <p>Examples of block-level elements</p>
+              <ul>
+                <li>&lt;div&gt;</li>
+                <li>&lt;h1&gt; - &lt;h6&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;form&gt;</li>
+                <li>&lt;header&gt;</li>
+                <li>&lt;footer&gt;</li>
+                <li>&lt;section&gt;</li>
+              </ul>
+            </li>
+            <h3>Inline Elements</h3>
+            <p>
+              An inline element DOES NOT start on a new line and only takes up
+              as much width as necessary.
+            </p>
+            <p>Examples of inline elements</p>
+            <ul>
+              <li>&lt;a&gt;</li>
+              <li>&lt;span&gt;</li>
+              <li>&lt;img&gt;</li>
+            </ul>
+            <h3>Display: none;</h3>
+            <p>
+              The <code>display: none;</code> is commonly used with JavaScript
+              to hide and show elements without deleting and recreating them.
+            </p>
+            <h3>Override The Default Display Value</h3>
+            <p>
+              As mentioned, every element has a default display value. However,
+              you can override this. Changing an inline element to a block
+              element, or vice versa, can be useful for making the page look a
+              specific way, and still follow the web standards. A common example
+              is making inline &lt;li&gt; elements for horizontal menus
+            </p>
+            <pre>e.g., <code>li {
+          display: inline;
+        }</code></pre>
+            <ul>
+              <li style="display: inline">
+                <a href="#">HTML</a>
+              </li>
+              <li style="display: inline">
+                <a href="#">CSS</a>
+              </li>
+              <li style="display: inline">
+                <a href="#">JavaScript</a>
+              </li>
+            </ul>
+            <h3>Hide an Element - display:none or visibility:hidden?</h3>
+            <p>
+              Hiding an element can be done by setting the display property to
+              none. The element will be hidden, and the page will be displayed
+              as if the element is not there:
+            </p>
+            <pre>e.g., <code>h1.hidden {
+        display: none;
+      }</code></pre>
+            <h3>CSS Display/Visibility Properties</h3>
+            <table class="ws-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width: 25%">Property</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      href="https://www.w3schools.com/cssref/pr_class_display.php"
+                      >display</a
+                    >
+                  </td>
+                  <td>Specifies how an element should be displayed</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      href="https://www.w3schools.com/cssref/pr_class_visibility.php"
+                      >visibility</a
+                    >
+                  </td>
+                  <td>Specifies whether or not an element should be visible</td>
+                </tr>
+              </tbody>
+            </table>
           </ul>
         </div>
       </section>

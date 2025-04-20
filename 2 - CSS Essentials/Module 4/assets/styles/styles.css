@@ -55,3 +55,11 @@ nav ul {
 #backgrounds ul {
   list-style-type: decimal;
 }
+
+code {
+  background-color: #f5f5dc;
+
+  border-radius: 5px;
+  font-family: monospace;
+  color: red;
+}

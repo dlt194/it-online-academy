@@ -327,7 +327,64 @@
         <h2>CSS Z-Index</h2>
         <div class="content">
           <ul>
-            <li style="list-style-type: none"></li>
+            <li style="list-style-type: none">
+              <p>
+                The <code>z-index</code> property specifies the stack order of
+                an element.
+              </p>
+              <p>
+                When elements are positioned, they can overlap other elements.
+              </p>
+              <p>
+                The <code>z-index</code> property specifies the stack order of
+                an element (which element should be placed in front of, or
+                behind, the others).
+              </p>
+              <p>An element can have a positive or negative stack order:</p>
+              <pre>e.g., <code>
+                img {
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  z-index: -1;
+                }
+              </code>
+              
+              </pre>
+              <div
+                class="w3-example w3-white"
+                style="position: relative; padding: 80px; margin-bottom: 120px"
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 30px;
+                    top: 15px;
+                    z-index: 0;
+                    height: 250px;
+                  "
+                  src="https://www.w3schools.com/css/img_tree.png"
+                />
+                <h1
+                  style="position: absolute; left: 35px; top: 15px; z-index: 0"
+                >
+                  This is a heading
+                </h1>
+
+                <p
+                  style="position: absolute; left: 35px; top: 65px; z-index: 0"
+                >
+                  Because the image has a z-index of -1, it will be placed
+                  behind the text.
+                </p>
+              </div>
+              <p>
+                <stong>Note:</stong> <code>z-index</code> only works on
+                positioned elements (position: absolute, position: relative,
+                position: fixed, or position: sticky) and flex items (elements
+                that are direct children of display: flex elements).
+              </p>
+            </li>
           </ul>
         </div>
       </section>

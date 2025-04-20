@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | CSS Essentials - Module 4</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Essentials - Module 4</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Module 1</a>
+          </li>
+          <li>
+            <a href="module_2.html">Module 2</a>
+          </li>
+          <li>
+            <a href="module_3.html">Module 3</a>
+          </li>
+          <li>
+            <a href="module_4.html">Module 4</a>
+          </li>
+          <li>
+            <a href="module_5.html">Module 5</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="position">
+        <h2>CSS Position</h2>
+        <div class="content">
+          <p>
+            The <code>position</code> property specifies the type of positioning
+            method used for an element (static, relative, fixed, absolute or
+            sticky).
+          </p>
+          <p>
+            The <code>position</code> property can take the following values:
+          </p>
+          <ul>
+            <li>
+              <code>static</code>: Default value. Elements are positioned
+              according to the normal flow of the document.
+            </li>
+            <li>
+              <code>relative</code>: Element is positioned relative to its
+              normal position.
+            </li>
+            <li>
+              <code>absolute</code>: Element is positioned relative to its
+              nearest positioned ancestor (instead of positioned relative to the
+              viewport like fixed).
+            </li>
+            <li>
+              <code>fixed</code>: Element is positioned relative to the browser
+              window.
+            </li>
+            <li>
+              <code>sticky</code>: Element is positioned based on the user's
+              scroll position.
+            </li>
+          </ul>
+          <ul>
+            <h3>position: static;</h3>
+            <li style="list-style-type: none">
+              <p>HTML elements are positioned static by default.</p>
+              <p>
+                Static positioned elements are not affected by the top, bottom,
+                left, and right properties.
+              </p>
+              <p>
+                An element with <code>position: static;</code> is not positioned
+                in any special way; it is always positioned according to the
+                normal flow of the page.
+              </p>
+              <pre>e.g., <code>div.static {
+          position: static;
+          border: 3px solid black;
+        }
+                </code></pre>
+              <div style="position: static; border: 3px solid black">
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>position: relative;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: relative;</code> is positioned
+                relative to it's normal position.
+              </p>
+              <p>
+                Setting the top, right, bottom, and left properties of a
+                relatively-positioned element will cause it to be adjusted away
+                from its normal position. Other content will not be adjusted to
+                fit into any gap left by the element.
+              </p>
+              <pre>e.g., <code>div.relative {
+          position: relative;
+          left: 30px;
+          border: 3px solid black;
+              }
+              </code></pre>
+              <div
+                style="position: relative; left: 30px; border: 3px solid black"
+              >
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>position: fixed;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: fixed;</code> is positioned
+                relative to the viewport, which means it always stays in the
+                same place even if the page is scrolled. The top, right, bottom,
+                and left properties are used to position the element.
+              </p>
+              <p>
+                A fixed element does not leave a gap in the page where it would
+                normally have been located.
+              </p>
+              <pre>e.g., <code>div.fixed {
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          width: 300px;
+          border: 3px solid black;
+        }</code></pre>
+              <div
+                style="
+                  position: fixed;
+                  bottom: 0;
+                  right: 0;
+                  width: 300px;
+                  border: 3px solid black;
+                "
+              >
+                <p>Example of a fixed position element</p>
+              </div>
+            </li>
+            <h3>position: absolute;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: absolute;</code> is positioned
+                relative to the nearest positioned ancestor (instead of
+                positioned relative to the viewport, like fixed).
+              </p>
+              <p>
+                However; if an absolute positioned element has no positioned
+                ancestors, it uses the document body, and moves along with page
+                scrolling.
+              </p>
+              <pre>e.g., <code>div.absolute {
+          position: absolute;
+          top: 80px;
+          right: 0;
+          width: 200px;
+          height: 100px;
+          border: 3px solid black;
+        }
+              </code></pre>
+              <div style="position: relative; width: 400px; height: 200px">
+                <div
+                  style="
+                    position: absolute;
+                    top: 80px;
+                    right: 0;
+                    width: 200px;
+                    height: 100px;
+                    border: 3px solid black;
+                  "
+                >
+                  <p>Example</p>
+                </div>
+              </div>
+            </li>
+            <h3>position: sticky;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: sticky;</code> is positioned
+                based on the user's scroll position.
+              </p>
+              <p>
+                A sticky element toggles between <code>relative</code> and
+                <code>fixed</code>, depending on the scroll position. It is
+                positioned relative until a given offset position is met in the
+                viewport - then it "sticks" in place (like position:fixed).
+              </p>
+              <p>
+                <strong>Note:</strong> You must specify at least one of top,
+                right, bottom or left for sticky positioning to work.
+              </p>
+              <pre>e.g., <code>div.sticky {
+            position: sticky;
+            top: 0;
+            background-color: green;
+            border: 2px solid black;
+        }
+              </code></pre>
+
+              <div
+                style="
+                  position: sticky;
+                  bottom: 0;
+                  background-color: green;
+                  border: 2px solid black;
+                "
+              >
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>Positioning Text in an Image</h3>
+            <li style="list-style-type: none">
+              <p>How to position text over an image:</p>
+              <pre>e.g., <code>
+        .topleft {
+          position: absolute;
+          top: 8px;
+          left: 16px;
+          font-size: 18px;
+        }
+              </code>
+              <code>
+        .topright {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+              </code>
+            <code>
+        .bottomleft {
+          position: absolute;
+          bottom: 8px;
+          left: 16px;
+          font-size: 18px;
+        } 
+            </code>
+          <code>
+        .bottomright {
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+          </code>
+        <code>
+        .center {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          font-size: 18px;
+        }
+        </code></pre>
+            </li>
+            <h3>All CSS Positioning Properties</h3>
+            <li style="list-style-type: none">
+              <table>
+                <tbody>
+                  <tr>
+                    <th style="width: 20%">Property</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_pos_bottom.php"
+                        >bottom</a
+                      >
+                    </td>
+                    <td>Sets the bottom margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_clip.php"
+                        >clip</a
+                      >
+                    </td>
+                    <td>Clips an absolutely positioned element</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_left.php"
+                        >left</a
+                      >
+                    </td>
+                    <td>Sets the left margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_class_position.php"
+                        >position</a
+                      >
+                    </td>
+                    <td>Specifies the type of positioning for an element</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_pos_right.php"
+                        >right</a
+                      >
+                    </td>
+                    <td>Sets the right margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_top.php"
+                        >top</a
+                      >
+                    </td>
+                    <td>Sets the top margin edge for a positioned box</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="z-index">
+        <h2>CSS Z-Index</h2>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <p>
+                The <code>z-index</code> property specifies the stack order of
+                an element.
+              </p>
+              <p>
+                When elements are positioned, they can overlap other elements.
+              </p>
+              <p>
+                The <code>z-index</code> property specifies the stack order of
+                an element (which element should be placed in front of, or
+                behind, the others).
+              </p>
+              <p>An element can have a positive or negative stack order:</p>
+              <pre>e.g., <code>
+                img {
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  z-index: -1;
+                }
+              </code>
+              
+              </pre>
+              <div
+                class="w3-example w3-white"
+                style="position: relative; padding: 80px; margin-bottom: 120px"
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 30px;
+                    top: 15px;
+                    z-index: 0;
+                    height: 250px;
+                  "
+                  src="https://www.w3schools.com/css/img_tree.png"
+                />
+                <h1
+                  style="position: absolute; left: 35px; top: 15px; z-index: 0"
+                >
+                  This is a heading
+                </h1>
+
+                <p
+                  style="position: absolute; left: 35px; top: 65px; z-index: 0"
+                >
+                  Because the image has a z-index of -1, it will be placed
+                  behind the text.
+                </p>
+              </div>
+              <p>
+                <stong>Note:</stong> <code>z-index</code> only works on
+                positioned elements (position: absolute, position: relative,
+                position: fixed, or position: sticky) and flex items (elements
+                that are direct children of display: flex elements).
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="display">
+        <h2>CSS Display</h2>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <h3>The display Property</h3>
+              <p>
+                The <code>display</code> property is the most important CSS
+                property for controlling layout.
+              </p>
+              <p>
+                Every HTML element has a default display value, depending on
+                what type of element it is. The default display value for most
+                elements is <code>block</code> or <code>inline</code>.
+              </p>
+              <p>
+                The <code>display</code> property is used to change the default
+                display behavior of HTML elements.
+              </p>
+              <h3>Block Level Elements</h3>
+              <p>
+                A block-level element ALWAYS starts on a new line and takes up
+                the full width available (stretches out to the left and right as
+                far as it can).
+              </p>
+              <p>Examples of block-level elements</p>
+              <ul>
+                <li>&lt;div&gt;</li>
+                <li>&lt;h1&gt; - &lt;h6&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;form&gt;</li>
+                <li>&lt;header&gt;</li>
+                <li>&lt;footer&gt;</li>
+                <li>&lt;section&gt;</li>
+              </ul>
+            </li>
+            <h3>Inline Elements</h3>
+            <p>
+              An inline element DOES NOT start on a new line and only takes up
+              as much width as necessary.
+            </p>
+            <p>Examples of inline elements</p>
+            <ul>
+              <li>&lt;a&gt;</li>
+              <li>&lt;span&gt;</li>
+              <li>&lt;img&gt;</li>
+            </ul>
+            <h3>Display: none;</h3>
+            <p>
+              The <code>display: none;</code> is commonly used with JavaScript
+              to hide and show elements without deleting and recreating them.
+            </p>
+            <h3>Override The Default Display Value</h3>
+            <p>
+              As mentioned, every element has a default display value. However,
+              you can override this. Changing an inline element to a block
+              element, or vice versa, can be useful for making the page look a
+              specific way, and still follow the web standards. A common example
+              is making inline &lt;li&gt; elements for horizontal menus
+            </p>
+            <pre>e.g., <code>li {
+          display: inline;
+        }</code></pre>
+            <ul>
+              <li style="display: inline">
+                <a href="#">HTML</a>
+              </li>
+              <li style="display: inline">
+                <a href="#">CSS</a>
+              </li>
+              <li style="display: inline">
+                <a href="#">JavaScript</a>
+              </li>
+            </ul>
+            <h3>Hide an Element - display:none or visibility:hidden?</h3>
+            <p>
+              Hiding an element can be done by setting the display property to
+              none. The element will be hidden, and the page will be displayed
+              as if the element is not there:
+            </p>
+            <pre>e.g., <code>h1.hidden {
+        display: none;
+      }</code></pre>
+            <h3>CSS Display/Visibility Properties</h3>
+            <table class="ws-table-all notranslate">
+              <tbody>
+                <tr>
+                  <th style="width: 25%">Property</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      href="https://www.w3schools.com/cssref/pr_class_display.php"
+                      >display</a
+                    >
+                  </td>
+                  <td>Specifies how an element should be displayed</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a
+                      href="https://www.w3schools.com/cssref/pr_class_visibility.php"
+                      >visibility</a
+                    >
+                  </td>
+                  <td>Specifies whether or not an element should be visible</td>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </div>
+      </section>
+      <section id="max-width">
+        <h2>CSS Max-Width</h2>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <h3>Using width, max-width and margin: auto;</h3>
+              <p>
+                As mentioned in the previous chapter; a block-level element
+                always takes up the full width available (stretches out to the
+                left and right as far as it can). <br />Setting the
+                <code>width</code> of a block-level element will prevent it from
+                stretching out to the edges of its container. Then, you can set
+                the margins to auto, to horizontally center the element within
+                its container. The element will take up the specified width, and
+                the remaining space will be split equally between the two
+                margins:
+              </p>
+              <div style="width: 500px; margin: auto; border: 3px solid black">
+                <p>
+                  This &lt;div&gt; element has a width of 500px, and margin set
+                  to auto.
+                </p>
+              </div>
+              <p>
+                <strong>Note:</strong>The problem with the &lt;div&gt; above
+                occurs when the browser window is smaller than the width of the
+                element. The browser then adds a horizontal scrollbar to the
+                page.
+              </p>
+              <p>
+                Using <code>max-width</code> instead, in this situation, will
+                improve the browser's handling of small windows. This is
+                important when making a site usable on small devices:
+              </p>
+              <div
+                style="max-width: 500px; margin: auto; border: 3px solid black"
+              >
+                <p>
+                  This &lt;div&gt; element has a max-width of 500px, and margin
+                  set to auto.
+                </p>
+              </div>
+              <p>
+                <strong>Tip:</strong> Resize the browser window to less than
+                500px wide, to see the difference between the two divs!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="overflow">
+        <h2>CSS Overflow</h2>
+        <div class="content">
+          <ul>
+            <li style="list-style-type: none">
+              <p>
+                The CSS <code>overflow</code> property controls what happens to
+                content that is too big to fit into an area.
+              </p>
+              <p>
+                The <code>overflow</code> property specifies whether to clip the
+                content or to add scrollbars when the content of an element is
+                too big to fit in the specified area.
+              </p>
+              <p>
+                The <code>overflow</code> property has the following values:
+              </p>
+              <ul>
+                <li>
+                  <code>visible</code> - Default. The overflow is not clipped.
+                  The content renders outside the element's box
+                </li>
+                <li>
+                  <code>hidden</code> - The overflow is clipped, and the rest of
+                  the content will be invisible
+                </li>
+                <li>
+                  <code>scroll</code> - The overflow is clipped, and a scrollbar
+                  is added to see the rest of the content
+                </li>
+                <li>
+                  <code>auto</code> - Similar to scroll, but it adds scrollbars
+                  only when necessary
+                </li>
+              </ul>
+              <h3>overflow: visible</h3>
+              <p>
+                By default, the overflow is <code>visible</code>, meaning that
+                it is not clipped and it renders outside the element's box.
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: visible;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: visible;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  You can use the overflow property when you want to have better
+                  control of the layout. The overflow property specifies what
+                  happens if content overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: hidden</h3>
+              <p>
+                With the <code>hidden</code> value, the overflow is clipped, and
+                the rest of the content is hidden
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: hidden;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: hidden;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: scroll</h3>
+              <p>
+                Setting the value to <code>scroll</code>, the overflow is
+                clipped and a scrollbar is added to scroll inside the box. Note
+                that this will add a scrollbar both horizontally and vertically
+                (even if you do not need it):
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: scroll;
+              }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: scroll;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: auto</h3>
+              <p>
+                The <code>auto</code> value is similar to scroll, but it adds
+                scrollbars only when necessary
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: auto;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: auto;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow-x and overflow-y</h3>
+              <p>
+                The overflow-x and overflow-y properties specifies whether to
+                change the overflow of content just horizontally or vertically
+                (or both):
+              </p>
+
+              <p>
+                overflow-x specifies what to do with the left/right edges of the
+                content.
+              </p>
+              <p>
+                overflow-y specifies what to do with the top/bottom edges of the
+                content.
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

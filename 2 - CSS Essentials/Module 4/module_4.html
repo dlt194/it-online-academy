@@ -505,7 +505,49 @@
         <h2>CSS Max-Width</h2>
         <div class="content">
           <ul>
-            <li style="list-style-type: none"></li>
+            <li style="list-style-type: none">
+              <h3>Using width, max-width and margin: auto;</h3>
+              <p>
+                As mentioned in the previous chapter; a block-level element
+                always takes up the full width available (stretches out to the
+                left and right as far as it can). <br />Setting the
+                <code>width</code> of a block-level element will prevent it from
+                stretching out to the edges of its container. Then, you can set
+                the margins to auto, to horizontally center the element within
+                its container. The element will take up the specified width, and
+                the remaining space will be split equally between the two
+                margins:
+              </p>
+              <div style="width: 500px; margin: auto; border: 3px solid black">
+                <p>
+                  This &lt;div&gt; element has a width of 500px, and margin set
+                  to auto.
+                </p>
+              </div>
+              <p>
+                <strong>Note:</strong>The problem with the &lt;div&gt; above
+                occurs when the browser window is smaller than the width of the
+                element. The browser then adds a horizontal scrollbar to the
+                page.
+              </p>
+              <p>
+                Using <code>max-width</code> instead, in this situation, will
+                improve the browser's handling of small windows. This is
+                important when making a site usable on small devices:
+              </p>
+              <div
+                style="max-width: 500px; margin: auto; border: 3px solid black"
+              >
+                <p>
+                  This &lt;div&gt; element has a max-width of 500px, and margin
+                  set to auto.
+                </p>
+              </div>
+              <p>
+                <strong>Tip:</strong> Resize the browser window to less than
+                500px wide, to see the difference between the two divs!
+              </p>
+            </li>
           </ul>
         </div>
       </section>
@@ -513,7 +555,177 @@
         <h2>CSS Overflow</h2>
         <div class="content">
           <ul>
-            <li style="list-style-type: none"></li>
+            <li style="list-style-type: none">
+              <p>
+                The CSS <code>overflow</code> property controls what happens to
+                content that is too big to fit into an area.
+              </p>
+              <p>
+                The <code>overflow</code> property specifies whether to clip the
+                content or to add scrollbars when the content of an element is
+                too big to fit in the specified area.
+              </p>
+              <p>
+                The <code>overflow</code> property has the following values:
+              </p>
+              <ul>
+                <li>
+                  <code>visible</code> - Default. The overflow is not clipped.
+                  The content renders outside the element's box
+                </li>
+                <li>
+                  <code>hidden</code> - The overflow is clipped, and the rest of
+                  the content will be invisible
+                </li>
+                <li>
+                  <code>scroll</code> - The overflow is clipped, and a scrollbar
+                  is added to see the rest of the content
+                </li>
+                <li>
+                  <code>auto</code> - Similar to scroll, but it adds scrollbars
+                  only when necessary
+                </li>
+              </ul>
+              <h3>overflow: visible</h3>
+              <p>
+                By default, the overflow is <code>visible</code>, meaning that
+                it is not clipped and it renders outside the element's box.
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: visible;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: visible;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  You can use the overflow property when you want to have better
+                  control of the layout. The overflow property specifies what
+                  happens if content overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: hidden</h3>
+              <p>
+                With the <code>hidden</code> value, the overflow is clipped, and
+                the rest of the content is hidden
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: hidden;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: hidden;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: scroll</h3>
+              <p>
+                Setting the value to <code>scroll</code>, the overflow is
+                clipped and a scrollbar is added to scroll inside the box. Note
+                that this will add a scrollbar both horizontally and vertically
+                (even if you do not need it):
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: scroll;
+              }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: scroll;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow: auto</h3>
+              <p>
+                The <code>auto</code> value is similar to scroll, but it adds
+                scrollbars only when necessary
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow: auto;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow: auto;
+                  margin-bottom: 120px;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+              <h3>overflow-x and overflow-y</h3>
+              <p>
+                The overflow-x and overflow-y properties specifies whether to
+                change the overflow of content just horizontally or vertically
+                (or both):
+              </p>
+
+              <p>
+                overflow-x specifies what to do with the left/right edges of the
+                content.
+              </p>
+              <p>
+                overflow-y specifies what to do with the top/bottom edges of the
+                content.
+              </p>
+              <pre>e.g., <code>div {
+        width: 200px;
+        height: 65px;
+        background-color: coral;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }</code></pre>
+              <div
+                style="
+                  width: 200px;
+                  height: 65px;
+                  background-color: coral;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                "
+              >
+                <p>
+                  The overflow property specifies what happens if content
+                  overflows an element's box
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>

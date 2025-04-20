@@ -34,8 +34,292 @@
       <section id="position">
         <h2>CSS Position</h2>
         <div class="content">
+          <p>
+            The <code>position</code> property specifies the type of positioning
+            method used for an element (static, relative, fixed, absolute or
+            sticky).
+          </p>
+          <p>
+            The <code>position</code> property can take the following values:
+          </p>
           <ul>
-            <li style="list-style-type: none"></li>
+            <li>
+              <code>static</code>: Default value. Elements are positioned
+              according to the normal flow of the document.
+            </li>
+            <li>
+              <code>relative</code>: Element is positioned relative to its
+              normal position.
+            </li>
+            <li>
+              <code>absolute</code>: Element is positioned relative to its
+              nearest positioned ancestor (instead of positioned relative to the
+              viewport like fixed).
+            </li>
+            <li>
+              <code>fixed</code>: Element is positioned relative to the browser
+              window.
+            </li>
+            <li>
+              <code>sticky</code>: Element is positioned based on the user's
+              scroll position.
+            </li>
+          </ul>
+          <ul>
+            <h3>position: static;</h3>
+            <li style="list-style-type: none">
+              <p>HTML elements are positioned static by default.</p>
+              <p>
+                Static positioned elements are not affected by the top, bottom,
+                left, and right properties.
+              </p>
+              <p>
+                An element with <code>position: static;</code> is not positioned
+                in any special way; it is always positioned according to the
+                normal flow of the page.
+              </p>
+              <pre>e.g., <code>div.static {
+          position: static;
+          border: 3px solid black;
+        }
+                </code></pre>
+              <div style="position: static; border: 3px solid black">
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>position: relative;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: relative;</code> is positioned
+                relative to it's normal position.
+              </p>
+              <p>
+                Setting the top, right, bottom, and left properties of a
+                relatively-positioned element will cause it to be adjusted away
+                from its normal position. Other content will not be adjusted to
+                fit into any gap left by the element.
+              </p>
+              <pre>e.g., <code>div.relative {
+          position: relative;
+          left: 30px;
+          border: 3px solid black;
+              }
+              </code></pre>
+              <div
+                style="position: relative; left: 30px; border: 3px solid black"
+              >
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>position: fixed;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: fixed;</code> is positioned
+                relative to the viewport, which means it always stays in the
+                same place even if the page is scrolled. The top, right, bottom,
+                and left properties are used to position the element.
+              </p>
+              <p>
+                A fixed element does not leave a gap in the page where it would
+                normally have been located.
+              </p>
+              <pre>e.g., <code>div.fixed {
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          width: 300px;
+          border: 3px solid black;
+        }</code></pre>
+              <div
+                style="
+                  position: fixed;
+                  bottom: 0;
+                  right: 0;
+                  width: 300px;
+                  border: 3px solid black;
+                "
+              >
+                <p>Example of a fixed position element</p>
+              </div>
+            </li>
+            <h3>position: absolute;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: absolute;</code> is positioned
+                relative to the nearest positioned ancestor (instead of
+                positioned relative to the viewport, like fixed).
+              </p>
+              <p>
+                However; if an absolute positioned element has no positioned
+                ancestors, it uses the document body, and moves along with page
+                scrolling.
+              </p>
+              <pre>e.g., <code>div.absolute {
+          position: absolute;
+          top: 80px;
+          right: 0;
+          width: 200px;
+          height: 100px;
+          border: 3px solid black;
+        }
+              </code></pre>
+              <div style="position: relative; width: 400px; height: 200px">
+                <div
+                  style="
+                    position: absolute;
+                    top: 80px;
+                    right: 0;
+                    width: 200px;
+                    height: 100px;
+                    border: 3px solid black;
+                  "
+                >
+                  <p>Example</p>
+                </div>
+              </div>
+            </li>
+            <h3>position: sticky;</h3>
+            <li style="list-style-type: none">
+              <p>
+                An element with <code>position: sticky;</code> is positioned
+                based on the user's scroll position.
+              </p>
+              <p>
+                A sticky element toggles between <code>relative</code> and
+                <code>fixed</code>, depending on the scroll position. It is
+                positioned relative until a given offset position is met in the
+                viewport - then it "sticks" in place (like position:fixed).
+              </p>
+              <p>
+                <strong>Note:</strong> You must specify at least one of top,
+                right, bottom or left for sticky positioning to work.
+              </p>
+              <pre>e.g., <code>div.sticky {
+            position: sticky;
+            top: 0;
+            background-color: green;
+            border: 2px solid black;
+        }
+              </code></pre>
+
+              <div
+                style="
+                  position: sticky;
+                  bottom: 0;
+                  background-color: green;
+                  border: 2px solid black;
+                "
+              >
+                <p>Example</p>
+              </div>
+            </li>
+            <h3>Positioning Text in an Image</h3>
+            <li style="list-style-type: none">
+              <p>How to position text over an image:</p>
+              <pre>e.g., <code>
+        .topleft {
+          position: absolute;
+          top: 8px;
+          left: 16px;
+          font-size: 18px;
+        }
+              </code>
+              <code>
+        .topright {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+              </code>
+            <code>
+        .bottomleft {
+          position: absolute;
+          bottom: 8px;
+          left: 16px;
+          font-size: 18px;
+        } 
+            </code>
+          <code>
+        .bottomright {
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+          font-size: 18px;
+        }
+          </code>
+        <code>
+        .center {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          font-size: 18px;
+        }
+        </code></pre>
+            </li>
+            <h3>All CSS Positioning Properties</h3>
+            <li style="list-style-type: none">
+              <table>
+                <tbody>
+                  <tr>
+                    <th style="width: 20%">Property</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_pos_bottom.php"
+                        >bottom</a
+                      >
+                    </td>
+                    <td>Sets the bottom margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_clip.php"
+                        >clip</a
+                      >
+                    </td>
+                    <td>Clips an absolutely positioned element</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_left.php"
+                        >left</a
+                      >
+                    </td>
+                    <td>Sets the left margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_class_position.php"
+                        >position</a
+                      >
+                    </td>
+                    <td>Specifies the type of positioning for an element</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="https://www.w3schools.com/cssref/pr_pos_right.php"
+                        >right</a
+                      >
+                    </td>
+                    <td>Sets the right margin edge for a positioned box</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="https://www.w3schools.com/cssref/pr_pos_top.php"
+                        >top</a
+                      >
+                    </td>
+                    <td>Sets the top margin edge for a positioned box</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
           </ul>
         </div>
       </section>

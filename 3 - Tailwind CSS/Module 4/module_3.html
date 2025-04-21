@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | Tailwind CSS - Module 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="bg-neutral-500 p-1">
+      <h1 class="text-white text-xl font-bold">Tailwind CSS</h1>
+      <div class="flex m-2 p-2">
+        <a
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
+          href="index.html"
+          >Module 1</a
+        >
+
+        <a
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
+          href="module_2.html"
+          >Module 2</a
+        >
+
+        <a
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl active: underline"
+          href="module_3.html"
+          >Module 3</a
+        >
+        <a
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
+          href="module_4.html"
+          >Module 4</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section id="layouts">
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          3.1 Layouts and Components
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2">
+            <strong>Flexbox & Grids</strong> function the same as they do in
+            normal CSS however, they use slightly different syntax
+          </p>
+          <div class="grid grid-cols-3">
+            <div class="border border-black-500 p-4 m-1 rounded-md">
+              <p class="font-medium underline">Flexbox</p>
+              <pre><code>&lt;div class="flex"&gt;
+  &lt;div class="flex-1"&gt;&lt;/div&gt;
+  &lt;div class="flex-2"&gt;&lt;/div&gt;
+  &lt;div class="flex-3"&gt;&lt;/div&gt;
+  &lt;div class="flex-4"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="border border-black-500 p-4 m-1 rounded-md">
+              <p class="font-medium underline">Grid with 3 Cols</p>
+              <pre><code>&lt;div class="grid grid-cols-3"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+            </div>
+            <div class="border border-black-500 p-4 m-1 rounded-md">
+              <p class="font-medium underline">Grid with 3 Rows</p>
+              <pre><code>&lt;div class="grid grid-rows-3"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="nav">
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          3.2 Creating a Navbar
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2">
+            A navbar is a common component in web design. It allows users to
+            navigate between different sections of a website. In Tailwind CSS,
+            we can create a simple navbar using utility classes.
+          </p>
+          <div class="border border-black-500 p-4 m-1 rounded-md">
+            <p class="font-medium underline">Navbar</p>
+            <pre><code>&lt;div class="flex justify-center"&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Home&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;About&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Contact&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Gallery&lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <div class="flex justify-center bg-stone-300">
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >About</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Gallery</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery">
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          Creating a Gallery
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2">
+            We can use a
+            <code class="text-sm text-red-500 font-mono bg-yellow-50"
+              >grid</code
+            >
+            to create a simple gallery.
+          </p>
+          <div class="border border-black-500 p-4 m-1 rounded-md">
+            <p class="font-medium underline">Gallery</p>
+            <pre><code>&lt;div class="mx-10 my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1"&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_1.jpg"
+  alt="image_1"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_2.jpg"
+  alt="image_2"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_3.jpg"
+  alt="image_3"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_4.jpg"
+  alt="image_4"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_5.jpg"
+  alt="image_5"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_6.jpg"
+  alt="image_6"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_7.jpg"
+  alt="image_7"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_8.jpg"
+  alt="image_8"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_9.jpg"
+  alt="image_9"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_10.jpg"
+  alt="image_10"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_11.jpg"
+  alt="image_11"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_12.jpg"
+  alt="image_12"
+/&gt;
+&lt;/div&gt;
+            </code></pre>
+            <div
+              class="mx-10 my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1"
+            >
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_1.jpg"
+                alt="image_1"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_2.jpg"
+                alt="image_2"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_3.jpg"
+                alt="image_3"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_4.jpg"
+                alt="image_4"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_5.jpg"
+                alt="image_5"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_6.jpg"
+                alt="image_6"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_7.jpg"
+                alt="image_7"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_8.jpg"
+                alt="image_8"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_9.jpg"
+                alt="image_9"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_10.jpg"
+                alt="image_10"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_11.jpg"
+                alt="image_11"
+              />
+              <img
+                class="w-[30vw] h-[100px] object-cover"
+                src="assets/images/image_12.jpg"
+                alt="image_12"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="config">
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          What is the Config?
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2">
+            It is for configuring the settings of your programme. In Tailwind we
+            can use our config to futher customise our utilites and components.
+          </p>
+          <div class="border border-black-500 p-4 m-1 rounded-md">
+            <p class="font-medium underline">Config</p>
+            <pre><code>&lt;script&gt;
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                'clifford': '#da373d',
+            },
+        },
+    },
+};
+&lt;/script&gt;
+
+&lt;div class="bg-clifford text-white"&gt;&lt;/div&gt;
+</code></pre>
+            <div class="bg-[#da373d] text-white">Example</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="fixed bottom-0 bg-neutral-500 p-1 w-full text-center text-white"
+    >
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DLT | Tailwind CSS - Module 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="bg-emerald-400 p-1">
+      <h1 class="text-white text-xl font-bold">Tailwind CSS</h1>
+      <nav>
+        <a
+          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          href="index.html"
+          >Module 1</a
+        >
+
+        <a
+          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          href="module_2.html"
+          >Module 2</a
+        >
+
+        <a
+          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          href="module_3.html"
+          >Module 3</a
+        >
+        <a
+          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          href="module_4.html"
+          >Module 4</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section id="basics">
+        <h2>2.1 The Basics</h2>
+        <div class="content">
+          <p>
+            A Utility first approach is instead of using individual classes for
+            each element, we use a utility class. This is a class named in our
+            markup which allows us to control our style, while being quick and
+            efficient.
+          </p>
+        </div>
+      </section>
+      <section id="core">
+        <h2>2.2 Core Utility Components</h2>
+        <div class="content">
+          <p>
+            Tailwind uses a <strong>shorthand syntax</strong> as opposed to
+            Regular CSS. Making it easier to change and create styling.
+          </p>
+          <pre>e.g., 
+    Regular CSS: <code>.container { display: flexbox; background-color: #2980B9; padding: 2px; margin: 2px;}</code>
+    Tailwind CSS: <code>&lt;div&gt; class='flex bg-blue-500 p-2 m2'&lt;div&gt;</code></pre>
+        </div>
+      </section>
+      <section id="responsiveness">
+        <h2>2.3 Responsive Design Principles</h2>
+        <div class="content">
+          <p>
+            Tailwind has desing utilities that make
+            <strong>responsive design</strong> a lot more attainable and
+            intuitive than CSS.
+          </p>
+          <p>
+            We can use elements like
+            <strong>sm, md, lg, xl and 2-10xl</strong> to denote which screen
+            type we will be using. Allowing consistent and flexible designs.
+          </p>
+          <p>640px -> <code>sm</code></p>
+          <p>768px -> <code>md</code></p>
+          <p>1024px -> <code>lg</code></p>
+          <p>1280px -> <code>xl</code></p>
+          <pre>e.g., <code>&lt;div&gt;class='text-xl text-blue-400 sm:text-red-500 md:text-green-500'&lt;/div&gt;</code></pre>
+          <div class="text-xl text-blue-400 sm:text-red-500 md:text-green-500">
+            Example Text
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

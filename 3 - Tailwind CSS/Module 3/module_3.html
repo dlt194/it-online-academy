@@ -9,30 +9,30 @@
   <body>
     <header class="bg-neutral-500 p-1">
       <h1 class="text-white text-xl font-bold">Tailwind CSS</h1>
-      <nav class="m-2 p-2">
+      <div class="flex m-2 p-2">
         <a
-          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
           href="index.html"
           >Module 1</a
         >
 
         <a
-          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
           href="module_2.html"
           >Module 2</a
         >
 
         <a
-          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl active: underline"
           href="module_3.html"
           >Module 3</a
         >
         <a
-          class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
+          class="m-1 text-white p-0.5 block text-md sm:inline sm: text-xl"
           href="#"
           >Module 4</a
         >
-      </nav>
+      </div>
     </header>
 
     <main>
@@ -80,7 +80,44 @@
           3.2 Creating a Navbar
         </h2>
         <div class="p-4 m-4">
-          <p class="p-2"></p>
+          <p class="p-2">
+            A navbar is a common component in web design. It allows users to
+            navigate between different sections of a website. In Tailwind CSS,
+            we can create a simple navbar using utility classes.
+          </p>
+          <div class="border border-black-500 p-1 m-1 rounded-md">
+            <p class="font-medium underline">Navbar</p>
+            <pre><code>&lt;div class="flex justify-center"&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Home&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;About&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Contact&lt;/a&gt;
+  &lt;a href='#' class='m-1 p-1 rounded-md bg-green-400 hover: underline hover:bg-blue-500'&gt;Gallery&lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+
+            <div class="flex justify-center bg-stone-300">
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >About</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="m-1 p-1 rounded-md bg-green-400 hover:underline hover:bg-blue-500"
+                >Gallery</a
+              >
+            </div>
+          </div>
         </div>
       </section>
       <section id="gallery">

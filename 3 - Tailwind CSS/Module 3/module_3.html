@@ -7,9 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <header class="bg-emerald-400 p-1">
+    <header class="bg-neutral-500 p-1">
       <h1 class="text-white text-xl font-bold">Tailwind CSS</h1>
-      <nav>
+      <nav class="m-2 p-2">
         <a
           class="m-1 border text-emerald-900 bg-emerald-200 rounded boarder-emerald-700 p-0.5 block text-md sm:inline sm: text-xl"
           href="index.html"
@@ -37,27 +37,66 @@
 
     <main>
       <section id="layouts">
-        <h2>3.1 Layouts and Components</h2>
-        <div class="content">
-          <p></p>
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          3.1 Layouts and Components
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2">
+            <strong>Flexbox & Grids</strong> function the same as they do in
+            normal CSS however, they use slightly different syntax
+          </p>
+          <div class="grid grid-cols-3">
+            <div class="border border-black-500 p-1 m-1 rounded-md">
+              <p class="font-medium underline">Flexbox</p>
+              <pre><code>&lt;div class="flex"&gt;
+  &lt;div class="flex-1"&gt;&lt;/div&gt;
+  &lt;div class="flex-2"&gt;&lt;/div&gt;
+  &lt;div class="flex-3"&gt;&lt;/div&gt;
+  &lt;div class="flex-4"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="border border-black-500 p-1 m-1 rounded-md">
+              <p class="font-medium underline">Grid with 3 Cols</p>
+              <pre><code>&lt;div class="grid grid-cols-3"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+            </div>
+            <div class="border border-black-500 p-1 m-1 rounded-md">
+              <p class="font-medium underline">Grid with 3 Rows</p>
+              <pre><code>&lt;div class="grid grid-rows-3"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
         </div>
       </section>
       <section id="nav">
-        <h2>3.2 Creating a Navbar</h2>
-        <div class="content">
-          <p></p>
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          3.2 Creating a Navbar
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2"></p>
         </div>
       </section>
       <section id="gallery">
-        <h2>Creating a Gallery</h2>
-        <div class="content">
-          <p></p>
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          Creating a Gallery
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2"></p>
         </div>
       </section>
       <section id="config">
-        <h2>What is the Config?</h2>
-        <div class="content">
-          <p></p>
+        <h2 class="bg-neutral-200 p-2 m-2 rounded-lg font-bold">
+          What is the Config?
+        </h2>
+        <div class="p-4 m-4">
+          <p class="p-2"></p>
         </div>
       </section>
     </main>

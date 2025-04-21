@@ -33,7 +33,104 @@
     <main>
       <section id="layout">
         <h2>CSS Layout-Float & Clear</h2>
-        <div class="content"></div>
+        <div class="content">
+          <p>
+            The CSS <code>float</code> property specifies how an element should
+            float.
+          </p>
+          <p>
+            The CSS <code>clear</code> property specifies what elements can
+            float beside the cleared element and on which side.
+          </p>
+          <h3>The float Property</h3>
+          <p>
+            The float property is used for positioning and formatting content
+            e.g. let an image float left to the text in a container.
+          </p>
+
+          <p>The float property can have one of the following values:</p>
+          <ul>
+            <li>
+              <code>left</code> - The element floats to the left of its
+              container
+            </li>
+            <li>
+              <code>right</code> - The element floats to the right of its
+              container
+            </li>
+            <li>
+              <code>none</code> - The element does not float (will be displayed
+              just where it occurs in the text). This is default
+            </li>
+            <li>
+              <code>inherit</code>The element inherits the float value of its
+              parent
+            </li>
+          </ul>
+          <p>
+            In its simplest use, <code>float</code> property can be used to wrap
+            text around images.
+          </p>
+          <pre>e.g., <code>img {float: right;}</code></pre>
+          <div
+            style="border: 1px solid black; padding: 8px 16px; overflow: auto"
+          >
+            <p>
+              <img
+                src="https://www.w3schools.com/css/pineapple.jpg"
+                alt="Pineapple"
+                style="
+                  width: 170px;
+                  height: 170px;
+                  float: right;
+                  margin-left: 15px;
+                  margin-bottom: 10px;
+                "
+              />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              nostrum reprehenderit natus ipsum soluta in repellendus quae sint
+              quaerat aperiam ullam, architecto veritatis! Voluptates distinctio
+              aperiam atque repudiandae. Expedita, sed! Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Nobis illo necessitatibus et
+              vel, quasi excepturi. Modi, unde eum porro nostrum accusamus eius
+              dicta, iste nobis dolorum dolor, enim corrupti reiciendis? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+              tempora, molestiae odit minima mollitia sit possimus eum hic, ab
+              quam deleniti quis repellat! Officia assumenda nobis quae, ipsam
+              facilis sequi. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Quisquam quod tenetur quis et. Ipsa ipsam ducimus quibusdam
+              cumque incidunt, sint veritatis ullam itaque aut quasi
+              exercitationem earum voluptatibus doloremque dolores.
+            </p>
+          </div>
+
+          <h3>The clear Property</h3>
+          <p>
+            When we use the <code>float</code> property, and we want the next
+            element below (not on right or left), we will have to use the
+            <code>clear</code> property.
+          </p>
+          <p>
+            The clear property specifies what should happen with the element
+            that is next to a floating element.
+          </p>
+          <ul>
+            <p>The clear property can have one of the following values:</p>
+            <li>
+              none - The element is not pushed below left or right floated
+              elements. This is default
+            </li>
+            <li>left - The element is pushed below left floated elements</li>
+            <li>right - The element is pushed below right floated elements</li>
+            <li>
+              both - The element is pushed below both left and right floated
+              elements
+            </li>
+            <li>
+              inherit - The element inherits the clear value from its parent
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="combinations">
         <h2>CSS Combinations</h2>

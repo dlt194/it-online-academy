@@ -135,6 +135,69 @@
           </p>
           <div class="border border-black-500 p-4 m-1 rounded-md">
             <p class="font-medium underline">Gallery</p>
+            <pre><code>&lt;div class="mx-10 my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1"&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_1.jpg"
+  alt="image_1"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_2.jpg"
+  alt="image_2"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_3.jpg"
+  alt="image_3"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_4.jpg"
+  alt="image_4"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_5.jpg"
+  alt="image_5"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_6.jpg"
+  alt="image_6"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_7.jpg"
+  alt="image_7"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_8.jpg"
+  alt="image_8"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_9.jpg"
+  alt="image_9"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_10.jpg"
+  alt="image_10"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_11.jpg"
+  alt="image_11"
+/&gt;
+&lt;img
+  class="w-[30vw] h-[100px] object-cover"
+  src="assets/images/image_12.jpg"
+  alt="image_12"
+/&gt;
+&lt;/div&gt;
+            </code></pre>
             <div
               class="mx-10 my-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1"
             >
@@ -207,11 +270,34 @@
           What is the Config?
         </h2>
         <div class="p-4 m-4">
-          <p class="p-2"></p>
+          <p class="p-2">
+            It is for configuring the settings of your programme. In Tailwind we
+            can use our config to futher customise our utilites and components.
+          </p>
+          <div class="border border-black-500 p-4 m-1 rounded-md">
+            <p class="font-medium underline">Config</p>
+            <pre><code>&lt;script&gt;
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                'clifford': '#da373d',
+            },
+        },
+    },
+};
+&lt;/script&gt;
+
+&lt;div class="bg-clifford text-white"&gt;&lt;/div&gt;
+</code></pre>
+            <div class="bg-[#da373d] text-white">Example</div>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer
+      class="fixed bottom-0 bg-neutral-500 p-1 w-full text-center text-white"
+    >
       <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
     </footer>
   </body>

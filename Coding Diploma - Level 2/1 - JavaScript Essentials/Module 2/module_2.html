@@ -6,6 +6,7 @@
     <title>JavaScript Essentials - Module 2</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/first-javascript.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
@@ -50,7 +51,34 @@
         <h2 class="text-xl font-semibold border-b pb-2">
           Your First JavaScript
         </h2>
-        <div class="prose max-w-none"></div>
+        <div class="prose max-w-none">
+          <p id="myParagraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sint
+            magni reiciendis quibusdam aut tenetur obcaecati repudiandae velit
+            amet nesciunt temporibus dolorum fugit, molestiae repellendus ab
+            perspiciatis incidunt odio saepe?
+          </p>
+          <br />
+          <button
+            class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+            onclick="changeText()"
+          >
+            Click Me
+          </button>
+          <br />
+          <code>
+            <pre>
+              
+function changeText() {
+  var paragraph = document.getElementById("myParagraph");
+  var newContent =
+    "This is the new text! You can see that the text has changed.";
+
+  paragraph.innerHTML = newContent;
+}
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

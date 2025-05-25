@@ -294,7 +294,71 @@ console.log(myArray.length); // Output: 5
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Loops are used to execute a block of code repeatedly until a
+            specified condition is met. The most common types of loops in
+            JavaScript are 'for', 'while', and 'do...while'.
+          </p>
+          <br />
+          <p>
+            Below is an example of some code that can easily be simplified with
+            a loop.
+          </p>
+          <br />
+          <code>
+            <pre>
+const library = [
+  "Lord of the Rings",
+  "Harry Potter",
+  "The Hobbit",
+  "Pride and Prejudice",
+  "To Kill a Mockingbird",
+  "1984",
+]
+
+let text = "";
+
+text = text + library[0] + "&lt;br&gt;";
+text = text + library[1] + "&lt;br&gt;";
+text = text + library[2] + "&lt;br&gt;";
+text = text + library[3] + "&lt;br&gt;";
+text = text + library[4] + "&lt;br&gt;";
+text = text + library[5] + "&lt;br&gt;";
+
+document.getElementById("demo").innerHTML = text;
+
+            </pre>
+          </code>
+          <br />
+          <p>
+            This code can be simplified using a loop to iterate through the
+            array and display each book title.
+          </p>
+          <br />
+          <code>
+            <pre>
+const library = [
+  "Lord of the Rings",
+  "Harry Potter",
+  "The Hobbit",
+  "Pride and Prejudice",
+  "To Kill a Mockingbird",
+  "1984",
+];
+let text = "";
+for (let i = 0; i &lt; library.length; i++) {
+  text += library[i] + "&lt;br&gt;";
+}
+document.getElementById("demo").innerHTML = text;
+            </pre>
+          </code>
+          <p>
+            In this example, the 'for' loop iterates through each element in the
+            'library' array and appends it to the 'text' variable, which is then
+            displayed in the HTML element with the ID "demo".
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Comments</h2>

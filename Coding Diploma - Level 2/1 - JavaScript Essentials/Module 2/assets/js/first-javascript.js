@@ -5,3 +5,7 @@ function changeText() {
 
   paragraph.innerHTML = newContent;
 }
+
+function helloWorld() {
+  window.alert("Hello, World!");
+}

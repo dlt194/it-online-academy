@@ -84,7 +84,62 @@ function changeText() {
         <h2 class="text-xl font-semibold border-b pb-2">
           Objects, Methods, Properties & Functions
         </h2>
-        <div class="prose max-w-none"></div>
+        <div class="prose max-w-none">
+          <p>3 of the most common objects in JavaScript are:</p>
+          <ul class="list-disc pl-6">
+            <li>Window</li>
+            <li>Document</li>
+            <li>Console</li>
+          </ul>
+          <br />
+          <p>
+            Window is the global object in JavaScript, it represents the browser
+            window. The document object represents the HTML document loaded in
+            the browser, and the console object provides access to the browser's
+            debugging console.
+          </p>
+          <p>To access the window object, you can use the `window` keyword.</p>
+          <br />
+          <code>
+            <pre>
+window.alert("Hello, World!");
+            </pre>
+          </code>
+          <p>
+            This code will display an alert box with the message "Hello, World!"
+            in the browser.
+          </p>
+          <br />
+          <button
+            class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+            onclick="helloWorld()"
+          >
+            Click Me
+          </button>
+          <br />
+          <br />
+          <p>
+            The window object has various properties. A good example of this
+            would be onload, which is an event handler that triggers when the
+            page is loaded.
+          </p>
+          <br />
+          <code>
+            <pre>
+window.onload = function() {
+  console.log("Page is loaded!");
+};
+            </pre>
+          </code>
+          <p>
+            This code will log "Page is loaded!" to the console when the page
+            finishes loading.
+          </p>
+          <p>
+            This would be considered an anonymous function. This is because it
+            does not have a defined name, it runs in the background.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

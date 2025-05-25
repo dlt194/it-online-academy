@@ -243,7 +243,52 @@ switch (myName) {
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Arrays</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Arrays are used to store multiple values in a single variable. They
+            can hold different types of data, including numbers, strings, and
+            objects. In JavaScript, you can create an array using square
+            brackets [].
+          </p>
+          <br />
+          <code>
+            <pre>
+let myArray = [1, 2, 3, 4, 5];
+let myArray = ["apple", "banana", "orange"];
+let myArray = [1, "apple", true, { name: "Dan" }];
+            </pre>
+          </code>
+          <p>
+            You can access elements in an array using their index, which starts
+            at 0. For example, myArray[0] will give you the first element of the
+            array.
+          </p>
+          <br />
+          <code>
+            <pre>
+console.log(myArray[0]); // Output: 1
+console.log(myArray[1]); // Output: 2
+console.log(myArray[2]); // Output: 3
+            </pre>
+          </code>
+          <p>
+            You can also use methods like push() to add elements to the end of
+            the array, pop() to remove the last element, and length to get the
+            number of elements in the array.
+          </p>
+          <br />
+          <code>
+            <pre>
+myArray.push(6); // Adds 6 to the end of the array
+myArray.pop(); // Removes the last element (5)
+console.log(myArray.length); // Output: 5
+            </pre>
+          </code>
+          <p>
+            Arrays are versatile and can be used to store lists, collections,
+            and more complex data structures.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>

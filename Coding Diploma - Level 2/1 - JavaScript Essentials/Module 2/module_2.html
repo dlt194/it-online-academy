@@ -86,7 +86,7 @@ function changeText() {
         </h2>
         <div class="prose max-w-none">
           <p>3 of the most common objects in JavaScript are:</p>
-          <ul class="list-disc pl-6">
+          <ul class="list-['-_'] pl-6">
             <li>Window</li>
             <li>Document</li>
             <li>Console</li>
@@ -145,7 +145,51 @@ window.onload = function() {
         <h2 class="text-xl font-semibold border-b pb-2">
           Variables & Data Types
         </h2>
-        <div class="prose max-w-none"></div>
+        <div class="prose max-w-none">
+          <p>
+            Variables are used to store data in JavaScript. They can hold
+            different types of values, such as numbers, strings, booleans, and
+            objects. In JavaScript, you can declare variables using the 'var',
+            'let', or 'const' keywords.
+          </p>
+          <br />
+          <ul class="list-['-_'] pl-6">
+            <li>
+              var: Used to declare a variable that can be reassigned later. It
+              has function scope.
+            </li>
+            <li>
+              let: Used to declare a block-scoped variable that can be
+              reassigned. It is preferred over 'var' for block scope.
+            </li>
+            <li>
+              const: Used to declare a block-scoped variable that cannot be
+              reassigned. It is used for constants.
+            </li>
+          </ul>
+          <br />
+          <code>
+            <pre>
+var myAge;
+var myAge = 30;
+var x = 10;
+var charaterName = "Sponge";
+var isRaining = false;
+
+let myAge;
+let myAge = 30;
+let x = 10;
+let charaterName = "Sponge";
+let isRaining = false;
+
+const myAge;
+const myAge = 30;
+const x = 10;
+const charaterName = "Sponge";
+const isRaining = false;
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

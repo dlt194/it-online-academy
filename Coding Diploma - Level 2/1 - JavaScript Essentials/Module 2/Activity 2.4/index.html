@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Activity 2.3: Log some information to the console of the web browser
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body>
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Hello World!</h2>
+        <div class="prose max-w-none">
+          <p id="paragraphToChange">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+            fugiat quidem tenetur, odit nobis id dolores labore animi unde
+            assumenda? Cupiditate sed ullam voluptatum in nesciunt nihil quasi
+            molestiae distinctio?
+          </p>
+          <br />
+          <button
+            class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+            onclick="changeText()"
+          >
+            Click Me
+          </button>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          This section will be targeted in my JavaScript to practice syntax
+        </h2>
+        <div class="prose max-w-none">
+          <p id="syntaxTarget"></p>
+        </div>
+        <br />
+        <button
+          class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+          onclick="syntaxPractice()"
+        >
+          Click Me
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

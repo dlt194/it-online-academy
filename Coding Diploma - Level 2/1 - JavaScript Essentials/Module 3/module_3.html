@@ -158,11 +158,57 @@ const chest = {
         <h2 class="text-xl font-semibold border-b pb-2">
           Accessing Objects and their Properties
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            In JavaScript when we want to work with an object, all we need to do
+            is call it's name (once it has been defined).
+          </p>
+          <br />
+          <p>For example</p>
+          <code>
+            <pre>
+const character = {
+  hairColour: "brown",
+  eyeColour: "blue",
+  clothesColour: "red",
+  goldCoins: 0,
+  isDead: false,
+  position: {
+    x: 0,
+    y: 0,
+  },
+  hasKey: true,
+  inventory: ["sword", "shield", "potion"],
+};
+
+console.log(character.hairColour); // Outputs: brown
+            </pre>
+          </code>
+          <p>
+            In the example above, we access the 'hairColour' property of the
+            'character' object using dot notation. We can also use bracket
+            notation to access properties dynamically.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Object Methods</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            When a function is associated with an object, it's called a method.
+            Methods are useful for performing actions related to the object.
+          </p>
+          <br />
+          <code>
+            <pre>
+let object = {
+  method: function (parameter1, parameter2) {
+    // Function block
+  }
+}
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Object Classes</h2>

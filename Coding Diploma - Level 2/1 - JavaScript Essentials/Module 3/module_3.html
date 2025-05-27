@@ -53,19 +53,106 @@
             utilize methods. Additionally, we will discuss object classes and
             modular JavaScript practices.
           </p>
+          <br />
+          <p>
+            Here is an example of a simple object representing some products:
+          </p>
+          <code>
+            <pre>
+const products = [
+  {
+    name: "Product 1",
+    price: 10,
+    description: "Description of Product 1",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 2",
+    price: 20,
+    description: "Description of Product 2",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 3",
+    price: 30,
+    description: "Description of Product 3",
+    image: "https://via.placeholder.com/150",
+  },
+]
+            </pre>
+          </code>
         </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">
           Object Properties & Methods
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Objects in JavaScript are collections of key-value pairs, where each
+            key is a string (or Symbol) and the value can be any data type,
+            including other objects or functions. This allows for a flexible way
+            to group related data and functionality together.
+          </p>
+          <br />
+          <p>
+            Properties are what describe the object, while methods define what
+            it can do.
+          </p>
+          <br />
+          <code>
+            <pre>
+const character = {
+  hairColour: "brown",
+  eyeColour: "blue",
+  clothesColour: "red",
+  goldCoins: 0,
+  isDead: false,
+  position: {
+    x: 0,
+    y: 0,
+  },
+  hasKey: true,
+  inventory: ["sword", "shield", "potion"],
+};
+
+const chest = {
+  isOpen: false,
+  isLocked: false,
+  coins: 10,
+  inventory: ["sword", "shield", "potion"],
+
+  openChest: function () {
+    if (!this.isOpen) {
+      this.isOpen = true;
+      this.coins = 0;
+      console.log("The chest is now open. Player collected 10 coins.");
+    }
+  },
+};
+
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">
           Where do Objects Live?
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Objects can be created in various scopes, such as global, function,
+            or block scope. They can also be nested within other objects or
+            arrays, allowing for complex data structures.
+          </p>
+          <br />
+          <p>
+            In the example above, the 'character' and 'chest' objects are
+            defined in the global scope, making them accessible throughout the
+            script.
+          </p>
+          <br />
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

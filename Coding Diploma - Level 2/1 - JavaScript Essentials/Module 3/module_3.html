@@ -224,17 +224,17 @@ let object = {
           <code>
             <pre>
 class Character {
-  constructor(name, health, strength, hairColour, clothesColour, goldCoins) {
+  constructor(name, health, hairColour, clothesColour, goldCoins) {
     this.name = name;
     this.health = health;
-    this.strength = strength;
+    
     this.hairColour = hairColour;
     this.clothesColour = clothesColour;
     this.goldCoins = goldCoins;
   }
 
 // New Character Instances
-const player = new Character("Hero", 100, 50, "brown", "blue", 0);
+const player = new Character("Hero", 100, "brown", "blue", 0);
 const enemy = new Character("Villain", 80, 40, "black", "red", 10);
 }
             </pre>
@@ -247,7 +247,7 @@ const enemy = new Character("Villain", 80, 40, "black", "red", 10);
           <br />
           <code>
             <pre>
-console.log(player); // Outputs: Character { name: 'Hero', health: 100, strength: 50, hairColour: 'brown', clothesColour: 'blue', goldCoins: 0 }
+console.log(player); // Outputs: Character { name: 'Hero', health: 100, hairColour: 'brown', clothesColour: 'blue', goldCoins: 0 }
 console.log(enemy.hairColour); // Outputs: black
             </pre>
           </code>

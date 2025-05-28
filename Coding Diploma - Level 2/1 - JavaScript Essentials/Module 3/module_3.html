@@ -212,7 +212,34 @@ let object = {
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Object Classes</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Object classes are relatively new to JavaScript. Because we want to
+            have the least amount of code repitition as possible, we can create
+            a class that defines the properties and methods of an object. This
+            allows us to create multiple instances of the same object type
+            without repeating code.
+          </p>
+          <br />
+          <code>
+            <pre>
+class Character {
+  constructor(name, health, strength, hairColour, clothesColour, goldCoins) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.hairColour = hairColour;
+    this.clothesColour = clothesColour;
+    this.goldCoins = goldCoins;
+  }
+
+// New Character Instances
+const player = new Character("Hero", 100, 50, "brown", "blue", 0);
+const enemy = new Character("Villain", 80, 40, "black", "red", 10);
+}
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

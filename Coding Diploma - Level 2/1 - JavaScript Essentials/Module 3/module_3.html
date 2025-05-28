@@ -299,7 +299,73 @@ myChest.openChest(); // Outputs: The chest is now open. Player collected 10 coin
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Modular JavaScript</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Modular JavaScript is a practice that involves breaking down code
+            into smaller, reusable modules. This helps in organizing code,
+            improving maintainability, and promoting reusability.
+          </p>
+          <br />
+          <p>
+            In the context of objects, we can create separate modules for
+            different object classes or functionalities, allowing us to import
+            and use them as needed in our main script.
+          </p>
+          <br />
+          <code>
+            <pre>
+// character.js
+export class Character {
+  constructor(name, health, hairColour, clothesColour, goldCoins) {
+    this.name = name;
+    this.health = health;
+    this.hairColour = hairColour;
+    this.clothesColour = clothesColour;
+    this.goldCoins = goldCoins;
+  }
+  attack(target) {
+    console.log(`${this.name} attacks ${target.name}!`);
+    target.health -= 10;
+
+    console.log(`${target.name} now has ${target.health} health.`);
+  }
+}
+
+// chest.js
+export class Chest {
+  constructor(isOpen, coins) {
+    this.isOpen = isOpen;
+    this.coins = coins;
+  }
+  openChest() {
+    if (!this.isOpen) {
+      this.isOpen = true;
+      console.log("The chest is now open. Player collected " + this.coins + " coins.");
+      this.coins = 0; // Reset coins after opening
+    } else {
+      console.log("The chest is already open.");
+    }
+  }
+}
+
+// main.js
+import { Character } from './character.js';
+import { Chest } from './chest.js';
+
+const player = new Character("Hero", 100, "brown", "blue", 0);
+const enemy = new Character("Villain", 80, "black", "red", 10);
+const myChest = new Chest(false, 10);
+
+player.attack(enemy); // Outputs: Hero attacks Villain!
+myChest.openChest(); // Outputs: The chest is now open. Player collected 10 coins.
+            </pre>
+          </code>
+          <p>
+            In the example above, we have separate modules for the 'Character'
+            and 'Chest' classes. We can import these modules into our main
+            script and use them as needed, promoting modularity and reusability.
+          </p>
+        </div>
       </section>
     </main>
 

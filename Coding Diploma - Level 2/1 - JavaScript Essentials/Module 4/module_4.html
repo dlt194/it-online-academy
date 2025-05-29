@@ -196,7 +196,69 @@ document.querySelector("nav li:last-child")
         <h2 class="text-xl font-semibold border-b pb-2">
           Get Elements & Classes by Id
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            To get an element by its ID, you can use the `getElementById`
+            method. This method returns the first element with the specified ID.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementById('myElement'); // Returns the element with ID 'myElement'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            To get elements by class name, you can use the
+            `getElementsByClassName` method, which returns a live HTMLCollection
+            of elements with the specified class.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementsByClassName('myClass'); // Returns elements with class 'myClass'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            You can also use `querySelector` to get the first element that
+            matches a CSS selector, or `querySelectorAll` to get all elements
+            that match a selector.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.querySelector('#myElement'); // Returns the first element with ID 'myElement'
+document.querySelectorAll('.myClass'); // Returns all elements with class 'myClass'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods are essential for manipulating the DOM and accessing
+            elements based on their IDs or classes.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+  const chapterSection = document.getElementById('chapter-section-id');
+  chapterSection.style.backgroundColor = "gold";
+  chapterSection.style.padding = "20px";
+  chapterSection.style.color = "black";
+
+  const paragraph = document.getElementById("paragraph-id");
+  paragraph.style.fontSize = "20px";
+  paragraph.style.color = "blue";
+  paragraph.style.fontWeight = "bold";
+  
+}");
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

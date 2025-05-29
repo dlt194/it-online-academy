@@ -13,7 +13,7 @@
     <header class="bg-blue-600 text-white p-4 shadow-md">
       <div class="container mx-auto flex items-center justify-between">
         <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
-        <nav class="space-x-2">
+        <nav class="space-x-1">
           <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
             >Module 1</a
           >
@@ -48,13 +48,16 @@
             the `${expression}` syntax.
           </p>
           <br />
-          <pre class="bg-gray-100 p-4 rounded">
-            <code class="text-sm">
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
 const name = 'Dan';
 const greeting = `Hello, ${name}! Welcome to JavaScript Essentials.`;
 console.log(greeting); // Output: Hello, Dan! Welcome to JavaScript Essentials.
-            </code>
-          </pre>
+            
+          </pre
+            >
+          </code>
           <br />
           <p>
             Template literals are enclosed by backticks (``) instead of single
@@ -62,8 +65,9 @@ console.log(greeting); // Output: Hello, Dan! Welcome to JavaScript Essentials.
             multi-line strings.
           </p>
           <br />
-          <code>
-            <pre>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
 // script.js
 class User {
   constructor(name, age, email) {
@@ -97,7 +101,10 @@ document.body.innerHTML = newHTML;
   &lt;script src="script.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-            </pre>
+            
+          
+          </pre
+            >
           </code>
           <br />
           <p>
@@ -112,7 +119,47 @@ document.body.innerHTML = newHTML;
         <h2 class="text-xl font-semibold border-b pb-2">
           String Concatenation
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            String concatenation is the process of joining two or more strings
+            together. In JavaScript, this can be done using the `+` operator or
+            template literals.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+     
+const firstName = 'Dan';
+const lastName = 'Thomas';
+const fullName = firstName + ' ' + lastName;
+console.log(fullName); // Output: Dan Thomas
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            In this example, we concatenate `firstName` and `lastName` using the
+            `+` operator to create a full name.
+          </p>
+          <br />
+          <p>
+            Alternatively, you can use template literals for cleaner syntax:
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
+const fullName = `${firstName} ${lastName}`;
+console.log(fullName); // Output: Dan Thomas
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            This method is more readable and allows for easier inclusion of
+            variables and expressions within strings.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

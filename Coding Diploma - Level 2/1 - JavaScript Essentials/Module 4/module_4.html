@@ -165,7 +165,32 @@ console.log(fullName); // Output: Dan Thomas
         <h2 class="text-xl font-semibold border-b pb-2">
           Finding Elements in the DOM
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            The Document Object Model (DOM) represents the structure of a web
+            page. You can find elements in the DOM using various methods such as
+            `getElementById`, `getElementsByClassName`, and `querySelector`.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementById('myElement'); // Finds an element by its ID
+document.getElementsByClassName('myClass'); // Finds elements by class name
+document.querySelector('.myClass'); // Finds the first element matching the selector
+document.querySelectorAll('.myClass'); // Finds all elements matching the selector
+document.querySelector("nav li:last-child"); // Finds the last child of a nav element
+
+document.querySelector("nav li:last-child")
+.forEach((item) => item.style.backgroundColor = "red"); // Changes the background color of the last nav item
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to access and manipulate elements in the DOM
+            easily.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

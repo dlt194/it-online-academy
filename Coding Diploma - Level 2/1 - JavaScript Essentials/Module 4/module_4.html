@@ -292,7 +292,43 @@ element.classList.contains('checkClass'); // Checks if a class exists
         <h2 class="text-xl font-semibold border-b pb-2">
           Attribute Properties & Methods
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Attributes in HTML elements can be accessed and modified using the
+            `getAttribute`, `setAttribute`, and `removeAttribute` methods.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.getAttribute('data-custom'); // Gets the value of a custom attribute
+element.setAttribute('data-custom', 'newValue'); // Sets a new value for a custom attribute
+element.removeAttribute('data-custom'); // Removes a custom attribute
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to interact with the attributes of HTML
+            elements, enabling dynamic changes to the element's properties.
+          </p>
+          <br />
+          <p>
+            You can also select an element using attributes with `hasAttribute`
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.querySelector("img").hasAttribute("alt"); // Checks if the image has an alt attribute
+            </pre>
+          </code>
+          <br />
+          <p>
+            This method returns `true` if the specified attribute exists on the
+            element, allowing you to conditionally manipulate elements based on
+            their attributes.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

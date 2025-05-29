@@ -334,7 +334,31 @@ document.querySelector("img").hasAttribute("alt"); // Checks if the image has an
         <h2 class="text-xl font-semibold border-b pb-2">
           Inline Style Property
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            The inline style property allows you to directly manipulate the CSS
+            styles of an element using JavaScript. You can access and modify the
+            `style` property of an element to change its appearance.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.style.color = 'red'; // Changes the text color to red
+element.style.backgroundColor = 'blue'; // Changes the background color to blue
+element.style.fontSize = '20px'; // Changes the font size to 20px
+element.style.display = 'none'; // Hides the element
+element.style.display = 'block'; // Shows the element
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            This method allows you to dynamically change the styles of an
+            element, providing a powerful way to control the appearance of your
+            web page.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

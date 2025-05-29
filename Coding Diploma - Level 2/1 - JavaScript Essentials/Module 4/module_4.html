@@ -264,7 +264,29 @@ document.addEventListener("DOMContentLoaded", function() {
         <h2 class="text-xl font-semibold border-b pb-2">
           Manipulating Classes
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            You can manipulate classes of elements using the `classList`
+            property. This property provides methods to add, remove, and toggle
+            classes on an element.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.classList.add('newClass'); // Adds a class
+element.classList.remove('oldClass'); // Removes a class
+element.classList.toggle('toggleClass'); // Toggles a class
+element.classList.contains('checkClass'); // Checks if a class exists
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to dynamically change the classes of an
+            element, which can be useful for styling and behavior changes.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

@@ -69,19 +69,132 @@ const PI = 3.14159; // Constant declaration using const
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">
-          Using Var to Declare a Variable
+          Using <code>var</code> to Declare a Variable
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            The <code>var</code> keyword is used to declare a variable that can
+            be re-assigned later. It has function scope, meaning it is
+            accessible within the function it is declared in, or globally if
+            declared outside of any function. However, using <code>var</code> is
+            generally discouraged in modern JavaScript due to its function
+            scope, which can lead to unexpected behavior. Instead, it is
+            recommended to use <code>let</code> or <code>const</code>.
+          </p>
+          <br />
+          <p>
+            When a variable is declared with <code>var</code> outside of a
+            function, it becomes a globally scoped variable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var globalVar = "I am a global variable"; // Global variable
+function myFunction() {
+  console.log(globalVar); // Accessible here
+}
+myFunction(); // Outputs: I am a global variable
+console.log(globalVar); // Outputs: I am a global variable
+            </pre>
+          </code>
+          <br />
+          <p>
+            When a variable is declared with <code>var</code> inside a block
+            (like an if statement), it is still accessible outside that block
+            due to its function scope.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var blockVar = "I am a block variable"; // Block variable
+if (true) {
+  var blockVar = "I am still accessible"; // Re-declaring the same variable
+  console.log(blockVar); // Outputs: I am still accessible
+}
+console.log(blockVar); // Outputs: I am still accessible
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>var</code> inside a function,
+            it is only accessible within that function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function myFunction() {
+  var localVar = "I am a local variable"; // Local variable
+  console.log(localVar); // Accessible here
+}
+myFunction();
+console.log(localVar); // Error: localVar is not defined
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">
-          Using Let to Declare a Variable
+          Using <code>let</code> to Declare a Variable
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            The <code>let</code> keyword is used to declare a block-scoped
+            variable. This means that the variable is only accessible within the
+            block it is declared in, such as within an if statement or a loop.
+            This helps prevent issues with variable scope and makes code more
+            predictable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let blockScopedVar = "I am a block-scoped variable"; // Block-scoped variable
+if (true) {
+  let blockScopedVar = "I am only accessible here"; // New variable in this block
+  console.log(blockScopedVar); // Outputs: I am only accessible here
+}
+console.log(blockScopedVar); // Outputs: I am a block-scoped variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>let</code> inside a block, it
+            is not accessible outside that block, preventing potential conflicts
+            with other variables.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let anotherBlockVar = "I am another block variable"; // Another block variable
+if (true) {
+  let another
+BlockVar = "I am only accessible in this block"; // New variable in this block
+  console.log(anotherBlockVar); // Outputs: I am only accessible in this block
+}
+console.log(anotherBlockVar); // Outputs: I am another block variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>let</code> inside a loop, it
+            is only accessible within that loop.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+for (let i = 0; i &lt; 5; i++) {
+  let loopVar = "I am a loop variable " + i; // Loop variable
+  console.log(loopVar); // Outputs: I am a loop variable 0, 1, 2, 3, 4
+}
+console.log(loopVar); // Error: loopVar is not defined
+            </pre>
+          </code>
+          <p>
+            The <code>let</code> keyword is preferred over <code>var</code> for
+            declaring variables in modern JavaScript due to its block scope,
+            which helps avoid unintended variable conflicts.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">
-          Using Const to Declare a Variable
+          Using <code>const</code> to Declare a Variable
         </h2>
         <div class="max-w-none"></div>
       </section>

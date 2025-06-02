@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 1</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Task List</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-col h-screen container mx-auto p-6">
+      <!-- Input Section -->
+      <section
+        class="bg-white rounded-lg shadow p-6 mb-6 flex-none mx-auto w-full"
+      >
+        <form action="" class="flex w-full space-x-2">
+          <input
+            type="text"
+            placeholder="Enter a task"
+            class="flex-1 p-2 border rounded"
+            id="task-input"
+          />
+          <button
+            type="button"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500"
+            id="add-task-button"
+            onclick="addTask(event)"
+          >
+            Add
+          </button>
+        </form>
+      </section>
+
+      <!-- Task List Section -->
+      <section
+        id="task-list-section"
+        class="bg-white rounded-lg shadow p-6 flex-1 overflow-auto"
+      >
+        <h2 class="text-xl font-semibold border-b pb-2">Your Tasks</h2>
+        <ul id="task-list" class="space-y-2">
+          <!-- Task items will be dynamically added here -->
+        </ul>
+      </section>
+
+      <!-- Edit-Task Modal (hidden by default) -->
+      <div
+        id="edit-modal-overlay"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+      >
+        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6">
+          <h2 class="text-xl font-semibold mb-4">Edit Task</h2>
+          <input
+            type="text"
+            id="edit-task-input"
+            class="w-full p-2 border rounded mb-4"
+            maxlength="100"
+          />
+          <div class="flex justify-end space-x-2">
+            <button
+              id="cancel-edit-btn"
+              class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-200"
+            >
+              Cancel
+            </button>
+            <button
+              id="save-edit-btn"
+              class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 3</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 6</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 7</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 8</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 9</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          A Deeper Dive into Objects
+        </h2>
+        <div class="max-w-none">
+          <p>
+            In this module, we will explore the concept of objects in
+            JavaScript, which are collections of properties and methods. Objects
+            are a fundamental part of JavaScript and allow for more complex data
+            structures.
+          </p>
+          <p>
+            We will cover how to create objects, access their properties, and
+            utilize methods. Additionally, we will discuss object classes and
+            modular JavaScript practices.
+          </p>
+          <br />
+          <p>
+            Here is an example of a simple object representing some products:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const products = [
+  {
+    name: "Product 1",
+    price: 10,
+    description: "Description of Product 1",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 2",
+    price: 20,
+    description: "Description of Product 2",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Product 3",
+    price: 30,
+    description: "Description of Product 3",
+    image: "https://via.placeholder.com/150",
+  },
+]
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Object Properties & Methods
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Objects in JavaScript are collections of key-value pairs, where each
+            key is a string (or Symbol) and the value can be any data type,
+            including other objects or functions. This allows for a flexible way
+            to group related data and functionality together.
+          </p>
+          <br />
+          <p>
+            Properties are what describe the object, while methods define what
+            it can do.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const character = {
+  hairColour: "brown",
+  eyeColour: "blue",
+  clothesColour: "red",
+  goldCoins: 0,
+  isDead: false,
+  position: {
+    x: 0,
+    y: 0,
+  },
+  hasKey: true,
+  inventory: ["sword", "shield", "potion"],
+};
+
+const chest = {
+  isOpen: false,
+  isLocked: false,
+  coins: 10,
+  inventory: ["sword", "shield", "potion"],
+
+  openChest: function () {
+    if (!this.isOpen) {
+      this.isOpen = true;
+      this.coins = 0;
+      console.log("The chest is now open. Player collected 10 coins.");
+    }
+  },
+};
+
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Where do Objects Live?
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Objects can be created in various scopes, such as global, function,
+            or block scope. They can also be nested within other objects or
+            arrays, allowing for complex data structures.
+          </p>
+          <br />
+          <p>
+            In the example above, the 'character' and 'chest' objects are
+            defined in the global scope, making them accessible throughout the
+            script.
+          </p>
+          <br />
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Accessing Objects and their Properties
+        </h2>
+        <div class="max-w-none">
+          <p>
+            In JavaScript when we want to work with an object, all we need to do
+            is call it's name (once it has been defined).
+          </p>
+          <br />
+          <p>For example</p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const character = {
+  hairColour: "brown",
+  eyeColour: "blue",
+  clothesColour: "red",
+  goldCoins: 0,
+  isDead: false,
+  position: {
+    x: 0,
+    y: 0,
+  },
+  hasKey: true,
+  inventory: ["sword", "shield", "potion"],
+};
+
+console.log(character.hairColour); // Outputs: brown
+            </pre>
+          </code>
+          <p>
+            In the example above, we access the 'hairColour' property of the
+            'character' object using dot notation. We can also use bracket
+            notation to access properties dynamically.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Object Methods</h2>
+        <div class="max-w-none">
+          <p>
+            When a function is associated with an object, it's called a method.
+            Methods are useful for performing actions related to the object.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let object = {
+  method: function (parameter1, parameter2) {
+    // Function block
+  }
+}
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Object Classes</h2>
+        <div class="max-w-none">
+          <p>
+            Object classes are relatively new to JavaScript. Because we want to
+            have the least amount of code repitition as possible, we can create
+            a class that defines the properties and methods of an object. This
+            allows us to create multiple instances of the same object type
+            without repeating code.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+class Character {
+  constructor(name, health, hairColour, clothesColour, goldCoins) {
+    this.name = name;
+    this.health = health;
+    
+    this.hairColour = hairColour;
+    this.clothesColour = clothesColour;
+    this.goldCoins = goldCoins;
+  }
+
+// New Character Instances
+const player = new Character("Hero", 100, "brown", "blue", 0);
+const enemy = new Character("Villain", 80, 40, "black", "red", 10);
+}
+            </pre>
+          </code>
+          <p>
+            We can access the properties of the class instances just like we
+            would with a normal object. Using dot notation, we can access the
+            specific properties of the instances we created.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+console.log(player); // Outputs: Character { name: 'Hero', health: 100, hairColour: 'brown', clothesColour: 'blue', goldCoins: 0 }
+console.log(enemy.hairColour); // Outputs: black
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Object Class Methods
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Object classes can also have methods defined within them. This
+            allows us to encapsulate functionality related to the object within
+            the class itself.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+class Chest {
+  constructor(isOpen, coins) {
+    this.isOpen = isOpen;
+    this.coins = coins;
+  }
+
+  openChest() {
+    if (!this.isOpen) {
+      this.isOpen = true;
+      console.log("The chest is now open. Player collected " + this.coins + " coins.");
+      this.coins = 0; // Reset coins after opening
+    } else {
+      console.log("The chest is already open.");
+    }
+  }
+}
+
+const myChest = new Chest(false, 10);
+
+myChest.openChest(); // Outputs: The chest is now open. Player collected 10 coins.
+
+            </pre>
+          </code>
+          <p>
+            In the example above, the 'Chest' class has a method called
+            'openChest' that allows us to open the chest and collect coins. This
+            encapsulates the functionality related to the chest within the class
+            itself.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Modular JavaScript</h2>
+        <div class="max-w-none">
+          <p>
+            Modular JavaScript is a practice that involves breaking down code
+            into smaller, reusable modules. This helps in organizing code,
+            improving maintainability, and promoting reusability.
+          </p>
+          <br />
+          <p>
+            In the context of objects, we can create separate modules for
+            different object classes or functionalities, allowing us to import
+            and use them as needed in our main script.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// character.js
+export class Character {
+  constructor(name, health, hairColour, clothesColour, goldCoins) {
+    this.name = name;
+    this.health = health;
+    this.hairColour = hairColour;
+    this.clothesColour = clothesColour;
+    this.goldCoins = goldCoins;
+  }
+  attack(target) {
+    console.log(`${this.name} attacks ${target.name}!`);
+    target.health -= 10;
+
+    console.log(`${target.name} now has ${target.health} health.`);
+  }
+}
+
+// chest.js
+export class Chest {
+  constructor(isOpen, coins) {
+    this.isOpen = isOpen;
+    this.coins = coins;
+  }
+  openChest() {
+    if (!this.isOpen) {
+      this.isOpen = true;
+      console.log("The chest is now open. Player collected " + this.coins + " coins.");
+      this.coins = 0; // Reset coins after opening
+    } else {
+      console.log("The chest is already open.");
+    }
+  }
+}
+
+// main.js
+import { Character } from './character.js';
+import { Chest } from './chest.js';
+
+const player = new Character("Hero", 100, "brown", "blue", 0);
+const enemy = new Character("Villain", 80, "black", "red", 10);
+const myChest = new Chest(false, 10);
+
+player.attack(enemy); // Outputs: Hero attacks Villain!
+myChest.openChest(); // Outputs: The chest is now open. Player collected 10 coins.
+            </pre>
+          </code>
+          <p>
+            In the example above, we have separate modules for the 'Character'
+            and 'Chest' classes. We can import these modules into our main
+            script and use them as needed, promoting modularity and reusability.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

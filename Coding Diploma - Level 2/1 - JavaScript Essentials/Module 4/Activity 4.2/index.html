@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 1</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-200 min-h-screen flex flex-col"
+  >
+    <!-- Header -->
+    <header class="bg-blue-600 dark:bg-gray-900 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Task List</h1>
+        <!-- Dark mode toggle button -->
+        <button
+          id="dark-mode-toggle"
+          class="flex items-center space-x-2 focus:outline-none"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            id="theme-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m8.071-8.071h1M3.928 12.071h1m12.727 5.657l.707.707M5.636 5.636l.707.707m12.727 0l-.707.707M5.636 18.364l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-col h-screen container mx-auto p-6">
+      <!-- Input Section -->
+      <section
+        class="bg-white dark:bg-slate-500 rounded-lg shadow p-6 mb-6 flex-none mx-auto w-full"
+      >
+        <form onsubmit="addTask(event)" class="flex w-full space-x-2">
+          <input
+            type="text"
+            placeholder="Enter a task"
+            class="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+            id="task-input"
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded hover:bg-blue-500 dark:hover:bg-blue-600"
+            id="add-task-button"
+          >
+            Add
+          </button>
+        </form>
+      </section>
+
+      <!-- Task List Section -->
+      <section
+        id="task-list-section"
+        class="bg-white dark:bg-slate-500 rounded-lg shadow p-6 flex-1 overflow-auto"
+      >
+        <h2
+          class="text-xl font-semibold border-b border-gray-300 dark:border-gray-600 pb-2"
+        >
+          Your Tasks
+        </h2>
+        <ul id="task-list" class="space-y-2 mt-4">
+          <!-- Task items will be dynamically added here -->
+        </ul>
+      </section>
+
+      <!-- Edit-Task Modal (hidden by default) -->
+      <div
+        id="edit-modal-overlay"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+      >
+        <div
+          class="bg-white dark:bg-slate-500 rounded-lg shadow-lg w-11/12 max-w-md p-6"
+        >
+          <h2
+            class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100"
+          >
+            Edit Task
+          </h2>
+          <input
+            type="text"
+            id="edit-task-input"
+            class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded mb-4 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+            maxlength="100"
+          />
+          <div class="flex justify-end space-x-2">
+            <button
+              id="cancel-edit-btn"
+              class="px-4 py-2 bg-gray-300 dark:bg-gray-600 text-gray-700 dark:text-gray-200 rounded hover:bg-gray-200 dark:hover:bg-gray-500"
+            >
+              Cancel
+            </button>
+            <button
+              id="save-edit-btn"
+              class="px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded hover:bg-blue-500 dark:hover:bg-blue-600"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 dark:bg-gray-900 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+
+    <script>
+      (function () {
+        const toggleBtn = document.getElementById("dark-mode-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+        const root = document.documentElement;
+
+        function updateIcon() {
+          const isDark = root.classList.contains("dark");
+          if (isDark) {
+            // show sun icon for switching back to light
+            themeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m8.071-8.071h1M3.928 12.071h1m12.727 5.657l.707.707M5.636 5.636l.707.707m12.727 0l-.707.707M5.636 18.364l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+              />
+            `;
+          } else {
+            // show moon icon for switching to dark
+            themeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"
+              />
+            `;
+          }
+        }
+
+        // Initial icon setup
+        updateIcon();
+
+        toggleBtn.addEventListener("click", () => {
+          root.classList.toggle("dark");
+          const isNowDark = root.classList.contains("dark");
+          updateIcon();
+        });
+      })();
+    </script>
+  </body>
+</html>

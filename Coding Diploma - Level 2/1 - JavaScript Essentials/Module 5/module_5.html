@@ -449,7 +449,66 @@ console.log(a | b); // 7 (Binary: 0111, bitwise OR)
         <h2 class="text-xl font-semibold border-b pb-2">
           Using JavaScript for Math
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            JavaScript provides built-in methods for performing mathematical
+            operations. The <code>Math</code> object contains properties and
+            methods for mathematical constants and functions.
+          </p>
+          <br />
+          <h3 class="text-lg font-semibold">Math Object</h3>
+          <p>
+            The <code>Math</code> object provides various mathematical functions
+            such as <code>Math.round()</code>, <code>Math.floor()</code>,
+            <code>Math.ceil()</code>, and more.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let number = 4.7;
+console.log(Math.round(number)); // 5 (rounds to nearest integer)
+console.log(Math.floor(number)); // 4 (rounds down to nearest integer)
+console.log(Math.ceil(number)); // 5 (rounds up to nearest integer)
+console.log(Math.sqrt(16)); // 4 (square root)
+console.log(Math.pow(2, 3)); // 8 (2 raised to the power of 3)
+console.log(Math.random()); // Random number between 0 and 1
+console.log(Math.max(10, 20, 30)); // 30 (maximum value)
+console.log(Math.min(10, 20, 30)); // 10 (minimum value)
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">
+            Using Variables in Math Operations
+          </h3>
+          <p>
+            You can use variables in mathematical operations to perform
+            calculations dynamically.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = 10;
+let b = 5;
+let sum = a + b; // Addition
+let difference = a - b; // Subtraction
+let product = a * b; // Multiplication
+let quotient = a / b; // Division
+let remainder = a % b; // Modulus (remainder of division)
+
+console.log("Sum:", sum); // Outputs: Sum: 15
+console.log("Difference:", difference); // Outputs: Difference: 5
+console.log("Product:", product); // Outputs: Product: 50
+console.log("Quotient:", quotient); // Outputs: Quotient: 2
+console.log("Remainder:", remainder); // Outputs: Remainder: 0
+            </pre>
+          </code>
+          <br />
+          <p>
+            JavaScript also supports complex mathematical operations, allowing
+            you to build applications that require calculations, such as
+            financial applications, games, and scientific simulations.
+          </p>
+        </div>
       </section>
     </main>
 

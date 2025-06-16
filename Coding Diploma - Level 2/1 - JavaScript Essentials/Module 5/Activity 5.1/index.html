@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 5 - Activity 5.1</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Activity 5.1: Math Assignment
+        </h2>
+        <div class="prose max-w-none">
+          <form class="space-y-4">
+            <div>
+              <label for="num1" class="block font-medium">Number 1:</label>
+              <input
+                type="number"
+                id="num1"
+                name="num1"
+                class="mt-1 block w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="num2" class="block font-medium">Number 2:</label>
+              <input
+                type="number"
+                id="num2"
+                name="num2"
+                class="mt-1 block w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="num3" class="block font-medium">Number 3:</label>
+              <input
+                type="number"
+                id="num3"
+                name="num3"
+                class="mt-1 block w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="num4" class="block font-medium">Number 4:</label>
+              <input
+                type="number"
+                id="num4"
+                name="num4"
+                class="mt-1 block w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="num5" class="block font-medium">Number 5:</label>
+              <input
+                type="number"
+                id="num5"
+                name="num5"
+                class="mt-1 block w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <button
+                type="button"
+                onclick="calculate([parseFloat(document.getElementById('num1').value), parseFloat(document.getElementById('num2').value), parseFloat(document.getElementById('num3').value), parseFloat(document.getElementById('num4').value), parseFloat(document.getElementById('num5').value)])"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Calculate
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

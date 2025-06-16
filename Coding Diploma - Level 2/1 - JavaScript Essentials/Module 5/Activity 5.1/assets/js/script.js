@@ -1,13 +1,19 @@
 function calculate(nums) {
-  let sum = 0;
+  var sum = 0;
 
   for (let num of nums) {
     sum = sum + num;
   }
 
-  let mean = Math.round(sum / nums.length, 2);
+  let mean = sum / nums.length;
 
-  console.log(`The sum of the numbers is ${sum} and the mean is ${mean}.`);
+  let roundedMean = Math.round(mean);
 
-  alert(`The sum of the numbers is ${sum} and the mean is ${mean}.`);
+  console.log(
+    `The sum of the numbers is ${sum} and the rounded mean is ${roundedMean}.`
+  );
+
+  alert(
+    `The sum of the numbers is ${sum} and the rounded mean is ${roundedMean}.`
+  );
 }

@@ -7,7 +7,7 @@ function calculate(nums) {
 
   let mean = sum / nums.length;
 
-  let roundedMean = Math.round(mean);
+  let roundedMean = Math.round(mean * 100) / 100;
 
   console.log(
     `The sum of the numbers is ${sum} and the rounded mean is ${roundedMean}.`

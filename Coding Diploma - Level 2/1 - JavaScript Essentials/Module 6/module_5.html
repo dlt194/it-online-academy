@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 5</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 7</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 8</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 9</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          A Deeper Look at Variables
+        </h2>
+        <div class="max-w-none">
+          <p>
+            In JavaScript, variables are used to store data values. They can be
+            declared using three keywords: <code>var</code>, <code>let</code>,
+            and <code>const</code>. Each has its own scope and use cases.
+          </p>
+          <p>
+            Variables can hold different types of data, including numbers,
+            strings, booleans, objects, and arrays or a mix of all of them.
+            Understanding how to declare and use variables is fundamental to
+            programming in JavaScript.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var name = "John Doe"; // Variable declaration using var
+let age = 30; // Variable declaration using let
+const PI = 3.14159; // Constant declaration using const
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Using <code>var</code> to Declare a Variable
+        </h2>
+        <div class="max-w-none">
+          <p>
+            The <code>var</code> keyword is used to declare a variable that can
+            be re-assigned later. It has function scope, meaning it is
+            accessible within the function it is declared in, or globally if
+            declared outside of any function. However, using <code>var</code> is
+            generally discouraged in modern JavaScript due to its function
+            scope, which can lead to unexpected behavior. Instead, it is
+            recommended to use <code>let</code> or <code>const</code>.
+          </p>
+          <br />
+          <p>
+            When a variable is declared with <code>var</code> outside of a
+            function, it becomes a globally scoped variable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var globalVar = "I am a global variable"; // Global variable
+function myFunction() {
+  console.log(globalVar); // Accessible here
+}
+myFunction(); // Outputs: I am a global variable
+console.log(globalVar); // Outputs: I am a global variable
+            </pre>
+          </code>
+          <br />
+          <p>
+            When a variable is declared with <code>var</code> inside a block
+            (like an if statement), it is still accessible outside that block
+            due to its function scope.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var blockVar = "I am a block variable"; // Block variable
+if (true) {
+  var blockVar = "I am still accessible"; // Re-declaring the same variable
+  console.log(blockVar); // Outputs: I am still accessible
+}
+console.log(blockVar); // Outputs: I am still accessible
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>var</code> inside a function,
+            it is only accessible within that function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function myFunction() {
+  var localVar = "I am a local variable"; // Local variable
+  console.log(localVar); // Accessible here
+}
+myFunction();
+console.log(localVar); // Error: localVar is not defined
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Using <code>let</code> to Declare a Variable
+        </h2>
+        <div class="max-w-none">
+          <p>
+            The <code>let</code> keyword is used to declare a block-scoped
+            variable. This means that the variable is only accessible within the
+            block it is declared in, such as within an if statement or a loop.
+            This helps prevent issues with variable scope and makes code more
+            predictable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let blockScopedVar = "I am a block-scoped variable"; // Block-scoped variable
+if (true) {
+  let blockScopedVar = "I am only accessible here"; // New variable in this block
+  console.log(blockScopedVar); // Outputs: I am only accessible here
+}
+console.log(blockScopedVar); // Outputs: I am a block-scoped variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>let</code> inside a block, it
+            is not accessible outside that block, preventing potential conflicts
+            with other variables.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let anotherBlockVar = "I am another block variable"; // Another block variable
+if (true) {
+  let another
+BlockVar = "I am only accessible in this block"; // New variable in this block
+  console.log(anotherBlockVar); // Outputs: I am only accessible in this block
+}
+console.log(anotherBlockVar); // Outputs: I am another block variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>let</code> inside a loop, it
+            is only accessible within that loop.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+for (let i = 0; i &lt; 5; i++) {
+  let loopVar = "I am a loop variable " + i; // Loop variable
+  console.log(loopVar); // Outputs: I am a loop variable 0, 1, 2, 3, 4
+}
+console.log(loopVar); // Error: loopVar is not defined
+            </pre>
+          </code>
+          <p>
+            The <code>let</code> keyword is preferred over <code>var</code> for
+            declaring variables in modern JavaScript due to its block scope,
+            which helps avoid unintended variable conflicts.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Using <code>const</code> to Declare a Variable
+        </h2>
+        <div class="max-w-none">
+          <p>
+            The <code>const</code> keyword is used to declare a constant
+            variable, which means its value cannot be re-assigned after it has
+            been set. Like <code>let</code>, it is block-scoped, meaning it is
+            only accessible within the block it is declared in.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const constantVar = "I am a constant variable"; // Constant variable
+if (true) {
+  const constantVar = "I am only accessible here"; // New constant in this block
+  console.log(constantVar); // Outputs: I am only accessible here
+}
+console.log(constantVar); // Outputs: I am a constant variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>const</code> inside a block,
+            it is not accessible outside that block, similar to
+            <code>let</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const anotherConstantVar = "I am another constant variable"; // Another constant variable
+if (true) {
+  const anotherConstantVar = "I am only accessible in this block"; // New constant in this block
+  console.log(anotherConstantVar); // Outputs: I am only accessible in this block
+}
+console.log(anotherConstantVar); // Outputs: I am another constant variable
+            </pre>
+          </code>
+          <p>
+            When a variable is declared with <code>const</code> inside a loop,
+            it is only accessible within that loop, similar to <code>let</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+for (let i = 0; i &lt; 5; i++) {
+  const loopConst = "I am a loop constant " + i; // Loop constant
+  console.log(loopConst); // Outputs: I am a loop constant 0, 1, 2, 3, 4
+}
+console.log(loopConst); // Error: loopConst is not defined
+            </pre>
+          </code>
+          <p>
+            The <code>const</code> keyword is used for variables that should not
+            change after they are set, providing a way to create immutable
+            values in JavaScript.
+          </p>
+          <br />
+          <p>
+            If the <code>const</code> is an object or an array, you can still
+            modify, add or remove items.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const person = {
+  name: "John Doe",
+  age: 30
+};
+
+person.age = 31; // Modifying a property of the object
+person.city = "New York"; // Adding a new property to the object
+delete person.name; // Deleting a property from the object
+
+console.log(person); // Outputs: { age: 31, city: "New York" }
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Variables & Data Types
+        </h2>
+        <div class="max-w-none">
+          <p>
+            JavaScript is a dynamically typed language, meaning it understands
+            the data type being used without needing us to declare the type
+            being used.
+          </p>
+          <p>
+            Variables can hold different types of data, including numbers,
+            strings, booleans, objects, and arrays. The type of data a variable
+            holds can change during the execution of the program.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// String: Represents a sequence of characters enclosed in single or double quotes.
+let name = "John Doe"; 
+let message = 'Hello, World!';
+
+// Number: Represents numeric values, both integers and floating-point numbers.
+let age = 30;
+let pi = 3.14159;
+
+// Boolean: Represents a logical value, either true or false.
+let isActive = true;
+let isComplete = false;
+
+// Undefined: Represents a variable that has been declared but not assigned a value.
+let notAssigned;
+let emptyValue;
+
+// Null: Represents an intentional absence of any value.
+let emptyObject = null;
+
+// Object: Represents a collection of key-value pairs, where keys are strings and values can be any data type. Objects can containe properties and methods that are used to store and manipulate more complex data structures.
+let person = {
+  name: "John Doe",
+  age: 30,
+  isActive: true
+};
+
+// Array: Represents an ordered list of values, which can be of any data type. Arrays are used to store multiple values in a single variable.
+let numbers = [1, 2, 3, 4, 5];
+let mixedArray = ["Hello", 42, true, null, { key: "value" }];
+
+// Function: Represents a block of reuseable code designed to perform a specific task. Functions can take parameters and return values. They are used to encapsulate and organise code.
+let greet = function(name) {
+  return "Hello, " + name + "!";
+};
+
+
+</pre
+            >
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Different Types of Operators
+        </h2>
+        <div class="max-w-none">
+          <p>
+            JavaScript provides various types of operators to perform operations
+            on variables and values. These include arithmetic, assignment,
+            comparison, logical, and bitwise operators.
+          </p>
+          <br />
+          <h3 class="text-lg font-semibold">Arithmetic Operators</h3>
+          <p>
+            Used to perform mathematical operations like addition, subtraction,
+            multiplication, division, and modulus.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = 10;
+let b = 5;
+let sum = a + b;
+let subtraction = a - b;
+let multiplication = a * b;
+let division = a / b;
+let modulus = a % b; // Remainder of division
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">Assignment Operators</h3>
+          <p>
+            Used to assign values to variables. The basic assignment operator is
+            <code>=</code>, but there are also compound assignment operators
+            like <code>+=</code>, <code>-=</code>, <code>*=</code>, and
+            <code>/=</code>.
+          </p>
+          <br />
+          <h3 class="text-lg font-semibold">
+            Equality comparisons and Sameness
+          </h3>
+          <p>
+            JavaScript provides several operators to compare values. The
+            equality operator <code>==</code> checks for value equality, while
+            the strict equality operator <code>===</code> checks for both value
+            and type equality. Similarly, the inequality operator
+            <code>!=</code>
+            checks for value inequality, and the strict inequality operator
+            <code>!==</code> checks for both value and type inequality.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let x = 10;
+let y = "10";
+
+console.log(x == y); // true (value equality)
+console.log(x === y); // false (strict equality, different types)
+console.log(x != y); // false (value inequality)
+console.log(x !== y); // true (strict inequality, different types)
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">Comparison Operators</h3>
+          <p>
+            Used to compare values and return a boolean result. These include
+            greater than (<code>&gt;</code>), less than (<code>&lt;</code>),
+            greater than or equal to (<code>&gt;=</code>), and less than or
+            equal to (<code>&lt;=</code>).
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = 10;
+let b = 5;
+console.log(a > b); // true (10 is greater than 5)
+console.log(a < b); // false (10 is not less than 5)
+console.log(a >= b); // true (10 is greater than or equal to 5)
+console.log(a <= b); // false (10 is not less than or equal to 5)
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">Logical Operators</h3>
+          <p>
+            Used to combine multiple boolean expressions. The logical AND
+            operator (<code>&amp;&amp;</code>) returns true if both operands are
+            true, the logical OR operator (<code>||</code>) returns true if at
+            least one operand is true, and the logical NOT operator
+            (<code>!</code>) negates a boolean value.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = true;
+let b = false;
+console.log(a && b); // false (both must be true)
+console.log(a || b); // true (at least one is true)
+console.log(!a); // false (negates the value)
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">Bitwise Operators</h3>
+          <p>
+            Used to perform operations on binary representations of numbers.
+            These include bitwise AND (<code>&amp;</code>), bitwise OR
+            (<code>|</code>), bitwise XOR (<code>^</code>), left shift
+            (<code>&lt;&lt;</code>), right shift (<code>&gt;&gt;</code>), and
+            unsigned right shift (<code>&gt;&gt;&gt;</code>).
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = 5; // Binary: 0101
+let b = 3; // Binary: 0011
+console.log(a & b); // 1 (Binary: 0001, bitwise AND)
+console.log(a | b); // 7 (Binary: 0111, bitwise OR)
+</pre
+            >
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Using JavaScript for Math
+        </h2>
+        <div class="max-w-none">
+          <p>
+            JavaScript provides built-in methods for performing mathematical
+            operations. The <code>Math</code> object contains properties and
+            methods for mathematical constants and functions.
+          </p>
+          <br />
+          <h3 class="text-lg font-semibold">Math Object</h3>
+          <p>
+            The <code>Math</code> object provides various mathematical functions
+            such as <code>Math.round()</code>, <code>Math.floor()</code>,
+            <code>Math.ceil()</code>, and more.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let number = 4.7;
+console.log(Math.round(number)); // 5 (rounds to nearest integer)
+console.log(Math.floor(number)); // 4 (rounds down to nearest integer)
+console.log(Math.ceil(number)); // 5 (rounds up to nearest integer)
+console.log(Math.sqrt(16)); // 4 (square root)
+console.log(Math.pow(2, 3)); // 8 (2 raised to the power of 3)
+console.log(Math.random()); // Random number between 0 and 1
+console.log(Math.max(10, 20, 30)); // 30 (maximum value)
+console.log(Math.min(10, 20, 30)); // 10 (minimum value)
+            </pre>
+          </code>
+          <br />
+          <h3 class="text-lg font-semibold">
+            Using Variables in Math Operations
+          </h3>
+          <p>
+            You can use variables in mathematical operations to perform
+            calculations dynamically.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let a = 10;
+let b = 5;
+let sum = a + b; // Addition
+let difference = a - b; // Subtraction
+let product = a * b; // Multiplication
+let quotient = a / b; // Division
+let remainder = a % b; // Modulus (remainder of division)
+
+console.log("Sum:", sum); // Outputs: Sum: 15
+console.log("Difference:", difference); // Outputs: Difference: 5
+console.log("Product:", product); // Outputs: Product: 50
+console.log("Quotient:", quotient); // Outputs: Quotient: 2
+console.log("Remainder:", remainder); // Outputs: Remainder: 0
+            </pre>
+          </code>
+          <br />
+          <p>
+            JavaScript also supports complex mathematical operations, allowing
+            you to build applications that require calculations, such as
+            financial applications, games, and scientific simulations.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -6,12 +6,23 @@
     <title>JavaScript Essentials - Module 6</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- My JavaScript -->
+    <script src="assets/js/script.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-blue-600 text-white p-4 shadow-md">
       <div class="container mx-auto flex items-center justify-between">
         <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Activity</a
+          >
+          <a href="objective.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Objective</a
+          >
+        </nav>
       </div>
     </header>
 
@@ -23,156 +34,39 @@
           Activity 6.1: Manipulating Arrays
         </h2>
         <div class="prose max-w-none">
-          <div class="p-2">
-            <strong>Objective:</strong>
-            <p>
-              Create a mini project to practice JavaScript array methods,
-              focusing on creating, indexing, and using methods like
-              <code>push</code>, <code>pop</code>, <code>shift</code>,
-              <code>unshift</code>, <code>splice</code>, and
-              <code>forEach</code>.
-            </p>
+          <div class="input-group">
+            <input
+              type="text"
+              name="elementInput"
+              id="elementInput"
+              placeholder="Enter an element"
+              class="border p-2 rounded w-full mb-4"
+            />
+            <button
+              class="rounded-none bg-blue-500 text-white m-2 p-2"
+              onclick="addElement()"
+            >
+              Add Element
+            </button>
+            <button
+              class="rounded-none bg-blue-500 text-white m-2 p-2"
+              onclick="removeElement('first')"
+            >
+              Remove First
+            </button>
+            <button
+              class="rounded-none bg-blue-500 text-white m-2 p-2"
+              onclick="removeElement('last')"
+            >
+              Remove Last
+            </button>
           </div>
-
-          <div class="p-2"></div>
-          <strong>Instructions:</strong>
-          <ol class="list-decimal pl-6 space-y-2">
-            <li>
-              <strong>Setup:</strong>
-              <ul class="list-disc pl-6">
-                <li>Create a new folder for your project files.</li>
-                <li>
-                  Inside the folder, create <code>index.html</code>,
-                  <code>styles.css</code> (optional), and
-                  <code>script.js</code> files.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>HTML Structure:</strong>
-              <ul class="list-disc pl-6">
-                <li>
-                  In <code>index.html</code>, set up the basic structure with a
-                  header (<code>&lt;h1&gt;</code>), a container for displaying
-                  array elements, and input fields/buttons for adding, removing,
-                  and manipulating array elements.
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="p-2">
-                <strong>JavaScript Implementation:</strong>
-                <ul class="list-disc pl-6">
-                  <li>
-                    <strong>Setup:</strong>
-                    <ul class="list-disc pl-6">
-                      <li>
-                        Open your <code>script.js</code> file in a text editor
-                        to implement JavaScript functions for array
-                        manipulation.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Initialize the Array:</strong>
-                    <ul class="list-disc pl-6">
-                      <li>
-                        Start by initializing an empty array using
-                        <code>let array = [];</code>. This array will store
-                        elements that you'll manipulate using different array
-                        methods.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Implementing Array Methods:</strong>
-                    <ul class="list-disc pl-6">
-                      <li>
-                        <strong>Push:</strong> Create a function
-                        <code>addElement()</code> that retrieves an element from
-                        an input field and adds it to the end of the array using
-                        <code>array.push(element)</code>.
-                      </li>
-                      <li>
-                        <strong>Pop:</strong> Create a function that removes the
-                        last element using <code>array.pop()</code> when a
-                        "Remove Last" button is clicked.
-                      </li>
-                      <li>
-                        <strong>Shift:</strong> Create a function that removes
-                        the first element using <code>array.shift()</code> when
-                        a "Remove First" button is clicked.
-                      </li>
-                      <li>
-                        <strong>Unshift:</strong> Create a function that adds an
-                        element to the beginning using
-                        <code>array.unshift(element)</code> when an "Add First"
-                        button is clicked.
-                      </li>
-                      <li>
-                        <strong>Splice:</strong> Create a function
-                        <code>removeElement(index)</code> that removes an
-                        element at a specific index using
-                        <code>array.splice(index, 1)</code>.
-                      </li>
-                      <li>
-                        <strong>ForEach:</strong> Create a function
-                        <code>displayArray()</code> that uses
-                        <code>array.forEach()</code> to display each element in
-                        the HTML area with ID <code>#arrayElements</code>.
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Displaying Array State:</strong>
-                    <ul class="list-disc pl-6">
-                      <li>
-                        Use DOM manipulation in <code>displayArray()</code> to
-                        update the <code>#arrayElements</code> div with the
-                        current state of the array.
-                      </li>
-                      <li>Format each element like "Element 1: value".</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Testing and Validation:</strong>
-                    <ul class="list-disc pl-6">
-                      <li>
-                        Test each method to ensure they update the array and UI
-                        correctly.
-                      </li>
-                      <li>
-                        Validate user input and handle edge cases like empty
-                        arrays or invalid operations gracefully.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="p-2">
-                <strong>Styling (Optional):</strong>
-                <ul class="list-disc pl-6">
-                  <li>
-                    Use <code>styles.css</code> to enhance visuals and user
-                    interaction.
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="p-2">
-                <strong>Testing and Validation:</strong>
-                <ul class="list-disc pl-6">
-                  <li>
-                    Repeat tests for each method after styling to confirm
-                    expected behavior.
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ol>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <div class="prose max-w-none">
+          <h2 class="text-xl font-semibold border-b pb-2">Array Elements:</h2>
+          <div id="arrayElements"></div>
         </div>
       </section>
     </main>

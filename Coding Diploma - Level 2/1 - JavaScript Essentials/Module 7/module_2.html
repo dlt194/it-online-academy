@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 2</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/first-javascript.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 8</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 9</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Introduction</h2>
+        <div class="max-w-none">
+          <p>
+            Learning JavaScript is like learning a new language. To start with
+            we will learn the basics, learning a few works and the basic syntax
+            then slowly through practice build the knowledge to add value.
+            Eventually we will reach fluency in JavaScript, allowing us to
+            create complex applications and solve problems effectively.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Your First JavaScript
+        </h2>
+        <div class="max-w-none">
+          <p id="myParagraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sint
+            magni reiciendis quibusdam aut tenetur obcaecati repudiandae velit
+            amet nesciunt temporibus dolorum fugit, molestiae repellendus ab
+            perspiciatis incidunt odio saepe?
+          </p>
+          <br />
+          <button
+            class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+            onclick="changeText()"
+          >
+            Click Me
+          </button>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+              
+function changeText() {
+  var paragraph = document.getElementById("myParagraph");
+  var newContent =
+    "This is the new text! You can see that the text has changed.";
+
+  paragraph.innerHTML = newContent;
+}
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Objects, Methods, Properties & Functions
+        </h2>
+        <div class="max-w-none">
+          <p>3 of the most common objects in JavaScript are:</p>
+          <ul class="list-['-_'] pl-6">
+            <li>Window</li>
+            <li>Document</li>
+            <li>Console</li>
+          </ul>
+          <br />
+          <p>
+            Window is the global object in JavaScript, it represents the browser
+            window. The document object represents the HTML document loaded in
+            the browser, and the console object provides access to the browser's
+            debugging console.
+          </p>
+          <p>To access the window object, you can use the `window` keyword.</p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+window.alert("Hello, World!");
+            </pre>
+          </code>
+          <p>
+            This code will display an alert box with the message "Hello, World!"
+            in the browser.
+          </p>
+          <br />
+          <button
+            class="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700 transition-colors duration-200"
+            onclick="helloWorld()"
+          >
+            Click Me
+          </button>
+          <br />
+          <br />
+          <p>
+            The window object has various properties. A good example of this
+            would be onload, which is an event handler that triggers when the
+            page is loaded.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+window.onload = function() {
+  console.log("Page is loaded!");
+};
+            </pre>
+          </code>
+          <p>
+            This code will log "Page is loaded!" to the console when the page
+            finishes loading.
+          </p>
+          <p>
+            This would be considered an anonymous function. This is because it
+            does not have a defined name, it runs in the background.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Variables & Data Types
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Variables are used to store data in JavaScript. They can hold
+            different types of values, such as numbers, strings, booleans, and
+            objects. In JavaScript, you can declare variables using the 'var',
+            'let', or 'const' keywords.
+          </p>
+          <br />
+          <ul class="list-['-_'] pl-6">
+            <li>
+              var: Used to declare a variable that can be reassigned later. It
+              has function scope.
+            </li>
+            <li>
+              let: Used to declare a block-scoped variable that can be
+              reassigned. It is preferred over 'var' for block scope.
+            </li>
+            <li>
+              const: Used to declare a block-scoped variable that cannot be
+              reassigned. It is used for constants.
+            </li>
+          </ul>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var myAge;
+var myAge = 30;
+var x = 10;
+var charaterName = "Sponge";
+var isRaining = false;
+
+let myAge;
+let myAge = 30;
+let x = 10;
+let charaterName = "Sponge";
+let isRaining = false;
+
+const myAge;
+const myAge = 30;
+const x = 10;
+const charaterName = "Sponge";
+const isRaining = false;
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Conditional Statements
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Conditional statements allow you to execute different code based on
+            certain conditions. The most common conditional statements in
+            JavaScript are 'if', 'else if', and 'else'.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let myName = "Dan";
+if (myName === "Dan") {
+  // Code to execute if condition is true
+  console.log("Hello, Dan!");
+} else if (anotherCondition) {
+  // Code to execute if anotherCondition is true
+  console.log("Hello, someone else!");
+} else {
+  // Code to execute if none of the conditions are true
+  console.log("Hello, stranger!");
+}
+            </pre>
+          </code>
+          <br />
+          <p>You can also use 'switch' statements.</p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+switch (myName) {
+  case "Dan":
+    console.log("Hello, Dan!");
+    break;
+  case "John":
+    console.log("Hello, John!");
+    break;
+  default:
+    console.log("Hello, stranger!");
+    break;
+}
+            </pre>
+          </code>
+          <p>
+            The 'switch' statement evaluates an expression and executes the
+            corresponding case block based on the value of the expression.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Arrays</h2>
+        <div class="max-w-none">
+          <p>
+            Arrays are used to store multiple values in a single variable. They
+            can hold different types of data, including numbers, strings, and
+            objects. In JavaScript, you can create an array using square
+            brackets [].
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let myArray = [1, 2, 3, 4, 5];
+let myArray = ["apple", "banana", "orange"];
+let myArray = [1, "apple", true, { name: "Dan" }];
+            </pre>
+          </code>
+          <p>
+            You can access elements in an array using their index, which starts
+            at 0. For example, myArray[0] will give you the first element of the
+            array.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let myArray = [1, 2, 3, 4, 5];
+console.log(myArray[0]); // Output: 1
+console.log(myArray[1]); // Output: 2
+console.log(myArray[2]); // Output: 3
+            </pre>
+          </code>
+          <p>
+            You can also use methods like push() to add elements to the end of
+            the array, pop() to remove the last element, and length to get the
+            number of elements in the array.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let myArray = [1, 2, 3, 4, 5];
+myArray.push(6); // Adds 6 to the end of the array
+myArray.pop(); // Removes the last element (5)
+console.log(myArray.length); // Output: 5
+            </pre>
+          </code>
+          <p>
+            Arrays are versatile and can be used to store lists, collections,
+            and more complex data structures.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>
+        <div class="max-w-none">
+          <p>
+            Loops are used to execute a block of code repeatedly until a
+            specified condition is met. The most common types of loops in
+            JavaScript are 'for', 'while', and 'do...while'.
+          </p>
+          <br />
+          <p>
+            Below is an example of some code that can easily be simplified with
+            a loop.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const library = [
+  "Lord of the Rings",
+  "Harry Potter",
+  "The Hobbit",
+  "Pride and Prejudice",
+  "To Kill a Mockingbird",
+  "1984",
+]
+
+let text = "";
+
+text = text + library[0] + "&lt;br&gt;";
+text = text + library[1] + "&lt;br&gt;";
+text = text + library[2] + "&lt;br&gt;";
+text = text + library[3] + "&lt;br&gt;";
+text = text + library[4] + "&lt;br&gt;";
+text = text + library[5] + "&lt;br&gt;";
+
+document.getElementById("demo").innerHTML = text;
+
+            </pre>
+          </code>
+          <br />
+          <p>
+            This code can be simplified using a loop to iterate through the
+            array and display each book title.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const library = [
+  "Lord of the Rings",
+  "Harry Potter",
+  "The Hobbit",
+  "Pride and Prejudice",
+  "To Kill a Mockingbird",
+  "1984",
+];
+let text = "";
+for (let i = 0; i &lt; library.length; i++) {
+  text += library[i] + "&lt;br&gt;";
+}
+document.getElementById("demo").innerHTML = text;
+            </pre>
+          </code>
+          <p>
+            In this example, the 'for' loop iterates through each element in the
+            'library' array and appends it to the 'text' variable, which is then
+            displayed in the HTML element with the ID "demo".
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Comments</h2>
+        <div class="max-w-none">
+          <p>
+            Comments are used to add notes or explanations in your code. They
+            are ignored by the JavaScript interpreter and do not affect the
+            execution of the code. You can use single-line comments or
+            multi-line comments.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// This is a single-line comment
+
+let myVariable = 10; // This is an inline comment
+
+/* This is a multi-line comment
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+Incidunt quasi illum, reiciendis dolorem, quam minus, odit cum odio error doloribus alias? 
+Ipsum nemo iste inventore corporis id, totam sapiente ipsam?
+  */
+
+            </pre>
+          </code>
+          <p>
+            Comments are useful for documenting your code, explaining complex
+            logic, or temporarily disabling code during development.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Write your first JavaScript code
+        </h2>
+        <div class="max-w-none"></div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Change HTML Content with JavaScript
+        </h2>
+        <div class="max-w-none"></div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Log some information to the console of your browser
+        </h2>
+        <div class="max-w-none"></div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Practice the syntax of JavaScript concepts
+        </h2>
+        <div class="max-w-none"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 4</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 8</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 9</a>
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Template Literals</h2>
+        <div class="max-w-none">
+          <p>
+            Template literals are string literals allowing embedded expressions.
+            They can be multi-line and include variables and expressions using
+            the `${expression}` syntax.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
+const name = 'Dan';
+const greeting = `Hello, ${name}! Welcome to JavaScript Essentials.`;
+console.log(greeting); // Output: Hello, Dan! Welcome to JavaScript Essentials.
+            
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            Template literals are enclosed by backticks (``) instead of single
+            or double quotes, allowing for easier string interpolation and
+            multi-line strings.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
+// script.js
+class User {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+}
+
+const userObject = new User("Dan", 30, "dan@example.com");
+
+console.log(userObject);
+
+
+const newHTML = `
+&lt;h1&gt;${userObject.name}&lt;/h1&gt;
+&lt;h1&gt;${userObject.age}&lt;/h1&gt;
+&lt;h1&gt;${userObject.email}&lt;/h1&gt;
+`;
+
+document.body.innerHTML = newHTML;
+
+// index.html
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            
+          
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            In this example, we create a `User` class and instantiate it with
+            some data. We then use template literals to create an HTML string
+            that includes the user's name, age, and email, which is then
+            inserted into the document body.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          String Concatenation
+        </h2>
+        <div class="max-w-none">
+          <p>
+            String concatenation is the process of joining two or more strings
+            together. In JavaScript, this can be done using the `+` operator or
+            template literals.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+     
+const firstName = 'Dan';
+const lastName = 'Thomas';
+const fullName = firstName + ' ' + lastName;
+console.log(fullName); // Output: Dan Thomas
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            In this example, we concatenate `firstName` and `lastName` using the
+            `+` operator to create a full name.
+          </p>
+          <br />
+          <p>
+            Alternatively, you can use template literals for cleaner syntax:
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+            
+const fullName = `${firstName} ${lastName}`;
+console.log(fullName); // Output: Dan Thomas
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            This method is more readable and allows for easier inclusion of
+            variables and expressions within strings.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Finding Elements in the DOM
+        </h2>
+        <div class="max-w-none">
+          <p>
+            The Document Object Model (DOM) represents the structure of a web
+            page. You can find elements in the DOM using various methods such as
+            `getElementById`, `getElementsByClassName`, and `querySelector`.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementById('myElement'); // Finds an element by its ID
+document.getElementsByClassName('myClass'); // Finds elements by class name
+document.querySelector('.myClass'); // Finds the first element matching the selector
+document.querySelectorAll('.myClass'); // Finds all elements matching the selector
+document.querySelector("nav li:last-child"); // Finds the last child of a nav element
+
+document.querySelector("nav li:last-child")
+.forEach((item) => item.style.backgroundColor = "red"); // Changes the background color of the last nav item
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to access and manipulate elements in the DOM
+            easily.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Get Elements & Classes by Id
+        </h2>
+        <div class="max-w-none">
+          <p>
+            To get an element by its ID, you can use the `getElementById`
+            method. This method returns the first element with the specified ID.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementById('myElement'); // Returns the element with ID 'myElement'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            To get elements by class name, you can use the
+            `getElementsByClassName` method, which returns a live HTMLCollection
+            of elements with the specified class.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.getElementsByClassName('myClass'); // Returns elements with class 'myClass'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            You can also use `querySelector` to get the first element that
+            matches a CSS selector, or `querySelectorAll` to get all elements
+            that match a selector.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.querySelector('#myElement'); // Returns the first element with ID 'myElement'
+document.querySelectorAll('.myClass'); // Returns all elements with class 'myClass'
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods are essential for manipulating the DOM and accessing
+            elements based on their IDs or classes.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+  const chapterSection = document.getElementById('chapter-section-id');
+  chapterSection.style.backgroundColor = "gold";
+  chapterSection.style.padding = "20px";
+  chapterSection.style.color = "black";
+
+  const paragraph = document.getElementById("paragraph-id");
+  paragraph.style.fontSize = "20px";
+  paragraph.style.color = "blue";
+  paragraph.style.fontWeight = "bold";
+  
+}");
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Manipulating Classes
+        </h2>
+        <div class="max-w-none">
+          <p>
+            You can manipulate classes of elements using the `classList`
+            property. This property provides methods to add, remove, and toggle
+            classes on an element.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.classList.add('newClass'); // Adds a class
+element.classList.remove('oldClass'); // Removes a class
+element.classList.toggle('toggleClass'); // Toggles a class
+element.classList.contains('checkClass'); // Checks if a class exists
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to dynamically change the classes of an
+            element, which can be useful for styling and behavior changes.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Attribute Properties & Methods
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Attributes in HTML elements can be accessed and modified using the
+            `getAttribute`, `setAttribute`, and `removeAttribute` methods.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.getAttribute('data-custom'); // Gets the value of a custom attribute
+element.setAttribute('data-custom', 'newValue'); // Sets a new value for a custom attribute
+element.removeAttribute('data-custom'); // Removes a custom attribute
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            These methods allow you to interact with the attributes of HTML
+            elements, enabling dynamic changes to the element's properties.
+          </p>
+          <br />
+          <p>
+            You can also select an element using attributes with `hasAttribute`
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.querySelector("img").hasAttribute("alt"); // Checks if the image has an alt attribute
+            </pre>
+          </code>
+          <br />
+          <p>
+            This method returns `true` if the specified attribute exists on the
+            element, allowing you to conditionally manipulate elements based on
+            their attributes.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Inline Style Property
+        </h2>
+        <div class="max-w-none">
+          <p>
+            The inline style property allows you to directly manipulate the CSS
+            styles of an element using JavaScript. You can access and modify the
+            `style` property of an element to change its appearance.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const element = document.getElementById('myElement');
+element.style.color = 'red'; // Changes the text color to red
+element.style.backgroundColor = 'blue'; // Changes the background color to blue
+element.style.fontSize = '20px'; // Changes the font size to 20px
+element.style.display = 'none'; // Hides the element
+element.style.display = 'block'; // Shows the element
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            This method allows you to dynamically change the styles of an
+            element, providing a powerful way to control the appearance of your
+            web page.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Adding Element to the DOM
+        </h2>
+        <div class="max-w-none">
+          <p>
+            To add an element to the DOM, you can create a new element using
+            `document.createElement`, set its attributes and content, and then
+            append it to an existing element using `appendChild` or
+            `insertBefore`.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const newElement = document.createElement('div'); // Creates a new div element
+newElement.id = 'newElementId'; // Sets an ID for the new element
+newElement.className = 'newElementClass'; // Sets a class for the new element
+newElement.textContent = 'This is a new element'; // Sets the text content
+const parentElement = document.getElementById('parentElementId'); // Gets the parent element
+parentElement.appendChild(newElement); // Appends the new element to the parent
+          </pre
+            >
+          </code>
+          <br />
+          <p>
+            This method allows you to dynamically create and insert new elements
+            into the DOM, enabling you to build interactive and dynamic web
+            applications.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+window.onLoad = addElement;
+
+function addElement() {
+  const newSection = document.createElement('section');
+
+  const newContent = document.createTextNode('This is a new section added to the DOM.');
+
+  newSection.appendChild(newContent);
+
+  const currentSection = document.querySelector('#chapter-section-id');
+  document.body.insertBefore(newSection, currentSection);
+}
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, we create a new section element, add text content
+            to it, and insert it before an existing section in the document.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Essentials - Module 6</title>
+    <title>JavaScript Essentials - Module 7</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/script.js"></script>
@@ -84,7 +84,57 @@ const person = {
         <h2 class="text-xl font-semibold border-b pb-2">
           How Functions are Defined
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>Functions are defined as Input -> Process -> Output.</p>
+          <br />
+          <p>
+            If we wanted to make a coffee, we would need to define the input
+            (coffee grounds and, water), the process (brew coffee), and the
+            output (a cup of coffee). In JavaScript, this is done using the
+            <code>function</code> keyword followed by a name, parentheses for
+            parameters, and curly braces for the function body.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function makeCoffee(coffeeGrounds, water) {
+  // Process: Brew coffee
+  const coffee = `Brewing ${coffeeGrounds} with ${water}...`;
+  // Output: Return the coffee
+  return coffee;
+}
+console.log(makeCoffee("Arabica", "hot water")); // Output: Brewing Arabica with hot water...
+            </pre>
+          </code>
+          <br />
+          <p>
+            When we are thinking about functions, we need to think like the
+            computer. We need to think about each step in the process and how
+            the input is transformed into output. This is similar to how we
+            should approach problem-solving in general. A function is
+            essentially a mini program within our main application.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+What type of function     What's the input
+    ⬇️                      ⬇️
+function functionName(param1, param2, ...) {
+    statement1;
+    statement2;          ⬅️ What needs to be done?
+    statement3;
+    
+    return value; // Optional
+}
+
+functionName(argument1, argument2); ⬅️ Call the function
+     ⬆️               ⬆️
+  Where will        Where will the input come from?
+  the function 
+  be called?
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

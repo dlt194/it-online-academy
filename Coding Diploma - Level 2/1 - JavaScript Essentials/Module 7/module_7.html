@@ -49,7 +49,36 @@
         <h2 class="text-xl font-semibold border-b pb-2">
           A Deeper Look at Functions
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Functions are extremely important in JavaScript. So what is a
+            function? A function is a reusable block of code that performs a
+            specific task. They keep your code organized, modular, and DRY
+            (Don't Repeat Yourself).
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+// Object wih a method
+const person = {
+  name: "Bob",
+  age: 25,
+  greet: function() {
+    return `Hello, ${this.name}!`;
+  }
+
+  person.greet(); // Output: Hello, Bob!
+}
+            </pre>
+          </code>
+          <br />
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

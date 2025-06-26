@@ -201,7 +201,66 @@ const a = 40, b = 50; // Declarations are hoisted, but assignments are not.
         <h2 class="text-xl font-semibold border-b pb-2">
           Function Parameters & Arguments
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Functions can take parameters, which are variables that act as
+            placeholders for the values that will be passed to the function when
+            it is called. These values are known as arguments. Parameters allow
+            functions to be more flexible and reusable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function add(a, b) {
+  return a + b; // a and b are parameters
+}
+console.log(add(5, 10)); // Output: 15 (5 and 10 are arguments)
+
+function greet(name, greeting = "Hello") {
+  return `${greeting}, ${name}!`; // name is a parameter, greeting is an optional parameter with a default value
+}
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+console.log(greet("Bob", "Hi")); // Output: Hi, Bob!
+            </pre>
+          </code>
+          <br />
+          <p>
+            Parameters can also have default values, which are used if no
+            argument is provided for that parameter when the function is called.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function multiply(a, b = 1) {
+  return a * b; // b has a default value of 1
+}
+console.log(multiply(5)); // Output: 5 (5 * 1)
+console.log(multiply(5, 2)); // Output: 10 (5 * 2)
+            </pre>
+          </code>
+          <br />
+          <p>
+            Functions can also accept a variable number of arguments using the
+            rest parameter syntax. This allows you to pass an array of values to
+            the function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0); // numbers is an array of arguments
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10 (1 + 2 + 3 + 4)
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>sum</code> function can take any number
+            of arguments, and it will return the sum of all the numbers passed
+            to it.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

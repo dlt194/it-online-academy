@@ -123,7 +123,7 @@ function functionName(param1, param2, ...) {
     statement1;
     statement2;          ⬅️ What needs to be done?
     statement3;
-    
+
     return value; // Optional
 }
 
@@ -140,7 +140,62 @@ functionName(argument1, argument2); ⬅️ Call the function
         <h2 class="text-xl font-semibold border-b pb-2">
           Function Expression vs Function Statement
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            In JavaScript, functions can be defined in two main ways: as a
+            function statement or a function expression. A function statement is
+            hoisted, meaning it can be called before it is defined in the code.
+            A function expression, on the other hand, is not hoisted and must be
+            defined before it is called.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let age = 30;
+let isAdult;
+
+if (age >= 18) {  // The part (age >= 18) is the expression because it evaluates to a value. In this case, a boolean value.
+  isAdult = true;
+} else {
+  isAdult = false;
+}
+
+console.log(isAdult); // Output: true
+            
+let a = 3;
+let b = 2;
+
+// Arithmetic Expressions
+let sum = a + b; // a and b are used as expressions.
+let difference = a - b; // a and b are used as expressions.
+
+// Logical Expressions
+let isGreater = a > b; // a and b are used as expressions.
+let isEqual = a === b; // a and b are used as expressions.
+
+// Function call expressions
+let math = Math.max(a, b); // Math.max is a function call expression, a and b are arguments passed to the function.
+
+console.log(x) // Output: undefined
+var x = 10; // Declaration is hoisted but the assignment is not
+
+console.log(y); // Output: ReferenceError: y is not defined
+let y = 20; // Both declaration and assignment happen during execution
+
+function example() {
+  console.log(z); // Output: undefined
+  var z = 30; // Function-scoped declaration is hoisted
+}
+
+example();
+
+console.log(a + b); // Output: ReferenceError: a is not defined
+
+const a = 40, b = 50; // Declarations are hoisted, but assignments are not.
+              </pre
+            >
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

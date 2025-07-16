@@ -266,7 +266,104 @@ console.log(sum(1, 2, 3, 4)); // Output: 10 (1 + 2 + 3 + 4)
         <h2 class="text-xl font-semibold border-b pb-2">
           Functions Return Values
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Functions can return values using the <code>return</code> keyword.
+            When a function returns a value, it can be used in expressions or
+            assigned to variables. If a function does not explicitly return a
+            value, it will return <code>undefined</code> by default.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function square(x) {
+  return x * x; // Returns the square of x
+}
+console.log(square(5)); // Output: 25
+
+function getFullName(firstName, lastName) {
+  return `${firstName} ${lastName}`; // Returns the full name
+}
+
+console.log(getFullName("John", "Doe")); // Output: John Doe
+
+function getUserInfo(user) {
+  return {
+    name: user.name,
+    age: user.age,
+    email: user.email,
+  }; // Returns an object with user information
+}
+console.log(getUserInfo({ name: "Alice", age: 30, email: "alice@example.com" })); // Output: { name: 'Alice', age: 30, email: 'alice@example.com' }
+            </pre>
+          </code>
+          <br />
+          <p>
+            The returned value can be used immediately or stored in a variable
+            for later use.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let result = square(10); // Store the returned value in a variable
+console.log(result); // Output: 100
+function calculateArea(length, width) {
+  return length * width; // Returns the area of a rectangle
+}
+console.log(calculateArea(5, 10)); // Output: 50
+</pre
+            >
+          </code>
+          <br />
+          <p>
+            If a function does not have a <code>return</code> statement, it will
+            return <code>undefined</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function doNothing() {
+  // No return statement
+}
+console.log(doNothing()); // Output: undefined
+            </pre>
+          </code>
+          <br />
+          <p>
+            Functions can also return multiple values by returning an array or
+            an object.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function getCoordinates() {
+  return [10, 20]; // Returns an array with coordinates
+}
+console.log(getCoordinates()); // Output: [10, 20]
+
+function getPerson() {
+  return {
+    name: "Alice",
+    age: 30,
+    email: "alice@example.com",
+  }; // Returns an object with person information
+}
+console.log(getPerson()); // Output: { name: 'Alice', age: 30, email: 'alice@example.com' }
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>getCoordinates</code> function returns an
+            array with two values, and the <code>getPerson</code> function
+            returns an object with multiple properties.
+          </p>
+          <br />
+          <p>
+            Two common functions are getters and setters. A getter is a function
+            that retrieves a value, while a setter is a function that updates a
+            value.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

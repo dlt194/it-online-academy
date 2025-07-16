@@ -369,7 +369,79 @@ console.log(getPerson()); // Output: { name: 'Alice', age: 30, email: 'alice@exa
         <h2 class="text-xl font-semibold border-b pb-2">
           Function Scope & Closures
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Function scope refers to the accessibility of variables within a
+            function. Variables defined inside a function are not accessible
+            from outside the function.
+          </p>
+          <br />
+          <p>
+            Closures are a feature in JavaScript where an inner function has
+            access to the outer function's variables even after the outer
+            function has returned.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let x = 15; // In the parent scope such as global or outer function
+
+function addNumbers(y) {
+  return x + y; // in the function scope
+} 
+
+console.log(addNumbers(5)); // Output: 20 (15 + 5)
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the variable <code>x</code> is defined in the
+            parent scope, and the function <code>addNumbers</code> can access it
+            even though it is defined inside another function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function outerFunction() {
+  const secret = "secret value";
+
+  function innerFunction() {
+    console.log(secret); // Accesses the outer function's variable
+  }
+  return innerFunction; // Returns the inner function
+}
+  const closure = outerFunction();
+  closure(); // Output: secret value
+            </pre>
+          </code>
+          <br />
+          <p>
+            One of the most important uses for closures is data encapsulation.
+            Closures allow you to create private variables that cannot be
+            accessed from outside the function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function outerFunction() {
+  let state = "";
+
+  function innerFunction() {
+    return `Information: ${state}`;
+  }
+
+  return innerFunction;
+}
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the variable <code>state</code> is private to the
+            <code>outerFunction</code>, and it can only be accessed by the
+            <code>innerFunction</code>. This allows you to create functions that
+            maintain their own state without exposing it to the outside world.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Callback Functions</h2>

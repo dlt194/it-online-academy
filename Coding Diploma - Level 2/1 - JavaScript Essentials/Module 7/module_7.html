@@ -445,7 +445,66 @@ function outerFunction() {
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Callback Functions</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            When we have two functions, and we want to control the execution
+            order, we can use callback functions.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// This is a simple function that takes a name and a callback function as parameters
+function greetUser(name, callback) {
+  const greetingMessage = `Hello, ${name}!`;
+  callback(greetingMessage);
+}
+
+// This is a callback function that will be called after the greeting message is created
+function displayGreeting(message) {
+  console.log(message);
+}
+
+
+// Call the greetUser function with a name and the displayGreeting function as a callback
+greetUser("Alice", displayGreeting); // Output: Hello, Alice!
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>greetUser</code> function takes a name
+            and a callback function as parameters. It creates a greeting message
+            and then calls the callback function with that message.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { id: 1, name: "Alice" };
+    callback(null, data); // Call the callback function with the fetched data
+  }, 2000); // Simulate an asynchronous operation
+}
+
+function handleData(error, data) {
+  if (error) {
+    console.error("Error fetching data:", error);
+  } else {
+    console.log("Fetched data:", data); // Output: Fetched data: { id: 1, name: 'Alice' }
+  }
+}
+
+fetchData(handleData); // Call fetchData with handleData as the callback
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>fetchData</code> function simulates an
+            asynchronous operation (like fetching data from a server) and calls
+            the provided callback function with the fetched data after a delay.
+            The <code>handleData</code> function is used to handle the result of
+            the asynchronous operation.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Arrow Functions</h2>

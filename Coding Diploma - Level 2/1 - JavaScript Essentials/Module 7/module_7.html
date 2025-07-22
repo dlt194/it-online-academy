@@ -596,7 +596,80 @@ a => a + 100;
         <h2 class="text-xl font-semibold border-b pb-2">
           Higher Order Functions
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Higher-order functions are functions that take other functions as
+            arguments or return them as results. They enable a functional
+            programming style and allow for more abstract and reusable code.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(function (number) {
+  return number % 2 === 0; // Returns true for even numbers
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+            </pre>
+          </code>
+          <br />
+          <p>
+            Higher-order functions can also return other functions. This is
+            useful for creating function factories or for partial application of
+            functions.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function createMultiplier(factor) {
+  return function (number) {
+    return number * factor; // Returns a function that multiplies by the factor
+  };
+}
+const double = createMultiplier(2); // Creates a function that doubles a number
+console.log(double(5)); // Output: 10
+const triple = createMultiplier(3); // Creates a function that triples a number
+console.log(triple(5)); // Output: 15
+            </pre>
+          </code>
+          <br />
+          <p>
+            Higher-order functions are a powerful feature of JavaScript that
+            allows for more flexible and reusable code. They are commonly used
+            in functional programming paradigms.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function x(y) {
+  y(); // Call the function passed as an argument
+}
+
+function print(){
+  console.log("Hello, World!"); // Function to be passed as an argument
+}
+
+x(print); // Output: Hello, World!
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the function <code>x</code> takes another function
+            <code>y</code> as an argument and calls it. The function
+            <code>print</code> is passed to <code>x</code>, which then executes
+            it. <code>x</code> is a higher-order function because it takes a
+            function as an argument.
+          </p>
+          <br />
+          <p>
+            Another place to use higher order functions is in event handling.
+            For example, you can pass a function to be executed when a button is
+            clicked. Another example is <code>addEventListener()</code>, which
+            is a higher-order function that takes a callback function as an
+            argument.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

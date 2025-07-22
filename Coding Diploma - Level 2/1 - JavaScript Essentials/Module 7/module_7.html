@@ -675,7 +675,54 @@ x(print); // Output: Hello, World!
         <h2 class="text-xl font-semibold border-b pb-2">
           Immediately Invoked Function Expressions (IIFe)
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            An Immediately Invoked Function Expression (IIFE) is a function that
+            is executed immediately after it is defined. It is often used to
+            create a private scope and avoid polluting the global namespace.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+(function () {
+  console.log("This is an IIFE");
+})();
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the function is defined and executed immediately.
+            This pattern is useful for initializing variables or executing code
+            without leaving any traces in the global scope.
+          </p>
+          <br />
+
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var counter = (function () {
+  count = 0; // Private variable
+  return {
+    increment: function() {
+      count++;
+    },
+    decrement: function() {
+      count--;
+    },
+    getCount: function() {
+      return count;
+    }
+  }
+  counter.increment(); // Increment the counter
+  counter.increment(); // Increment the counter again
+  console.log(counter.getCount()); // Output: 2
+  counter.decrement(); // Decrement the counter
+  console.log(counter.getCount()); // Output: 1
+
+  console.log(counter.count); // Output: undefined (count is private)
+})();
+            </pre>
+          </code>
+        </div>
       </section>
     </main>
 

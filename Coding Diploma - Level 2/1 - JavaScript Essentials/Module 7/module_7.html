@@ -508,7 +508,89 @@ fetchData(handleData); // Call fetchData with handleData as the callback
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Arrow Functions</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            An arrow function expression is a compact alternative to traditional
+            function expressions, with some semantic differences and deliberate
+            limitations in usage.
+          </p>
+          <br />
+          <ul class="list-disc pl-6">
+            <li>
+              Arrow functions don't have their own bindings to 'this',
+              'arguments', or 'super', and should not be used as methods.
+            </li>
+            <li>
+              Arrow functions cannot be used as constructors and will throw an
+              error when used with 'new'.
+            </li>
+            <li>
+              Arrow functions cannot use 'yield', and thus cannot be used as
+              generator functions.
+            </li>
+          </ul>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+const add = (a, b) => a + b; // Implicit return
+console.log(add(5, 10)); // Output: 15
+
+const square = (x) => x * x; // Single expression, implicit return
+console.log(square(4)); // Output: 16
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((num) => num * 2); // Using arrow function with array method
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+const person = {
+  name: "Bob",
+  age: 30,
+  greet: () => `Hello, ${this.name}!`, // Arrow function does not bind 'this' 
+  // This will not work as expected because 'this' does not refer to the person object
+};
+
+console.log(person.greet()); // Output: Hello, undefined!
+            </pre>
+          </code>
+          <br />
+          <p>
+            Arrow functions are particularly useful for concise function
+            expressions and when you want to preserve the lexical scope of
+            <code>this</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// Traditional anonymous function
+(function (a) {
+  return a + 100;
+});
+
+// 1. Remove the word 'function' and replace it with an arrow (=>) between the arguments and the body braces
+(a) => {
+  return a + 100;
+};
+
+// 2. Remove the body braces and word 'return' - the return is implied
+(a) => a + 100;
+
+// 3. Remove the parameter parenthesis if there is only one parameter
+a => a + 100;
+            </pre>
+          </code>
+          <br />
+          <p>
+            Arrow functions are often used in functional programming patterns,
+            such as with array methods like <code>map</code>,
+            <code>filter</code>, and <code>reduce</code>.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

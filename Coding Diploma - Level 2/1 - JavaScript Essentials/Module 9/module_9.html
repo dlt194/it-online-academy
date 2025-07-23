@@ -135,7 +135,168 @@ console.log(`Your grade is: ${grade}`);
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Logical Operators</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Logical operators are used to combine multiple conditions. The most
+            common logical operators in JavaScript are AND (&&), OR (||), and
+            NOT (!).
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let age = 20;
+let hasPermission = true;
+
+if (age >= 18 && hasPermission) {
+  console.log("Access granted.");
+} else {
+  console.log("Access denied.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a person is at least 18 years old and
+            has permission. If both conditions are true, access is granted.
+          </p>
+          <br />
+          <p>
+            The OR operator (||) can be used to check if at least one condition
+            is true.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isWeekend = true;
+let isHoliday = false;
+
+if (isWeekend || isHoliday) {
+  console.log("It's a day off!");
+} else {
+  console.log("It's a working day.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if it's either a weekend or a holiday to
+            determine if it's a day off.
+          </p>
+          <br />
+          <p>
+            The NOT operator (!) negates a condition, making it true if it was
+            false and vice versa.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isLoggedIn = false;
+if (!isLoggedIn) {
+  console.log("Please log in.");
+} else {
+  console.log("Welcome back!");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a user is not logged in and prompt them
+            to log in.
+          </p>
+          <br />
+          <p>Logical operators can be combined to create complex conditions.</p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isAdmin = true;
+let isEditor = false;
+if (isAdmin || isEditor) {
+  console.log("You have editing permissions.");
+} else {
+  console.log("You do not have editing permissions.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a user is either an admin or an editor
+            to determine their editing permissions.
+          </p>
+          <br />
+          <p>
+            You also have comparison operators that can be used in conjunction
+            with logical operators. These include:
+          </p>
+          <ul>
+            <li>Equal to (===)</li>
+            <li>Not equal to (!==)</li>
+            <li>Greater than (&gt;)</li>
+            <li>Less than (&lt;)</li>
+            <li>Greater than or equal to (&gt;=)</li>
+            <li>Less than or equal to (&lt;=)</li>
+          </ul>
+          <p>
+            These operators can be used to compare values and return a boolean
+            result, which can then be used in conditional statements.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let x = 5;
+let y = 10;
+let z = "Dan";
+let a = true;
+
+if (x == 5) {
+  console.log("x is equal to 5");
+} 
+
+if (x != 5) {
+  console.log("x is not equal to 5");
+}
+
+if (x === 5) {
+  console.log("x is equal to 5 and the same data type");
+}
+
+if (x !== 5) {
+  console.log("x is not equal to 5 or not the same data type");
+}
+
+if (x &gt; 5) {
+  console.log("x is greater than 5")
+}
+
+if (x &lt; 5) {
+  console.log("x is less than 5")
+}
+
+if (x &gt;= 5) {
+  console.log("x is greater than or equal to 5")
+}
+
+if (y !== 10) {
+  console.log("y is not equal to 10")
+} else {
+  console.log("y is equal to 10")
+}
+
+// Logical Operators
+
+if (x &gt; 0 && y &gt; 0) {
+  console.log("Both x and y are positive")
+}
+
+if (x &lt; 0 || y &lt; 0) {
+  console.log("Either x or y is negative")
+}
+
+// Ternary Operator
+let max = x > y ? x : y;
+console.log(`The maximum value is ${max}`)
+
+// Type Operators
+if (typeof x === "number") {
+  console.log("x is a number")
+}
+            </pre>
+          </code>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

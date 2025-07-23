@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const circles = [];
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      function Circle(x, y, radius, color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+
+        this.draw = function () {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        };
+      }
+
+      canvas.addEventListener("mousemove", function (event) {
+        const radius = Math.random() * 30 + 10;
+        const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+          Math.random() * 255
+        })`;
+        circles.push(new Circle(event.clientX, event.clientY, radius, color));
+      });
+
+      canvas.addEventListener("click", function (event) {
+        const radius = Math.random() * 30 + 10;
+        const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+          Math.random() * 255
+        })`;
+        circles.push(new Circle(event.clientX, event.clientY, radius, color));
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        circles.forEach((circle) => {
+          circle.draw();
+        });
+      }
+
+      animate();
+    </script>
+  </body>
+</html>

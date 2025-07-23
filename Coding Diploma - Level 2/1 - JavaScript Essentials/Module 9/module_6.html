@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 6</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="module_8.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 8</a
+          >
+          <a href="module_9.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 9</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          A Deeper Look at Arrays
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Arrays are a special type of object in JavaScript that allow you to
+            store multiple values in a single variable. They are created using
+            square brackets <code>[]</code> and can hold a mix of different data
+            types.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let fruits = ["apple", "banana", "cherry"]; // Array of strings
+
+let numbers = [1, 2, 3, 4, 5]; // Array of numbers
+
+let mixed = ["apple", 1, true, null, [1, 2, 3]]; // Array of mixed types
+
+let objects = [
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 }
+]; // Array of objects
+
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]; // 2D Array (Array of Arrays)
+
+let nestedArray = [
+  ["a", "b", "c"],
+  ["d", "e"],
+  ["f", "g", "h", "i"]
+]; // Array of Arrays with different lengths
+
+let emptyArray = []; // Empty Array
+            </pre>
+          </code>
+          <br />
+          <p>
+            Arrays can be accessed using their index, which starts at 0. For
+            example, <code>fruits[0]</code> will return "apple".
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Array Indexing</h2>
+        <div class="max-w-none">
+          <p>
+            Array indexing allows you to access individual elements within an
+            array. You can use the index number in square brackets to retrieve
+            the value at that position.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let fruits = ["apple", "banana", "cherry"];
+let firstFruit = fruits[0]; // "apple"
+let secondFruit = fruits[1]; // "banana"
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Array Methods</h2>
+        <div class="max-w-none">
+          <p>
+            JavaScript provides a variety of built-in methods for working with
+            arrays. These methods allow you to manipulate and interact with
+            array data easily.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let fruits = ["apple", "banana", "cherry"];
+fruits.push("date"); // Adds "date" to the end
+fruits.pop(); // Removes the last element
+fruits.shift(); // Removes the first element
+fruits.unshift("kiwi"); // Adds "kiwi" to the beginning
+            </pre>
+          </code>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 7</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="module_8.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 8</a
+          >
+          <a href="module_9.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 9</a
+          >
+          <a href="#" class="px-3 py-1 hover:bg-blue-500 rounded">Module 10</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          A Deeper Look at Functions
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Functions are extremely important in JavaScript. So what is a
+            function? A function is a reusable block of code that performs a
+            specific task. They keep your code organized, modular, and DRY
+            (Don't Repeat Yourself).
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+// Object wih a method
+const person = {
+  name: "Bob",
+  age: 25,
+  greet: function() {
+    return `Hello, ${this.name}!`;
+  }
+
+  person.greet(); // Output: Hello, Bob!
+}
+            </pre>
+          </code>
+          <br />
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          How Functions are Defined
+        </h2>
+        <div class="max-w-none">
+          <p>Functions are defined as Input -> Process -> Output.</p>
+          <br />
+          <p>
+            If we wanted to make a coffee, we would need to define the input
+            (coffee grounds and, water), the process (brew coffee), and the
+            output (a cup of coffee). In JavaScript, this is done using the
+            <code>function</code> keyword followed by a name, parentheses for
+            parameters, and curly braces for the function body.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function makeCoffee(coffeeGrounds, water) {
+  // Process: Brew coffee
+  const coffee = `Brewing ${coffeeGrounds} with ${water}...`;
+  // Output: Return the coffee
+  return coffee;
+}
+console.log(makeCoffee("Arabica", "hot water")); // Output: Brewing Arabica with hot water...
+            </pre>
+          </code>
+          <br />
+          <p>
+            When we are thinking about functions, we need to think like the
+            computer. We need to think about each step in the process and how
+            the input is transformed into output. This is similar to how we
+            should approach problem-solving in general. A function is
+            essentially a mini program within our main application.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+What type of function     What's the input
+    ⬇️                      ⬇️
+function functionName(param1, param2, ...) {
+    statement1;
+    statement2;          ⬅️ What needs to be done?
+    statement3;
+
+    return value; // Optional
+}
+
+functionName(argument1, argument2); ⬅️ Call the function
+     ⬆️               ⬆️
+  Where will        Where will the input come from?
+  the function 
+  be called?
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Function Expression vs Function Statement
+        </h2>
+        <div class="max-w-none">
+          <p>
+            In JavaScript, functions can be defined in two main ways: as a
+            function statement or a function expression. A function statement is
+            hoisted, meaning it can be called before it is defined in the code.
+            A function expression, on the other hand, is not hoisted and must be
+            defined before it is called.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let age = 30;
+let isAdult;
+
+if (age >= 18) {  // The part (age >= 18) is the expression because it evaluates to a value. In this case, a boolean value.
+  isAdult = true;
+} else {
+  isAdult = false;
+}
+
+console.log(isAdult); // Output: true
+            
+let a = 3;
+let b = 2;
+
+// Arithmetic Expressions
+let sum = a + b; // a and b are used as expressions.
+let difference = a - b; // a and b are used as expressions.
+
+// Logical Expressions
+let isGreater = a > b; // a and b are used as expressions.
+let isEqual = a === b; // a and b are used as expressions.
+
+// Function call expressions
+let math = Math.max(a, b); // Math.max is a function call expression, a and b are arguments passed to the function.
+
+console.log(x) // Output: undefined
+var x = 10; // Declaration is hoisted but the assignment is not
+
+console.log(y); // Output: ReferenceError: y is not defined
+let y = 20; // Both declaration and assignment happen during execution
+
+function example() {
+  console.log(z); // Output: undefined
+  var z = 30; // Function-scoped declaration is hoisted
+}
+
+example();
+
+console.log(a + b); // Output: ReferenceError: a is not defined
+
+const a = 40, b = 50; // Declarations are hoisted, but assignments are not.
+              </pre
+            >
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Function Parameters & Arguments
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Functions can take parameters, which are variables that act as
+            placeholders for the values that will be passed to the function when
+            it is called. These values are known as arguments. Parameters allow
+            functions to be more flexible and reusable.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function add(a, b) {
+  return a + b; // a and b are parameters
+}
+console.log(add(5, 10)); // Output: 15 (5 and 10 are arguments)
+
+function greet(name, greeting = "Hello") {
+  return `${greeting}, ${name}!`; // name is a parameter, greeting is an optional parameter with a default value
+}
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+console.log(greet("Bob", "Hi")); // Output: Hi, Bob!
+            </pre>
+          </code>
+          <br />
+          <p>
+            Parameters can also have default values, which are used if no
+            argument is provided for that parameter when the function is called.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function multiply(a, b = 1) {
+  return a * b; // b has a default value of 1
+}
+console.log(multiply(5)); // Output: 5 (5 * 1)
+console.log(multiply(5, 2)); // Output: 10 (5 * 2)
+            </pre>
+          </code>
+          <br />
+          <p>
+            Functions can also accept a variable number of arguments using the
+            rest parameter syntax. This allows you to pass an array of values to
+            the function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0); // numbers is an array of arguments
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10 (1 + 2 + 3 + 4)
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>sum</code> function can take any number
+            of arguments, and it will return the sum of all the numbers passed
+            to it.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Functions Return Values
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Functions can return values using the <code>return</code> keyword.
+            When a function returns a value, it can be used in expressions or
+            assigned to variables. If a function does not explicitly return a
+            value, it will return <code>undefined</code> by default.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function square(x) {
+  return x * x; // Returns the square of x
+}
+console.log(square(5)); // Output: 25
+
+function getFullName(firstName, lastName) {
+  return `${firstName} ${lastName}`; // Returns the full name
+}
+
+console.log(getFullName("John", "Doe")); // Output: John Doe
+
+function getUserInfo(user) {
+  return {
+    name: user.name,
+    age: user.age,
+    email: user.email,
+  }; // Returns an object with user information
+}
+console.log(getUserInfo({ name: "Alice", age: 30, email: "alice@example.com" })); // Output: { name: 'Alice', age: 30, email: 'alice@example.com' }
+            </pre>
+          </code>
+          <br />
+          <p>
+            The returned value can be used immediately or stored in a variable
+            for later use.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let result = square(10); // Store the returned value in a variable
+console.log(result); // Output: 100
+function calculateArea(length, width) {
+  return length * width; // Returns the area of a rectangle
+}
+console.log(calculateArea(5, 10)); // Output: 50
+</pre
+            >
+          </code>
+          <br />
+          <p>
+            If a function does not have a <code>return</code> statement, it will
+            return <code>undefined</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function doNothing() {
+  // No return statement
+}
+console.log(doNothing()); // Output: undefined
+            </pre>
+          </code>
+          <br />
+          <p>
+            Functions can also return multiple values by returning an array or
+            an object.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function getCoordinates() {
+  return [10, 20]; // Returns an array with coordinates
+}
+console.log(getCoordinates()); // Output: [10, 20]
+
+function getPerson() {
+  return {
+    name: "Alice",
+    age: 30,
+    email: "alice@example.com",
+  }; // Returns an object with person information
+}
+console.log(getPerson()); // Output: { name: 'Alice', age: 30, email: 'alice@example.com' }
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>getCoordinates</code> function returns an
+            array with two values, and the <code>getPerson</code> function
+            returns an object with multiple properties.
+          </p>
+          <br />
+          <p>
+            Two common functions are getters and setters. A getter is a function
+            that retrieves a value, while a setter is a function that updates a
+            value.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Function Scope & Closures
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Function scope refers to the accessibility of variables within a
+            function. Variables defined inside a function are not accessible
+            from outside the function.
+          </p>
+          <br />
+          <p>
+            Closures are a feature in JavaScript where an inner function has
+            access to the outer function's variables even after the outer
+            function has returned.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+let x = 15; // In the parent scope such as global or outer function
+
+function addNumbers(y) {
+  return x + y; // in the function scope
+} 
+
+console.log(addNumbers(5)); // Output: 20 (15 + 5)
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the variable <code>x</code> is defined in the
+            parent scope, and the function <code>addNumbers</code> can access it
+            even though it is defined inside another function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function outerFunction() {
+  const secret = "secret value";
+
+  function innerFunction() {
+    console.log(secret); // Accesses the outer function's variable
+  }
+  return innerFunction; // Returns the inner function
+}
+  const closure = outerFunction();
+  closure(); // Output: secret value
+            </pre>
+          </code>
+          <br />
+          <p>
+            One of the most important uses for closures is data encapsulation.
+            Closures allow you to create private variables that cannot be
+            accessed from outside the function.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function outerFunction() {
+  let state = "";
+
+  function innerFunction() {
+    return `Information: ${state}`;
+  }
+
+  return innerFunction;
+}
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the variable <code>state</code> is private to the
+            <code>outerFunction</code>, and it can only be accessed by the
+            <code>innerFunction</code>. This allows you to create functions that
+            maintain their own state without exposing it to the outside world.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Callback Functions</h2>
+        <div class="max-w-none">
+          <p>
+            When we have two functions, and we want to control the execution
+            order, we can use callback functions.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// This is a simple function that takes a name and a callback function as parameters
+function greetUser(name, callback) {
+  const greetingMessage = `Hello, ${name}!`;
+  callback(greetingMessage);
+}
+
+// This is a callback function that will be called after the greeting message is created
+function displayGreeting(message) {
+  console.log(message);
+}
+
+
+// Call the greetUser function with a name and the displayGreeting function as a callback
+greetUser("Alice", displayGreeting); // Output: Hello, Alice!
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>greetUser</code> function takes a name
+            and a callback function as parameters. It creates a greeting message
+            and then calls the callback function with that message.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { id: 1, name: "Alice" };
+    callback(null, data); // Call the callback function with the fetched data
+  }, 2000); // Simulate an asynchronous operation
+}
+
+function handleData(error, data) {
+  if (error) {
+    console.error("Error fetching data:", error);
+  } else {
+    console.log("Fetched data:", data); // Output: Fetched data: { id: 1, name: 'Alice' }
+  }
+}
+
+fetchData(handleData); // Call fetchData with handleData as the callback
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>fetchData</code> function simulates an
+            asynchronous operation (like fetching data from a server) and calls
+            the provided callback function with the fetched data after a delay.
+            The <code>handleData</code> function is used to handle the result of
+            the asynchronous operation.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Arrow Functions</h2>
+        <div class="max-w-none">
+          <p>
+            An arrow function expression is a compact alternative to traditional
+            function expressions, with some semantic differences and deliberate
+            limitations in usage.
+          </p>
+          <br />
+          <ul class="list-disc pl-6">
+            <li>
+              Arrow functions don't have their own bindings to 'this',
+              'arguments', or 'super', and should not be used as methods.
+            </li>
+            <li>
+              Arrow functions cannot be used as constructors and will throw an
+              error when used with 'new'.
+            </li>
+            <li>
+              Arrow functions cannot use 'yield', and thus cannot be used as
+              generator functions.
+            </li>
+          </ul>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const greet = (name) => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+const add = (a, b) => a + b; // Implicit return
+console.log(add(5, 10)); // Output: 15
+
+const square = (x) => x * x; // Single expression, implicit return
+console.log(square(4)); // Output: 16
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((num) => num * 2); // Using arrow function with array method
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+const person = {
+  name: "Bob",
+  age: 30,
+  greet: () => `Hello, ${this.name}!`, // Arrow function does not bind 'this' 
+  // This will not work as expected because 'this' does not refer to the person object
+};
+
+console.log(person.greet()); // Output: Hello, undefined!
+            </pre>
+          </code>
+          <br />
+          <p>
+            Arrow functions are particularly useful for concise function
+            expressions and when you want to preserve the lexical scope of
+            <code>this</code>.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+// Traditional anonymous function
+(function (a) {
+  return a + 100;
+});
+
+// 1. Remove the word 'function' and replace it with an arrow (=>) between the arguments and the body braces
+(a) => {
+  return a + 100;
+};
+
+// 2. Remove the body braces and word 'return' - the return is implied
+(a) => a + 100;
+
+// 3. Remove the parameter parenthesis if there is only one parameter
+a => a + 100;
+            </pre>
+          </code>
+          <br />
+          <p>
+            Arrow functions are often used in functional programming patterns,
+            such as with array methods like <code>map</code>,
+            <code>filter</code>, and <code>reduce</code>.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Higher Order Functions
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Higher-order functions are functions that take other functions as
+            arguments or return them as results. They enable a functional
+            programming style and allow for more abstract and reusable code.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(function (number) {
+  return number % 2 === 0; // Returns true for even numbers
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+            </pre>
+          </code>
+          <br />
+          <p>
+            Higher-order functions can also return other functions. This is
+            useful for creating function factories or for partial application of
+            functions.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function createMultiplier(factor) {
+  return function (number) {
+    return number * factor; // Returns a function that multiplies by the factor
+  };
+}
+const double = createMultiplier(2); // Creates a function that doubles a number
+console.log(double(5)); // Output: 10
+const triple = createMultiplier(3); // Creates a function that triples a number
+console.log(triple(5)); // Output: 15
+            </pre>
+          </code>
+          <br />
+          <p>
+            Higher-order functions are a powerful feature of JavaScript that
+            allows for more flexible and reusable code. They are commonly used
+            in functional programming paradigms.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+function x(y) {
+  y(); // Call the function passed as an argument
+}
+
+function print(){
+  console.log("Hello, World!"); // Function to be passed as an argument
+}
+
+x(print); // Output: Hello, World!
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the function <code>x</code> takes another function
+            <code>y</code> as an argument and calls it. The function
+            <code>print</code> is passed to <code>x</code>, which then executes
+            it. <code>x</code> is a higher-order function because it takes a
+            function as an argument.
+          </p>
+          <br />
+          <p>
+            Another place to use higher order functions is in event handling.
+            For example, you can pass a function to be executed when a button is
+            clicked. Another example is <code>addEventListener()</code>, which
+            is a higher-order function that takes a callback function as an
+            argument.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Immediately Invoked Function Expressions (IIFe)
+        </h2>
+        <div class="max-w-none">
+          <p>
+            An Immediately Invoked Function Expression (IIFE) is a function that
+            is executed immediately after it is defined. It is often used to
+            create a private scope and avoid polluting the global namespace.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+(function () {
+  console.log("This is an IIFE");
+})();
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the function is defined and executed immediately.
+            This pattern is useful for initializing variables or executing code
+            without leaving any traces in the global scope.
+          </p>
+          <br />
+
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+var counter = (function () {
+  count = 0; // Private variable
+  return {
+    increment: function() {
+      count++;
+    },
+    decrement: function() {
+      count--;
+    },
+    getCount: function() {
+      return count;
+    }
+  }
+  counter.increment(); // Increment the counter
+  counter.increment(); // Increment the counter again
+  console.log(counter.getCount()); // Output: 2
+  counter.decrement(); // Decrement the counter
+  console.log(counter.getCount()); // Output: 1
+
+  console.log(counter.count); // Output: undefined (count is private)
+})();
+            </pre>
+          </code>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

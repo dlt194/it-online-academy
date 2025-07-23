@@ -3,15 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Essentials - Module 1</title>
+    <title>JavaScript Essentials - Module 8.1</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- My JavaScript -->
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-blue-600 text-white p-4 shadow-md">
       <div class="container mx-auto flex items-center justify-between">
-        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <h1 class="text-2xl font-bold">
+          JavaScript Essentials - Activity 8.1: Create an Interactive Image
+          Gallery
+        </h1>
       </div>
     </header>
 
@@ -19,7 +24,21 @@
     <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
       <!-- Course Content -->
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
-        <div class="prose max-w-none"></div>
+        <div class="prose max-w-none text-center">
+          <input
+            class="border border-gray-300 p-2 rounded w-full mb-4"
+            type="text"
+            id="imgInput"
+            placeholder="Enter URL for Image to Add to Gallery"
+          />
+          <button
+            id="addImgButton"
+            class="bg-blue-600 text-white px-4 py-2 rounded text-center hover:bg-blue-700 transition-colors m-2"
+          >
+            Add Image
+          </button>
+          <div id="imgGallery" class="flex flex-wrap justify-center"></div>
+        </div>
       </section>
     </main>
 

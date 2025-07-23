@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 7 - Basic Calculator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Calculator Script -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0870e740b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">
+          JavaScript Essentials - Basic Calculator
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <div class="prose max-w-none">
+          <div class="calculator">
+            <input
+              type="number"
+              name="num1"
+              id="num1"
+              placeholder="Enter first number"
+              class="mb-2 rounded border p-2 max-w-[200px] w-full"
+            />
+            <input
+              type="number"
+              name="num2"
+              id="num2"
+              placeholder="Enter second number"
+              class="mb-2 rounded border p-2 max-w-[200px] w-full"
+            />
+            <div id="buttons">
+              <button
+                onclick="calculate('add')"
+                class="mb-2 rounded border p-2 w-[50px] h-[50px] hover:bg-blue-300"
+                value="+"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button
+                onclick="calculate('subtract')"
+                class="mb-2 rounded border p-2 w-[50px] h-[50px] hover:bg-blue-300"
+                value="-"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                onclick="calculate('multiply')"
+                class="mb-2 rounded border p-2 w-[50px] h-[50px] hover:bg-blue-300"
+                value="*"
+              >
+                <i class="fa-solid fa-times"></i>
+              </button>
+              <button
+                onclick="calculate('divide')"
+                class="mb-2 rounded border p-2 w-[50px] h-[50px] hover:bg-blue-300"
+                value="/"
+              >
+                <i class="fa-solid fa-divide"></i>
+              </button>
+            </div>
+            <div class="" id="result"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -356,7 +356,132 @@ switch (day) {
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Loops offer a quick and easy way to do something repeatedly. You can
+            think of a loop as a computerised version of a game where you tell
+            someone to take X steps in one direction, then Y steps in another.
+            For example, the idea "Go five steps to the east" could be expressed
+            this way as a loop:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+for (let step = 0; step &lt; 5; step++) {
+  console.log("Step to the east");
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will execute five times, logging "Step to
+            the east" each time.
+          </p>
+          <br />
+          <p>There are several types of loops in JavaScript, including:</p>
+          <ul>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do...while loop</li>
+            <li>for...of loop</li>
+            <li>for...in loop</li>
+          </ul>
+          <p>
+            Each type of loop has its own use case and syntax. For example, a
+            while loop continues to execute as long as a specified condition is
+            true:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let count = 0;
+while (count < 5) {
+  console.log("Count is: " + count);
+  count++;
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will continue to execute until `count` is
+            no longer less than 5, logging the current count each time.
+          </p>
+          <br />
+          <p>
+            A do...while loop is similar but guarantees that the code block will
+            execute at least once:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let count = 0;
+do {
+  console.log("Count is: " + count);
+  count++;
+} while (count &lt; 5);
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will execute at least once, logging the
+            current count each time, and will continue until `count` is no
+            longer less than 5.
+          </p>
+          <br />
+          <p>
+            The for...of loop is used to iterate over iterable objects like
+            arrays or strings:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+  console.log("Fruit: " + fruit);
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will iterate over each fruit in the
+            `fruits` array and log it to the console.
+          </p>
+          <br />
+          <p>
+            The for...in loop is used to iterate over the properties of an
+            object:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let person = { name: "Dan", age: 30, city: "London" };
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will iterate over each property of the
+            `person` object and log the key and its corresponding value to the
+            console.
+          </p>
+          <br />
+          <p>
+            Loops can also be nested, meaning you can have a loop inside another
+            loop. This is useful for working with multi-dimensional arrays or
+            performing complex iterations.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+for (let row of matrix) {
+  for (let value of row) {
+    console.log("Value: " + value);
+  }
+}
+            </pre>
+          </code>
+          <p>
+            In this example, we have a 2D array (matrix) and we use nested loops
+            to iterate over each row and each value within that row, logging the
+            value to the console.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

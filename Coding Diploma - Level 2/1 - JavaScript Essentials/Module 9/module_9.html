@@ -302,7 +302,57 @@ if (typeof x === "number") {
         <h2 class="text-xl font-semibold border-b pb-2">
           Conditional Switch Statements
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            Switch statements are another way to handle multiple conditions in
+            JavaScript. They are often used when you have a variable that can
+            take on multiple values, and you want to execute different code for
+            each value.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("It's the start of the week.");
+    break;
+  case "Tuesday":
+    console.log("It's the second day of the week.");
+    break;
+  case "Wednesday":
+    console.log("It's hump day!");
+    break;
+  case "Thursday":
+    console.log("Almost the weekend.");
+    break;
+  case "Friday":
+    console.log("It's the end of the week.");
+    break;
+  case "Saturday":
+    console.log("It's the weekend!");
+    break;
+  case "Sunday":
+    console.log("It's the weekend!");
+    break;
+
+  default:
+    console.log("It's not a valid day.");
+    break;
+}
+            </pre>
+          </code>
+          <p>
+            In this example, we use a switch statement to check the value of the
+            variable `day` and log a message based on its value. The `break`
+            statement is used to exit the switch block after executing the code
+            for the matched case.
+          </p>
+          <br />
+          <p>
+            If no case matches, the `default` case is executed, which acts as a
+            fallback.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>

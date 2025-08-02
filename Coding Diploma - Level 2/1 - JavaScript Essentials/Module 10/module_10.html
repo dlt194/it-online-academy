@@ -407,7 +407,133 @@ asyncCall();
         <h2 class="text-xl font-semibold border-b pb-2">
           Example of Fetch Data, API & Asynchronous JS
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+function fetchPokemonData(pokemonName) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+}
+
+function processPokemonData(data) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const processedData = {
+        name: data.name,
+        height: data.height,
+        weight: data.weight,
+        abilities: data.abilities.map(ability => ability.ability.name)
+      };
+      resolve(processedData);
+    }, 1000); // Simulating a delay for processing
+  })
+}
+
+document.getElementById('fetchButton').addEventListener('click', () => {
+  const pokemonName = document.getElementById('pokemonName').value;
+  const output = document.getElementById('output');
+
+  output.innerText = 'Fetching data...';
+
+  fetchPokemonData(pokemonName)
+    .then(data => {
+      return processPokemonData(data)
+    })
+    .then(processedData => {
+      output.innerHTML = `
+        &lt;h2 class="underline"&gt;Pokemon Data&lt;/h2&gt;
+        &lt;p&gt;&lt;strong &gt;Name: &lt;/strong&gt; ${processedData.name}&lt;/p&gt;
+        &lt;p class="capitalize"&gt;&lt;strong&gt;Height: &lt;/strong&gt; ${processedData.height}&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Weight: &lt;/strong&gt; ${processedData.weight}&lt;/p&gt;
+        &lt;p class="capitalize"&gt;&lt;strong&gt;Abilities: &lt;/strong&gt; ${processedData.abilities.join(', ')}&lt;/p&gt;
+      `;
+    })
+    .catch(error => {
+      output.innerText = `Error: ${error.message}`;
+    })
+})
+            </pre>
+          </code>
+          <div class="flex items-center justify-between mb-4">
+            <input
+              class="border p-2 rounded w-full m-2"
+              type="text"
+              placeholder="Add a new task"
+              id="pokemonName"
+            />
+            <button
+              id="fetchButton"
+              class="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Add
+            </button>
+          </div>
+          <div id="output"></div>
+          <script>
+            function fetchPokemonData(pokemonName) {
+              return fetch(
+                `https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`
+              ).then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json();
+              });
+            }
+
+            function processPokemonData(data) {
+              return new Promise((resolve) => {
+                setTimeout(() => {
+                  const processedData = {
+                    name: data.name,
+                    height: data.height,
+                    weight: data.weight,
+                    abilities: data.abilities.map(
+                      (ability) => ability.ability.name
+                    ),
+                  };
+                  resolve(processedData);
+                }, 1000); // Simulating a delay for processing
+              });
+            }
+
+            document
+              .getElementById("fetchButton")
+              .addEventListener("click", () => {
+                const pokemonName =
+                  document.getElementById("pokemonName").value;
+                const output = document.getElementById("output");
+
+                output.innerText = "Fetching data...";
+
+                fetchPokemonData(pokemonName)
+                  .then((data) => {
+                    return processPokemonData(data);
+                  })
+                  .then((processedData) => {
+                    output.innerHTML = `
+                      <h2 class="underline">Pokemon Data</h2>
+                      <p class="capitalize"><strong>Name: </strong> ${
+                        processedData.name
+                      }</p>
+                      <p><strong>Height: </strong> ${processedData.height}</p>
+                      <p><strong>Weight: </strong> ${processedData.weight}</p>
+                      <p class="capitalize"><strong>Abilities: </strong> ${processedData.abilities.join(
+                        ", "
+                      )}</p>
+                    `;
+                  })
+                  .catch((error) => {
+                    output.innerText = `Error: ${error.message}`;
+                  });
+              });
+          </script>
+        </div>
       </section>
     </main>
 

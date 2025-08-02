@@ -347,7 +347,61 @@ doSomething()
         <h2 class="text-xl font-semibold border-b pb-2">
           Async Await in Asynchronous JS
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            The <code>async function</code> declaration creates a binding of a
+            new async function to a given name. The <code>await</code> keyword
+            is permitted within the function body, enabling asynchronous,
+            promise-based behavior to be written in a cleaner style, avoiding
+            the need to explicitly configure promise chains.
+          </p>
+          <br />
+          <p>
+            The <code>await</code> operator is used to wait for a
+            <code>Promise</code> and get its fulfillment value. It can only be
+            used inside an <code>async function</code> or at the top level of a
+            module.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+            </pre>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>asyncCall</code> function is declared as
+            an async function. Inside it, the <code>await</code> keyword is used
+            to pause the execution until the promise returned by
+            <code>resolveAfter2Seconds</code> is resolved.
+          </p>
+          <br />
+          <p>
+            Async functions can contain zero or more
+            <code>await</code> expressions. Await expressions make
+            promise-returning functions behave as though they are synchronous by
+            suspending execution until the returned promise is fulfilled or
+            rejected. The resolved value of the promise is treated as the return
+            value of the await expression. Use of <code>async</code> and
+            <code>await</code> enables the use of ordinary
+            <code>try</code>/<code>catch</code> blocks around asynchronous code.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

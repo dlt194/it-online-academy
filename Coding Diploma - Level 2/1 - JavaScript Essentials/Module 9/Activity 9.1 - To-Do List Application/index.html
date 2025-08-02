@@ -6,7 +6,7 @@
     <title>JavaScript Essentials - Module 1</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
@@ -20,7 +20,27 @@
     <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
       <!-- Course Content -->
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
-        <div class="prose max-w-none"></div>
+        <div class="prose max-w-none">
+          <div class="flex items-center justify-between mb-4">
+            <input
+              class="border p-2 rounded w-full m-2"
+              type="text"
+              placeholder="Add a new task"
+              id="taskInput"
+            />
+            <button
+              id="addTaskButton"
+              class="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Add
+            </button>
+          </div>
+          <div>
+            <ul id="taskList" class="pl-5 space-y-2">
+              <!-- Tasks will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 

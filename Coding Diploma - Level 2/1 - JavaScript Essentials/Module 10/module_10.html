@@ -142,7 +142,109 @@ console.log('End');
         <h2 class="text-xl font-semibold border-b pb-2">
           Callbacks in Asynchronous JS
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            There are two ways in which the callback may be called: synchrons
+            and asynchronous. Synchronous callbacks are executed immediately
+            after the invocation of the outer function, while asynchronous
+            callbacks are called as some point later, usually after an
+            asynchronous operation has completed.
+          </p>
+          <br />
+          <p>
+            Understanding whether the callback is synchronous or asynchronous is
+            particularly important when analysing side effects.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let value = 1;
+
+doSomething(() => {
+  value = 2;
+});
+
+console.log(value); // 1
+            </pre>
+            <script>
+              let value = 1;
+
+              function doSomething(callback) {
+                // Simulating an asynchronous operation
+                setTimeout(() => {
+                  callback();
+                }, 1000);
+              }
+
+              doSomething(() => {
+                value = 2;
+              });
+
+              console.log(value); // 1
+            </script>
+          </code>
+          <br />
+          <p>
+            If <code>doSomething</code> calls the callback synchronously, then
+            the last statement would be log <code>2</code> because
+            <code>value = 2</code> is synchronous executed; otherwise if the
+            callback is asynchronous, then the last statement would log
+            <code>1</code> because <code>value = 2</code> is only executed after
+            the <code>console.log</code> statement.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+function fetchData(callback) {
+  // Simulating a network request or asynchronous operation with setTimeout
+  setTimeout(() => {
+    const data = { id: 1, name: 'John Doe' };
+    callback(null, data);
+  }, 2000); // Simulating a 2-second delay
+}
+
+function handleData(error, data) {
+  if (error) {
+    console.error('Error fetching data:', error);
+  } else {
+    console.log('Data fetched successfully:', data);
+  }
+}
+
+// Calling the fetchData function with a callback
+fetchData(handleData);
+            </pre>
+            <script>
+              function fetchData(callback) {
+                // Simulating a network request or asynchronous operation with setTimeout
+                setTimeout(() => {
+                  const data = { id: 1, name: "John Doe" };
+                  callback(null, data);
+                }, 2000); // Simulating a 2-second delay
+              }
+
+              function handleData(error, data) {
+                if (error) {
+                  console.error("Error fetching data:", error);
+                } else {
+                  console.log("Data fetched successfully:", data);
+                }
+              }
+
+              // Calling the fetchData function with a callback
+              fetchData(handleData);
+            </script>
+          </code>
+          <br />
+          <p>
+            In this example, the <code>fetchData</code> function simulates an
+            asynchronous operation (like fetching data from a server) using
+            <code>setTimeout</code>. The callback function
+            <code>handleData</code>
+            is called once the data is fetched, allowing us to handle the result
+            or any errors.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

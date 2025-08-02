@@ -1,9 +1,24 @@
+// Array to store tasks
+let tasks = [];
+
 function addTask() {
-  const taskInput = document.getElementById("taskInput").value.trim();
+  const taskInput = document.getElementById("taskInput").value;
 
   if (taskInput) {
-    const taskList = document.getElementById("taskList");
+    tasks.push(taskInput);
+    document.getElementById("taskInput").value = "";
+    displayTasks();
+  } else {
+    alert("Please enter a task.");
+  }
+}
 
+function displayTasks() {
+  const taskList = document.getElementById("taskList");
+
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
     const taskItem = document.createElement("li");
 
     taskItem.classList.add(
@@ -14,44 +29,12 @@ function addTask() {
       "p-2",
       "rounded"
     );
-    const task = document.createElement("span");
+    const taskContent = document.createElement("span");
 
-    task.textContent = taskInput;
+    taskContent.textContent = task;
 
     const buttonDiv = document.createElement("div");
     buttonDiv.classList.add("flex", "space-x-2");
-
-    const completeButton = document.createElement("button");
-    completeButton.textContent = "Complete";
-    completeButton.classList.add(
-      "rounded",
-      "bg-green-600",
-      "text-white",
-      "px-3",
-      "py-1",
-      "hover:bg-green-700",
-      "transition-colors",
-      "m-2"
-    );
-    completeButton.onclick = () => {
-      if (completeButton.textContent === "Complete") {
-        task.classList.toggle("line-through");
-        completeButton.textContent = "Incomplete";
-        completeButton.classList.toggle("bg-green-600");
-        completeButton.classList.toggle("bg-yellow-600");
-        completeButton.classList.toggle("hover:bg-green-700");
-        completeButton.classList.toggle("hover:bg-yellow-700");
-        task.classList.toggle("opacity-50");
-      } else {
-        task.classList.toggle("line-through");
-        completeButton.textContent = "Complete";
-        completeButton.classList.toggle("bg-yellow-600");
-        completeButton.classList.toggle("bg-green-600");
-        completeButton.classList.toggle("hover:bg-yellow-700");
-        completeButton.classList.toggle("hover:bg-green-700");
-        task.classList.toggle("opacity-100");
-      }
-    };
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
@@ -65,18 +48,18 @@ function addTask() {
       "transition-colors",
       "m-2"
     );
-    removeButton.onclick = () => taskList.removeChild(taskItem);
+    removeButton.onclick = () => removeTask(index);
 
-    buttonDiv.appendChild(completeButton);
     buttonDiv.appendChild(removeButton);
-    taskItem.appendChild(task);
+    taskItem.appendChild(taskContent);
     taskItem.appendChild(buttonDiv);
     taskList.appendChild(taskItem);
+  });
+}
 
-    document.getElementById("taskInput").value = "";
-  } else {
-    alert("Please enter a task.");
-  }
+function removeTask(index) {
+  tasks.splice(index, 1);
+  displayTasks();
 }
 
 document

@@ -54,7 +54,89 @@
         <h2 class="text-xl font-semibold border-b pb-2">
           Introduction to AJAX
         </h2>
-        <div class="max-w-none"></div>
+        <div class="max-w-none">
+          <p>
+            AJAX (Asynchronous JavaScript and XML) is a technique that allows
+            web pages to be updated asynchronously by exchanging small amounts
+            of data with the server behind the scenes. This means that it is
+            possible to update parts of a web page without reloading the entire
+            page.
+          </p>
+          <br />
+          <p>
+            AJAX is commonly used to create dynamic and interactive web
+            applications, allowing for a smoother user experience.
+          </p>
+          <br />
+          <p>
+            AJAX is often used in combination with JavaScript to create
+            interactive web applications. It allows developers to send and
+            receive data from a server without having to reload the entire page.
+          </p>
+          <br />
+          <p>
+            Although AJAX originally used XML for data exchange, it now commonly
+            uses JSON (JavaScript Object Notation) due to its simplicity,
+            lightweight nature, and ease of use.
+          </p>
+          <br />
+          <p>
+            AJAX is not a technology in itself, but rather an approach to using
+            a number of existing technologies together, including HTML or XHTML,
+            CSS, JavaScript, DOM, XML, XSLT and most importantly the
+            <code>XMLHttpRequest</code> object. When combined, these
+            technologies allow for the creation of dynamic and interactive web
+            applications which can make quick incremental updates to the user
+            interface without requiring a full page reload.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+console.log('Start');
+
+// Simulating an asynchronous operation
+setTimeout(() => {
+  console.log('Water is boiled');
+  console.log('Stir the cup')
+}, 3000);
+
+console.log('While the water is boiling, I can do other things');
+console.log('Get the cup');
+console.log('Add the tea bag')
+console.log('Add the sugar');
+console.log('Add the milk');
+
+console.log('Enjoy your tea!');
+console.log('End');
+            </pre>
+            <script>
+              console.log("Start");
+
+              // Simulating an asynchronous operation
+              setTimeout(() => {
+                console.log("Water is boiled");
+                console.log("Stir the cup");
+              }, 3000);
+
+              console.log("While the water is boiling, I can do other things");
+              console.log("Get the cup");
+              console.log("Add the tea bag");
+              console.log("Add the sugar");
+              console.log("Add the milk");
+
+              console.log("Enjoy your tea!");
+              console.log("End");
+            </script>
+          </code>
+          <br />
+          <p>
+            In the above code, the `setTimeout` function simulates an
+            asynchronous operation that takes 3 seconds to complete. While the
+            water is boiling, other tasks can be performed, such as getting the
+            cup, adding the tea bag, sugar, and milk. Once the water is boiled,
+            the message "Enjoy your tea!" is logged to the console.
+          </p>
+        </div>
       </section>
       <section class="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 class="text-xl font-semibold border-b pb-2">

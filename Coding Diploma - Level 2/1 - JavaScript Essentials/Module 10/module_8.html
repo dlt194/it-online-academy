@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 8</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="module_8.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 8</a
+          >
+          <a href="module_9.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 9</a
+          >
+          <a href="module_10.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 10</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Introduction to Events
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Events are actions or occurrences that happen in the browser, such
+            as clicks, key presses, or mouse movements. JavaScript can respond
+            to these events and execute code when they occur.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.addEventListener('click', function(event) {
+  console.log('Document clicked!', event);
+});
+            </pre>
+          </code>
+          <p>
+            In this example, we add an event listener to the document that
+            listens for click events. When the document is clicked, it logs a
+            message to the console.
+          </p>
+          <br />
+          <p>
+            Event handling is important for creating interactive web
+            applications. It allows developers to respond to user actions, such
+            as clicks, key presses, and mouse movements.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Events References</h2>
+        <div class="max-w-none">
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Events"
+              target="_blank"
+              class="text-blue-600 hover:underline"
+              >MDN Web Docs - Events</a
+            >
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+document.addEventListener('click', function(event) {
+  console.log('Document clicked!', event);
+});
+            </pre>
+          </code>
+          <p>
+            This code adds an event listener to the document that listens for
+            click events. When the document is clicked, it logs a message to the
+            console.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const circles = [];
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function Circle(x, y, radius) {
+  this.x = x;
+  this.y = y;
+  this.radius = radius;
+  this.color = color;
+
+  this.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+}
+
+canvas.addEventListener('mousemove', function(event) {
+  const radius = Math.random() * 30 + 10;
+  const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+  circles.push(new Circle(event.clientX, event.clientY, radius, color));
+})
+
+canvas.addEventListener('click', function(event) {
+  const radius = Math.random() * 30 + 10;
+  const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+  circles.push(new Circle(event.clientX, event.clientY, radius, color));
+});
+
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  circles.forEach(circle => {
+    circle.draw();
+  });
+}
+            </pre>
+          </code>
+          <p>
+            This code creates a canvas where circles are drawn at the mouse
+            position when the mouse moves or clicks. Each circle has a random
+            radius and color.
+          </p>
+          <br />
+          <a
+            href="example.html"
+            target="_blank"
+            class="text-blue-600 hover:underline"
+            >Example</a
+          >
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Add Event Listener Example
+        </h2>
+        <div class="max-w-none">
+          <p>
+            This example demonstrates how to add an event listener to a button
+            element. When the button is clicked, it logs a message to the
+            console.
+          </p>
+          <br />
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded">
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+  alert('Button clicked!');
+});
+            </pre>
+          </code>
+          <p>
+            In this example, we select a button element with the ID "myButton"
+            and add an event listener that listens for click events. When the
+            button is clicked, it displays an alert message.
+          </p>
+          <br />
+          <p>
+            Event listeners can be added to various elements, such as buttons,
+            links, and even the document itself. They allow developers to
+            respond to user interactions and create dynamic web applications.
+          </p>
+          <br />
+          <p>
+            For more information on event listeners, you can refer to the
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+              target="_blank"
+              class="text-blue-600 hover:underline"
+              >MDN Web Docs - addEventListener</a
+            >.
+          </p>
+          <br />
+          <p>
+            You can also view the example in action by clicking the button
+            below:
+          </p>
+          <br />
+          <button
+            id="myButton"
+            class="bg-blue-600 text-white px-4 py-2 m-2 rounded hover:bg-blue-500"
+            onclick="console.log('Button clicked!')"
+          >
+            Click Me
+          </button>
+          <script>
+            document
+              .getElementById("myButton")
+              .addEventListener("click", function () {
+                alert("Button clicked!");
+              });
+          </script>
+          <p>
+            This code adds an event listener to the button that listens for
+            click events. When the button is clicked, it displays an alert
+            message.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

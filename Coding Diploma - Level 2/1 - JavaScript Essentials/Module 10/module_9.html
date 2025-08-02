@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Essentials - Module 9</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-2xl font-bold">JavaScript Essentials</h1>
+        <nav class="space-x-1">
+          <a href="index.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 1</a
+          >
+          <a href="module_2.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 2</a
+          >
+          <a href="module_3.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 3</a
+          >
+          <a href="module_4.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 4</a
+          >
+          <a href="module_5.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 5</a
+          >
+          <a href="module_6.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 6</a
+          >
+          <a href="module_7.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 7</a
+          >
+          <a href="module_8.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 8</a
+          >
+          <a href="module_9.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 9</a
+          >
+          <a href="module_10.html" class="px-3 py-1 hover:bg-blue-500 rounded"
+            >Module 10</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
+      <!-- Course Content -->
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Conditional Statements
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Conditional statements are used to perform different actions based
+            on different conditions. In JavaScript, we primarily use the
+            if...else statement for this purpose.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+
+if (condition) {
+  // code to execute if condition is true
+} else {
+  // code to execute if condition is false
+}
+          </pre
+            >
+          </code>
+          <p>Example:</p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let age = 18;
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check the age of a person and log a message to
+            the console based on whether they are an adult or a minor. The
+            result would be "You are an adult."
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Ternary Operators</h2>
+        <div class="max-w-none">
+          <p>
+            Ternary operators provide a shorthand way to write conditional
+            statements. They are often used for simple conditions.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+condition ? expressionIfTrue : expressionIfFalse;
+          
+let age = 18;
+let message = age >= 18 ? "You are an adult." : "You are a minor.";
+console.log(message);
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we use a ternary operator to assign a message based
+            on the age. The result would be "You are an adult."
+          </p>
+          <br />
+          <p>
+            Ternary operators can be nested for more complex conditions, but
+            readability may suffer.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let score = 85;
+
+let grade = score >= 90 ? "A" :
+            score >= 80 ? "B" :
+            score >= 70 ? "C" :
+            score >= 60 ? "D" : "F";
+
+console.log(`Your grade is: ${grade}`);
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we determine a letter grade based on the score
+            using nested ternary operators.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Logical Operators</h2>
+        <div class="max-w-none">
+          <p>
+            Logical operators are used to combine multiple conditions. The most
+            common logical operators in JavaScript are AND (&&), OR (||), and
+            NOT (!).
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let age = 20;
+let hasPermission = true;
+
+if (age >= 18 && hasPermission) {
+  console.log("Access granted.");
+} else {
+  console.log("Access denied.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a person is at least 18 years old and
+            has permission. If both conditions are true, access is granted.
+          </p>
+          <br />
+          <p>
+            The OR operator (||) can be used to check if at least one condition
+            is true.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isWeekend = true;
+let isHoliday = false;
+
+if (isWeekend || isHoliday) {
+  console.log("It's a day off!");
+} else {
+  console.log("It's a working day.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if it's either a weekend or a holiday to
+            determine if it's a day off.
+          </p>
+          <br />
+          <p>
+            The NOT operator (!) negates a condition, making it true if it was
+            false and vice versa.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isLoggedIn = false;
+if (!isLoggedIn) {
+  console.log("Please log in.");
+} else {
+  console.log("Welcome back!");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a user is not logged in and prompt them
+            to log in.
+          </p>
+          <br />
+          <p>Logical operators can be combined to create complex conditions.</p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let isAdmin = true;
+let isEditor = false;
+if (isAdmin || isEditor) {
+  console.log("You have editing permissions.");
+} else {
+  console.log("You do not have editing permissions.");
+}
+          </pre
+            >
+          </code>
+          <p>
+            In this example, we check if a user is either an admin or an editor
+            to determine their editing permissions.
+          </p>
+          <br />
+          <p>
+            You also have comparison operators that can be used in conjunction
+            with logical operators. These include:
+          </p>
+          <ul>
+            <li>Equal to (===)</li>
+            <li>Not equal to (!==)</li>
+            <li>Greater than (&gt;)</li>
+            <li>Less than (&lt;)</li>
+            <li>Greater than or equal to (&gt;=)</li>
+            <li>Less than or equal to (&lt;=)</li>
+          </ul>
+          <p>
+            These operators can be used to compare values and return a boolean
+            result, which can then be used in conditional statements.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let x = 5;
+let y = 10;
+let z = "Dan";
+let a = true;
+
+if (x == 5) {
+  console.log("x is equal to 5");
+} 
+
+if (x != 5) {
+  console.log("x is not equal to 5");
+}
+
+if (x === 5) {
+  console.log("x is equal to 5 and the same data type");
+}
+
+if (x !== 5) {
+  console.log("x is not equal to 5 or not the same data type");
+}
+
+if (x &gt; 5) {
+  console.log("x is greater than 5")
+}
+
+if (x &lt; 5) {
+  console.log("x is less than 5")
+}
+
+if (x &gt;= 5) {
+  console.log("x is greater than or equal to 5")
+}
+
+if (y !== 10) {
+  console.log("y is not equal to 10")
+} else {
+  console.log("y is equal to 10")
+}
+
+// Logical Operators
+
+if (x &gt; 0 && y &gt; 0) {
+  console.log("Both x and y are positive")
+}
+
+if (x &lt; 0 || y &lt; 0) {
+  console.log("Either x or y is negative")
+}
+
+// Ternary Operator
+let max = x > y ? x : y;
+console.log(`The maximum value is ${max}`)
+
+// Type Operators
+if (typeof x === "number") {
+  console.log("x is a number")
+}
+            </pre>
+          </code>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">
+          Conditional Switch Statements
+        </h2>
+        <div class="max-w-none">
+          <p>
+            Switch statements are another way to handle multiple conditions in
+            JavaScript. They are often used when you have a variable that can
+            take on multiple values, and you want to execute different code for
+            each value.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("It's the start of the week.");
+    break;
+  case "Tuesday":
+    console.log("It's the second day of the week.");
+    break;
+  case "Wednesday":
+    console.log("It's hump day!");
+    break;
+  case "Thursday":
+    console.log("Almost the weekend.");
+    break;
+  case "Friday":
+    console.log("It's the end of the week.");
+    break;
+  case "Saturday":
+    console.log("It's the weekend!");
+    break;
+  case "Sunday":
+    console.log("It's the weekend!");
+    break;
+
+  default:
+    console.log("It's not a valid day.");
+    break;
+}
+            </pre>
+          </code>
+          <p>
+            In this example, we use a switch statement to check the value of the
+            variable `day` and log a message based on its value. The `break`
+            statement is used to exit the switch block after executing the code
+            for the matched case.
+          </p>
+          <br />
+          <p>
+            If no case matches, the `default` case is executed, which acts as a
+            fallback.
+          </p>
+        </div>
+      </section>
+      <section class="bg-white rounded-lg shadow p-6 space-y-6">
+        <h2 class="text-xl font-semibold border-b pb-2">Loops</h2>
+        <div class="max-w-none">
+          <p>
+            Loops offer a quick and easy way to do something repeatedly. You can
+            think of a loop as a computerised version of a game where you tell
+            someone to take X steps in one direction, then Y steps in another.
+            For example, the idea "Go five steps to the east" could be expressed
+            this way as a loop:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+for (let step = 0; step &lt; 5; step++) {
+  console.log("Step to the east");
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will execute five times, logging "Step to
+            the east" each time.
+          </p>
+          <br />
+          <p>There are several types of loops in JavaScript, including:</p>
+          <ul>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do...while loop</li>
+            <li>for...of loop</li>
+            <li>for...in loop</li>
+          </ul>
+          <p>
+            Each type of loop has its own use case and syntax. For example, a
+            while loop continues to execute as long as a specified condition is
+            true:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let count = 0;
+while (count < 5) {
+  console.log("Count is: " + count);
+  count++;
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will continue to execute until `count` is
+            no longer less than 5, logging the current count each time.
+          </p>
+          <br />
+          <p>
+            A do...while loop is similar but guarantees that the code block will
+            execute at least once:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let count = 0;
+do {
+  console.log("Count is: " + count);
+  count++;
+} while (count &lt; 5);
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will execute at least once, logging the
+            current count each time, and will continue until `count` is no
+            longer less than 5.
+          </p>
+          <br />
+          <p>
+            The for...of loop is used to iterate over iterable objects like
+            arrays or strings:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+  console.log("Fruit: " + fruit);
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will iterate over each fruit in the
+            `fruits` array and log it to the console.
+          </p>
+          <br />
+          <p>
+            The for...in loop is used to iterate over the properties of an
+            object:
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let person = { name: "Dan", age: 30, city: "London" };
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+            </pre>
+          </code>
+          <p>
+            In this example, the loop will iterate over each property of the
+            `person` object and log the key and its corresponding value to the
+            console.
+          </p>
+          <br />
+          <p>
+            Loops can also be nested, meaning you can have a loop inside another
+            loop. This is useful for working with multi-dimensional arrays or
+            performing complex iterations.
+          </p>
+          <code class="text-sm">
+            <pre class="bg-gray-100 p-4 rounded mt-2">
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+for (let row of matrix) {
+  for (let value of row) {
+    console.log("Value: " + value);
+  }
+}
+            </pre>
+          </code>
+          <p>
+            In this example, we have a 2D array (matrix) and we use nested loops
+            to iterate over each row and each value within that row, logging the
+            value to the console.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+      <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

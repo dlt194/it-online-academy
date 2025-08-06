@@ -1,2 +1,25 @@
 certificates/*
 Certificates/*
+Coding Diploma - Level 2/2 - React Essentials/node_modules
+
+# dependencies
+Coding Diploma - Level 2/2 - React Essentials/node_modules
+Coding Diploma - Level 2/2 - React Essentials/*.pnp
+Coding Diploma - Level 2/2 - React Essentials/*.pnp.js
+
+# testing
+Coding Diploma - Level 2/2 - React Essentials/coverage
+
+# production
+Coding Diploma - Level 2/2 - React Essentials/build
+
+# misc
+Coding Diploma - Level 2/2 - React Essentials/.DS_Store
+Coding Diploma - Level 2/2 - React Essentials/.env.local
+Coding Diploma - Level 2/2 - React Essentials/.env.development.local
+Coding Diploma - Level 2/2 - React Essentials/.env.test.local
+Coding Diploma - Level 2/2 - React Essentials/.env.production.local
+
+Coding Diploma - Level 2/2 - React Essentials/npm-debug.log*
+Coding Diploma - Level 2/2 - React Essentials/yarn-debug.log*
+Coding Diploma - Level 2/2 - React Essentials/yarn-error.log*

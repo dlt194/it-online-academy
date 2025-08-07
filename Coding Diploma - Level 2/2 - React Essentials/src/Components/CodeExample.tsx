@@ -11,7 +11,7 @@ function escapeHtml(str: string) {
 
 export default function CodeExample({ codeString }: { codeString: string }) {
   return (
-    <pre className="bg-gray-100 p-4 rounded">
+    <pre className="bg-gray-100 p-4 mb-4 rounded">
       <code
         className="text-sm text-gray-800"
         dangerouslySetInnerHTML={{

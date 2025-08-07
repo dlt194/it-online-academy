@@ -1,3 +1,5 @@
+import CardComponent from "../Components/CardComponent";
+
 function Module_2() {
   return (
     <>
@@ -65,15 +67,36 @@ function Module_2() {
           Modern App Building
         </h2>
         <div className="prose max-w-none">
-          <p></p>
+          <h3 className="font-bold">What is JSX?</h3>
+          <ul className="list-disc pl-5">
+            <li>
+              Syntax to describe what components looks like and how they work.
+            </li>
+            <li>Components must return a block of JSX</li>
+            <li>
+              Extension of JavaScript that allows to embed JS, CSS and React
+              Components into HTML
+            </li>
+            <li>
+              Each JSX element is converted into React.createElement() function
+              call
+            </li>
+          </ul>
+          <br />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 className="text-xl font-semibold border-b pb-2">
           Practical Activity: Building a Reusable Card Component
         </h2>
-        <div className="prose max-w-none">
-          <p></p>
+        <div className="prose max-w-none flex">
+          <CardComponent
+            image="https://placehold.co/400"
+            name="Dan Thomas"
+            jobTitle="Software Engineer"
+            bio="Passionate about building scalable applications."
+            skills={["JavaScript", "React", "Node.js", "Python"]}
+          />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">

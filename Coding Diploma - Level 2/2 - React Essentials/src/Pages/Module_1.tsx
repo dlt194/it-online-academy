@@ -61,10 +61,14 @@ function Module_2() {
       <section className="bg-white rounded-lg shadow p-6 space-y-6">
         <h2 className="text-xl font-semibold border-b pb-2">Frameworks</h2>
         <div className="prose max-w-none">
-          <p></p>
+          <p>
+            React is often compared to other JavaScript frameworks like Angular
+            and Vue.js. Each framework has its own strengths and weaknesses, and
+            the choice between them depends on the specific needs of your
+            project.
+          </p>
         </div>
       </section>
-      ;
     </>
   );
 }

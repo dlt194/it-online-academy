@@ -13,7 +13,7 @@ import Module10 from "./Pages/Module_10";
 
 function App() {
   return (
-    <>
+    <div className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
       <header className="bg-blue-600 text-white p-4 shadow-md">
         <div className="container mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold">React Essentials</h1>
@@ -62,6 +62,7 @@ function App() {
       <main className="flex-1 container mx-auto p-6 grid grid-cols-1 gap-6">
         {/* <!-- Course Content --> */}
         <Routes>
+          <Route path="/" element={<Module1 />} />
           <Route path="module_1" element={<Module1 />} />
           <Route path="module_2" element={<Module2 />} />
           <Route path="module_3" element={<Module3 />} />
@@ -79,7 +80,7 @@ function App() {
       <footer className="bg-blue-600 text-white text-center p-4">
         <p>&copy; 2025 Dan Thomas. All rights reserved.</p>
       </footer>
-    </>
+    </div>
   );
 }
 

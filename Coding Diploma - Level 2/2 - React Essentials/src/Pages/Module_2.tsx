@@ -1,6 +1,7 @@
 import CardComponent from "../Components/CardComponent";
 import CodeExample from "../Components/CodeExample";
 import CreateJobComponent from "../Components/CreateJobComponent";
+import { JobBoardComponent } from "../Components/JobBoardComponent";
 import VariableDisplayComponent from "../Components/VariableDisplayComponent";
 
 function Module_2() {
@@ -137,7 +138,7 @@ function Module_2() {
           Practical Activity: Dynamic Job Board with JSX Expressions
         </h2>
         <div className="prose max-w-none">
-          <p></p>
+          <JobBoardComponent />
         </div>
       </section>
     </>

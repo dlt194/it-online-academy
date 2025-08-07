@@ -1,5 +1,6 @@
 import CardComponent from "../Components/CardComponent";
 import CodeExample from "../Components/CodeExample";
+import CreateJobComponent from "../Components/CreateJobComponent";
 import VariableDisplayComponent from "../Components/VariableDisplayComponent";
 
 function Module_2() {
@@ -109,8 +110,6 @@ function Module_2() {
           <CodeExample
             codeString={`function VariableDisplayComponent() {\n\n\tconst myVar1 = 'Variable in JSX';\n\tconst myVar2 = [1, 2, 3]\n\n\treturn (\n\t\t<p>{myVar1}</p>\n\t\t<p>{myVar2}</p>\n\t\t<p>{myVar3.name}</p>\n\t);\n}`}
           />
-          <br />
-          <VariableDisplayComponent />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">
@@ -118,7 +117,7 @@ function Module_2() {
           Practical Activity: Working with React JSX, Variables and Objects
         </h2>
         <div className="prose max-w-none">
-          <p></p>
+          <VariableDisplayComponent />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">
@@ -126,7 +125,11 @@ function Module_2() {
           Expression and Practice in JSX
         </h2>
         <div className="prose max-w-none">
-          <p></p>
+          <CodeExample
+            codeString={`const CreateJob = () => {\n\tconst jobCount = 0;\n\tconst countJob = () => {\n\t\treturn jobCount === 0 ? "No jobs scheduled today" : jobCount;\n\t};\n\treturn (\n\t\t<>\n\t\t\t<p>Jobs: {countJob()}</p>\n\t\t\t<p>Create a Job</p>\n\t\t</>\n\t);\n}`}
+          />
+          <br />
+          <CreateJobComponent />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">

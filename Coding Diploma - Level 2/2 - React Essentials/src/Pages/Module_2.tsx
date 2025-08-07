@@ -1,4 +1,6 @@
 import CardComponent from "../Components/CardComponent";
+import CodeExample from "../Components/CodeExample";
+import VariableDisplayComponent from "../Components/VariableDisplayComponent";
 
 function Module_2() {
   return (
@@ -104,7 +106,11 @@ function Module_2() {
           Creating Variables in JSX
         </h2>
         <div className="prose max-w-none">
-          <p></p>
+          <CodeExample
+            codeString={`function VariableDisplayComponent() {\n\n\tconst myVar1 = 'Variable in JSX';\n\tconst myVar2 = [1, 2, 3]\n\n\treturn (\n\t\t<p>{myVar1}</p>\n\t\t<p>{myVar2}</p>\n\t\t<p>{myVar3.name}</p>\n\t);\n}`}
+          />
+          <br />
+          <VariableDisplayComponent />
         </div>
       </section>
       <section className="bg-white rounded-lg shadow p-6 space-y-6">

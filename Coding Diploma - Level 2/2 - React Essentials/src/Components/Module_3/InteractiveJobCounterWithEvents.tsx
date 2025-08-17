@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 const InteractiveJobCounterWithEvents = () => {
-  const [jobCount, setJobCount] = useState(0);
+  let jobCount = 0;
 
   const handleAddJob = () => {
     console.log("Adding Job");
-    setJobCount(jobCount + 1);
+    jobCount += 1;
   };
   return (
     <div>

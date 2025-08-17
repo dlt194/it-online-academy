@@ -4,8 +4,10 @@ import { StyledButtonComponent } from "../Components/StyledButtonComponent";
 
 import CreateJobComponent from "../Components/Module_3/CreateJobComponent.tsx?raw";
 import StyleAttributeCompontent from "../Components/Module_3/StyleAttributeCompontent.tsx?raw";
+import InteractiveJobCounterWithEvents from "../Components/Module_3/InteractiveJobCounterWithEvents.tsx?raw";
 
 import { default as StyleAttributeCompontentExample } from "../Components/Module_3/StyleAttributeCompontent";
+import { default as InteractiveJobCounterWithEventsExample } from "../Components/Module_3/InteractiveJobCounterWithEvents";
 
 function Module_3() {
   return (
@@ -52,12 +54,43 @@ function Module_3() {
             <br />
 
             <CodeExample component={CreateJobComponent} />
+            <br />
+            <h3 className="font-bold">How to use State in Real Time?</h3>
+            <p>
+              A single variable ina component is considered a State Variable.
+              These are some ways to use State during Development:
+            </p>
+            <ul className="list-disc pl-5">
+              <li>useState</li>
+              <li>useReducer</li>
+              <li>Context API</li>
+            </ul>
+            <br />
+            <h3 className="font-bold">Why do we use States?</h3>
+
+            <ul className="list-disc pl-5">
+              <li>Dynamic UI Updates</li>
+              <li>Event Handling</li>
+              <li>Component Isolation</li>
+              <li>
+                Efficient Rendering: Updating the Component triggers React to
+                render
+              </li>
+            </ul>
+            <br />
           </div>
         }
       />
+
       <CourseSectionComponent
         title="Practical Activity - Interactive Job Counter with Events"
-        children={<p></p>}
+        children={
+          <div>
+            <CodeExample component={InteractiveJobCounterWithEvents} />
+            <br />
+            <InteractiveJobCounterWithEventsExample />
+          </div>
+        }
       />
       <CourseSectionComponent title="Use State" children={<p></p>} />
       <CourseSectionComponent

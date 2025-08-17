@@ -8,12 +8,16 @@ import InteractiveJobCounterWithEvents from "../Components/Module_3/InteractiveJ
 import InteractiveJobCounterWithUseState from "../Components/Module_3/InteractiveJobCounterWithUseState.tsx?raw";
 import WorkingWithStateAndHandlingUserValues from "../Components/Module_3/WorkingWithStateAndHandlingUserValues.tsx?raw";
 import DynamicFormComponent from "../Components/Module_3/DynamicFormComponent.tsx?raw";
+import PracticalExerciseUsingUseState from "../Components/Module_3/PracticalExerciseUsingUseState.tsx?raw";
+import DynamicBotListManager from "../Components/Module_3/DynamicBotListManager.tsx?raw";
 
 import { default as StyleAttributeCompontentExample } from "../Components/Module_3/StyleAttributeCompontent";
 import { default as InteractiveJobCounterWithEventsExample } from "../Components/Module_3/InteractiveJobCounterWithEvents";
 import { default as InteractiveJobCounterWithUseStateExample } from "../Components/Module_3/InteractiveJobCounterWithUseState";
 import { default as WorkingWithStateAndHandlingUserValuesExample } from "../Components/Module_3/WorkingWithStateAndHandlingUserValues";
 import { default as DynamicFormComponentExample } from "../Components/Module_3/DynamicFormComponent";
+import { default as PracticalExerciseUsingUseStateExample } from "../Components/Module_3/PracticalExerciseUsingUseState";
+import { default as DynamicBotListManagerExample } from "../Components/Module_3/DynamicBotListManager";
 
 function Module_3() {
   return (
@@ -170,11 +174,33 @@ function Module_3() {
       />
       <CourseSectionComponent
         title="Practice Exercise Using useState"
-        children={<div></div>}
+        children={
+          <div>
+            <h3 className="font-bold">How do we map List?</h3>
+            <ul className="list-disc pl-5">
+              <li>
+                Creating a list of arrays, Bot 1, 2 & 3 which will be triggered
+                on a button click
+              </li>
+              <li>Printing thos # of bots into the page</li>
+              <li>Creating a unique index for each element</li>
+            </ul>
+            <br />
+            <CodeExample component={PracticalExerciseUsingUseState} />
+            <br />
+            <PracticalExerciseUsingUseStateExample />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Practical Activity - Dynamic Bot List Manager"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={DynamicBotListManager} />
+            <br />
+            <DynamicBotListManagerExample />
+          </div>
+        }
       />
     </>
   );

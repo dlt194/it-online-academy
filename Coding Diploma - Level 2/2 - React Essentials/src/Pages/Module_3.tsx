@@ -6,10 +6,14 @@ import CreateJobComponent from "../Components/Module_3/CreateJobComponent.tsx?ra
 import StyleAttributeCompontent from "../Components/Module_3/StyleAttributeCompontent.tsx?raw";
 import InteractiveJobCounterWithEvents from "../Components/Module_3/InteractiveJobCounterWithEvents.tsx?raw";
 import InteractiveJobCounterWithUseState from "../Components/Module_3/InteractiveJobCounterWithUseState.tsx?raw";
+import WorkingWithStateAndHandlingUserValues from "../Components/Module_3/WorkingWithStateAndHandlingUserValues.tsx?raw";
+import DynamicFormComponent from "../Components/Module_3/DynamicFormComponent.tsx?raw";
 
 import { default as StyleAttributeCompontentExample } from "../Components/Module_3/StyleAttributeCompontent";
 import { default as InteractiveJobCounterWithEventsExample } from "../Components/Module_3/InteractiveJobCounterWithEvents";
 import { default as InteractiveJobCounterWithUseStateExample } from "../Components/Module_3/InteractiveJobCounterWithUseState";
+import { default as WorkingWithStateAndHandlingUserValuesExample } from "../Components/Module_3/WorkingWithStateAndHandlingUserValues";
+import { default as DynamicFormComponentExample } from "../Components/Module_3/DynamicFormComponent";
 
 function Module_3() {
   return (
@@ -146,11 +150,23 @@ function Module_3() {
       />
       <CourseSectionComponent
         title="Working with State and Handling User Values"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={WorkingWithStateAndHandlingUserValues} />
+            <br />
+            <WorkingWithStateAndHandlingUserValuesExample />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Dynamic Input Form with useState"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={DynamicFormComponent} />
+            <br />
+            <DynamicFormComponentExample />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Practice Exercise Using useState"

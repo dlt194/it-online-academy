@@ -15,6 +15,7 @@ export const StyledButtonComponent = ({
     color: "#4A90E2",
     backgroundColor: "#F0F4F8",
     padding: "16px",
+    margin: "10px",
   };
 
   const buttonStyles: React.CSSProperties = {
@@ -36,7 +37,7 @@ export const StyledButtonComponent = ({
     : buttonStyles;
 
   return (
-    <div>
+    <div className="">
       {/* Styled Heading */}
       <h1 style={headingStyles}>{heading}</h1>
       {/* Styled Button */}

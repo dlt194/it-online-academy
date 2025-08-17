@@ -1,23 +1,10 @@
-function escapeHtml(str: string) {
-  const map = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;",
-  };
-  return str.replace(/[&<>"']/g, (m) => map[m as keyof typeof map]);
-}
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-export default function CodeExample({ codeString }: { codeString: string }) {
+export default function CodeExample({ component }: { component: string }) {
   return (
-    <pre className="bg-gray-100 p-4 mb-4 rounded">
-      <code
-        className="text-sm text-gray-800"
-        dangerouslySetInnerHTML={{
-          __html: escapeHtml(codeString),
-        }}
-      />
-    </pre>
+    <SyntaxHighlighter language="tsx" style={darcula} showLineNumbers>
+      {component}
+    </SyntaxHighlighter>
   );
 }

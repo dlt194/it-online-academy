@@ -1,4 +1,5 @@
 import CodeExample from "../Components/CodeExample";
+import Video from "../Components/Module_1/VideoComponent.tsx?raw";
 
 function Module_2() {
   return (
@@ -27,9 +28,7 @@ function Module_2() {
 
           <code className="text-sm">
             <pre className="bg-gray-100 p-4 rounded">
-              <CodeExample
-                codeString={`function Video({ video  }) {\n\treturn (\n\t\t<div>\n\t\t\t<Thumbnail video={video} />\n\t\t\t<a href={video.url}>\n\t\t\t\t<h3>{video.title}</h3>\n\t\t\t\t<p>{video.description}</p>\n\t\t\t</a>\n\t\t\t<LikeButton video={video} />\n\t\t</div>\n\t);\n}}`}
-              />
+              <CodeExample component={Video} />
             </pre>
           </code>
         </div>

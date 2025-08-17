@@ -2,37 +2,59 @@ import CodeExample from "../Components/CodeExample";
 import { CourseSectionComponent } from "../Components/CourseSectionComponent";
 import { StyledButtonComponent } from "../Components/StyledButtonComponent";
 
+import CreateJobComponent from "../Components/Module_3/CreateJobComponent.tsx?raw";
+import StyleAttributeCompontent from "../Components/Module_3/StyleAttributeCompontent.tsx?raw";
+
+import { default as StyleAttributeCompontentExample } from "../Components/Module_3/StyleAttributeCompontent";
+
 function Module_3() {
-  const jobCount: number = 25;
-
-  const countJob = () => {
-    return jobCount === 0
-      ? "No Jobs to Schedule Today"
-      : `Jobs Running Today from Bot: ${jobCount}`;
-  };
-
   return (
     <>
       <CourseSectionComponent
         title="Style Attributes"
         children={
           <div>
-            <CodeExample
-              codeString={`function App() {\n\tconst jobCount = 25;\n\tconst hideProperty = true;\n\tconst countJob = () => {\n\t\treturn jobCount === 0 ? "No Jobs to Schedule Today"\n\t\t: "Jobs Running Today from Bot: ${jobCount}"\n\t};\n\treturn (\n\t\t<button\n\t\t\tclassName="border m-2 p-2 bg-blue-600 text-white rounded-sm shadow shadow-gray-100 hover:bg-blue-700"\n\t\t\tdisabled={hideProperty}\n\t\t\tvalue="Create a Job"\n\t\t>\n\t\t\tCreate a Job\n\t\t</button>\n\t)\n}`}
-            />
-            <h1>Jobs: {countJob()}</h1>
-            <StyledButtonComponent
-              heading="Styled Heading"
-              button="Create a Job"
-            />
+            <CodeExample component={StyleAttributeCompontent} />
+            <StyleAttributeCompontentExample />
           </div>
         }
       />
       <CourseSectionComponent
         title="Practical Activity - Styling React Components with Inline Styles"
-        children={<p></p>}
+        children={
+          <StyledButtonComponent heading="Styled Heading" button="Click Me" />
+        }
       />
-      <CourseSectionComponent title="Events and States" children={<p></p>} />
+      <CourseSectionComponent
+        title="Events and States"
+        children={
+          <div>
+            <h3 className="font-bold">Events in ReactJS</h3>
+            <p>
+              Actions that occur due to user interactions, like clicking a
+              button, hovering over an element, typing in an input field.
+            </p>
+            <br />
+            <h3 className="font-bold">Common Event Handling Patterns</h3>
+            <ul className="list-disc pl-5">
+              <li>Handling Click Events</li>
+              <li>Handling Form Submission</li>
+              <li>Handling Events in Keyboards</li>
+            </ul>
+            <br />
+            <h3 className="font-bold">Why do we use Events?</h3>
+            <ul className="list-disc pl-5">
+              <li>Interactivity</li>
+              <li>State Management</li>
+              <li>Immediate Responses</li>
+              <li>Form Handling</li>
+            </ul>
+            <br />
+
+            <CodeExample component={CreateJobComponent} />
+          </div>
+        }
+      />
       <CourseSectionComponent
         title="Practical Activity - Interactive Job Counter with Events"
         children={<p></p>}

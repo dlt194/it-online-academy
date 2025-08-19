@@ -20,15 +20,18 @@ const DynamicBotManager = () => {
 
   const addBotToList = () => {
     // Implement add bot functionality
-    setBots((prevBots) => [
-      ...prevBots,
-      {
-        ...newBot,
-        id: nextId,
-        status: "Inactive",
-      },
-    ]);
-    setNextId((prev) => prev + 1);
+    if (newBot.name.trim() !== "") {
+      setBots((prevBots) => [
+        ...prevBots,
+        {
+          ...newBot,
+          id: nextId,
+          status: "Inactive",
+        },
+      ]);
+      setNextId((prev) => prev + 1);
+      setNewBot({ id: 0, name: "", status: "" });
+    }
   };
 
   const deleteBot = (id: number) => {
@@ -42,6 +45,7 @@ const DynamicBotManager = () => {
 
       {/* Add input fields for new bot */}
       <input
+        required
         type="text"
         value={newBot.name}
         onChange={(e) => handleInputChange(e)}

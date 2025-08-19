@@ -3,9 +3,11 @@ import { CourseSectionComponent } from "../Components/CourseSectionComponent";
 
 import AddAndRemoveElements from "../Components/Module_4/AddAndRemoveElements.tsx?raw";
 import DynamicBotListManager from "../Components/Module_4/DynamicBotListManager.tsx?raw";
+import ConditionalTemplates from "../Components/Module_4/ConditionalTemplates.tsx?raw";
 
 import { default as AddAndRemoveElementsExample } from "../Components/Module_4/AddAndRemoveElements";
 import { default as DynamicBotListManagerExample } from "../Components/Module_4/DynamicBotListManager";
+import { default as ConditionalTemplatesExample } from "../Components/Module_4/ConditionalTemplates";
 
 function Module_4() {
   return (
@@ -30,7 +32,12 @@ function Module_4() {
       />
       <CourseSectionComponent
         title="Conditional Templates"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={ConditionalTemplates} />
+            <ConditionalTemplatesExample />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Practical Activity - Building a Modular Job Board Application"

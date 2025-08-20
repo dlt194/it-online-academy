@@ -1,4 +1,3 @@
-import React from "react";
 import JobItemComponent from "./JobItemComponent";
 
 const JobListComponent = ({ jobs, updateJob, deleteJob }) => {

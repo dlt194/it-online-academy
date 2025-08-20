@@ -1,5 +1,3 @@
-import React from "react";
-
 const ShowJobsComponent = ({ showJobs, setShowJobs }) => {
   return (
     <>

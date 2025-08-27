@@ -1,13 +1,15 @@
+import { useState } from "react";
+
 import Header from "./Header";
 import JobColumnComponent from "./JobColumnComponent";
 
 const ScheduledTaskForms_5_3_1 = () => {
-  const tasks = [
+  const [tasks, setTasks] = useState([
     { id: 1, title: "Job 1", status: "pending" },
     { id: 2, title: "Job 2", status: "complete" },
     { id: 3, title: "Job 3", status: "in progress" },
     { id: 4, title: "Job 4", status: "complete" },
-  ];
+  ]);
 
   return (
     <>

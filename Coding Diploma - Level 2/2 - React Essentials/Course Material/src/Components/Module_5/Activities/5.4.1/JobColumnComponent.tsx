@@ -16,7 +16,7 @@ const JobColumnComponent: React.FC<JobColumnProps> = (props) => {
       <ul className="job-column-tasks">
         {props.tasks.length > 0 ? (
           props.tasks.map((job) => (
-            <li key={job.id} className="pl-2">
+            <li key={job.id} className="p-2">
               {job.title}
             </li>
           ))

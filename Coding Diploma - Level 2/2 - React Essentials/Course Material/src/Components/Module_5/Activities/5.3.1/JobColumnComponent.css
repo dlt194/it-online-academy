@@ -1,0 +1,27 @@
+.job-column-section {
+  background-color: #237c38;
+  color: #fff;
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 2);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-column-title {
+  text-decoration-line: underline;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.job-column-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(7500%)
+    hue-rotate(313deg) brightness(104%) contrast(101%);
+}
+
+.job-column-tasks {
+  list-style-type: disc;
+  padding-left: 20px;
+}

@@ -4,13 +4,15 @@ import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 export default function CodeExample({
   component,
   showLineNumbers = true,
+  language = "tsx",
 }: {
   component: string;
   showLineNumbers?: boolean;
+  language?: string;
 }) {
   return (
     <SyntaxHighlighter
-      language="tsx"
+      language={language}
       style={darcula}
       showLineNumbers={showLineNumbers}
     >

@@ -1,0 +1,19 @@
+button {
+  margin: 0px 10px;
+  padding: 7px 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.formButton {
+  font-size: 14px;
+  font-weight: 300;
+  background-color: cadetblue;
+  padding: 4px 20px;
+  color: #fff;
+}
+
+.formButton:hover {
+  background-color: darkcyan;
+}

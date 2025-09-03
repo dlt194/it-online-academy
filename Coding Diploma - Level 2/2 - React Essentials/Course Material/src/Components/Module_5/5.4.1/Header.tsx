@@ -1,4 +1,3 @@
-import { default as JobForm } from "./JobForm";
 import "./JobForm.css";
 
 const Header = () => {
@@ -10,7 +9,6 @@ const Header = () => {
           Home
         </a>
       </div>
-      <JobForm />
     </>
   );
 };

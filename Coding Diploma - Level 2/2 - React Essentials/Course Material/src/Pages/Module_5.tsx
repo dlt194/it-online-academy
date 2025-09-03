@@ -5,8 +5,9 @@ import { default as ScheduledTaskForms_5_1_1 } from "../Components/Module_5/5.1/
 import { default as Header_5_1_1 } from "../Components/Module_5/5.1/Header.tsx?raw";
 import { default as JobForm_5_1_1 } from "../Components/Module_5/5.1/JobForm.tsx?raw";
 import { default as FormButton } from "../Components/Module_5/5.3/FormButton.tsx?raw";
-import { default as ScheduledTaskForms_5_3_1 } from "../Components/Module_5/Activities/5.3.1/ScheduledTaskForms.tsx?raw";
-import { default as JobColumnComponent } from "../Components/Module_5/Activities/5.3.1/JobColumnComponent.tsx?raw";
+import { default as ScheduledTaskForms_5_3_1 } from "../Components/Module_5/5.3.1/ScheduledTaskForms.tsx?raw";
+import { default as JobColumnComponent } from "../Components/Module_5/5.3.1/JobColumnComponent.tsx?raw";
+import { default as JobColumnComponent_5_4 } from "../Components/Module_5/5.4/JobColumnComponent.tsx?raw";
 
 import JobFormCSS from "../Components/Module_5/5.2/JobForm.css?raw";
 import FormButtonCSS from "../Components/Module_5/5.3/FormButton.css?raw";
@@ -14,7 +15,8 @@ import FormButtonCSS from "../Components/Module_5/5.3/FormButton.css?raw";
 import { default as ScheduledTaskFormsExample } from "../Components/Module_5/5.1/ScheduledTaskForms";
 import { default as ScheduledTaskForms_5_2_1 } from "../Components/Module_5/5.2/ScheduledTaskForms";
 import { default as FormButtonExample } from "../Components/Module_5/5.3/FormButton";
-import { default as ScheduledTaskFormsExample_5_3_1 } from "../Components/Module_5/Activities/5.3.1/ScheduledTaskForms";
+import { default as ScheduledTaskFormsExample_5_3_1 } from "../Components/Module_5/5.3.1/ScheduledTaskForms";
+import { default as ScheduledTaskForms_5_4_1 } from "../Components/Module_5/5.4.1/ScheduledTaskForms";
 
 function Module_5() {
   return (
@@ -401,7 +403,11 @@ function Module_5() {
 
       <CourseSectionComponent
         title="Building Job Lists and Status Components"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobColumnComponent_5_4} />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Practical Activity: Implementing Dynamic Functionality in the Job Management Application"
@@ -536,6 +542,7 @@ function Module_5() {
                 reloads.
               </li>
             </ul>
+            <ScheduledTaskForms_5_4_1 />
           </div>
         }
       />

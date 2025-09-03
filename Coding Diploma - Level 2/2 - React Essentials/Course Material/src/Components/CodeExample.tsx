@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function CodeExample({
   component,
@@ -13,7 +13,7 @@ export default function CodeExample({
   return (
     <SyntaxHighlighter
       language={language}
-      style={darcula}
+      style={materialDark}
       showLineNumbers={showLineNumbers}
     >
       {component}

@@ -8,6 +8,7 @@ import { default as FormButton } from "../Components/Module_5/5.3/FormButton.tsx
 import { default as ScheduledTaskForms_5_3_1 } from "../Components/Module_5/5.3.1/ScheduledTaskForms.tsx?raw";
 import { default as JobColumnComponent } from "../Components/Module_5/5.3.1/JobColumnComponent.tsx?raw";
 import { default as JobColumnComponent_5_4 } from "../Components/Module_5/5.4/JobColumnComponent.tsx?raw";
+import { default as JobColumnComponent_5_5 } from "../Components/Module_5/5.5/JobColumnComponent.tsx?raw";
 
 import JobFormCSS from "../Components/Module_5/5.2/JobForm.css?raw";
 import FormButtonCSS from "../Components/Module_5/5.3/FormButton.css?raw";
@@ -16,7 +17,9 @@ import { default as ScheduledTaskFormsExample } from "../Components/Module_5/5.1
 import { default as ScheduledTaskForms_5_2_1 } from "../Components/Module_5/5.2/ScheduledTaskForms";
 import { default as FormButtonExample } from "../Components/Module_5/5.3/FormButton";
 import { default as ScheduledTaskFormsExample_5_3_1 } from "../Components/Module_5/5.3.1/ScheduledTaskForms";
-import { default as ScheduledTaskForms_5_4_1 } from "../Components/Module_5/5.4.1/ScheduledTaskForms";
+import { default as ScheduledTaskFormsExample_5_4_1 } from "../Components/Module_5/5.4.1/ScheduledTaskForms";
+import { default as ScheduledTaskFormsExample_5_4 } from "../Components/Module_5/5.4/ScheduledTaskForms";
+import { default as ScheduledTaskFormsExample_5_5 } from "../Components/Module_5/5.5/ScheduledTaskForms";
 
 function Module_5() {
   return (
@@ -406,6 +409,7 @@ function Module_5() {
         children={
           <div>
             <CodeExample component={JobColumnComponent_5_4} />
+            <ScheduledTaskFormsExample_5_4 />
           </div>
         }
       />
@@ -542,14 +546,19 @@ function Module_5() {
                 reloads.
               </li>
             </ul>
-            <ScheduledTaskForms_5_4_1 />
+            <ScheduledTaskFormsExample_5_4_1 />
           </div>
         }
       />
 
       <CourseSectionComponent
         title="Functional Aspects for Forms"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobColumnComponent_5_5} />
+            <ScheduledTaskFormsExample_5_5 />
+          </div>
+        }
       />
       <CourseSectionComponent
         title="Practical Activity: Enhancing Form Handling in the Job Management Application"

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./JobForm.css";
+import JobFormButton from "./JobFormButton";
+import CategorySelector from "./CategorySelector";
 
 type JobDetails = {
   title: string;
@@ -25,19 +27,13 @@ const JobForm = () => {
     setJobDetails((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleCategoryToggle = (category: string) => {
-    // Implement category toggle functionality
-    setJobDetails((prev) => ({
-      ...prev,
-      categories: prev.categories.includes(category)
-        ? prev.categories.filter((c) => c !== category) // remove if already selected
-        : [...prev.categories, category], // add if not selected
-    }));
-  };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Submitted job details:", jobDetails);
+  };
+
+  const validateCategory = (cat) => {
+    return jobDetails.categories.some((item) => item === cat);
   };
 
   return (
@@ -51,20 +47,8 @@ const JobForm = () => {
         placeholder="Enter job title"
       />
 
-      <div>
-        {categoryOptions.map((category) => (
-          <button
-            key={category}
-            type="button"
-            onClick={() => handleCategoryToggle(category)}
-            // Add styling based on selection state
-            className={`tag ${
-              jobDetails.categories.includes(category) ? "tag-active" : ""
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+      <div className="flex">
+        <CategorySelector />
         <select
           name="status"
           value={jobDetails.status}

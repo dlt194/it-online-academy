@@ -5,9 +5,13 @@ import { default as AppForm_6_1 } from "../Components/Module_6/6.1/AppForm.tsx?r
 import { default as FormButton_6_1 } from "../Components/Module_6/6.1/FormButton.tsx?raw";
 
 import { default as JobForm_6_1_1 } from "../Components/Module_6/6.1.1/JobForm.tsx?raw";
+import { default as JobFormButton_6_2 } from "../Components/Module_6/6.2/JobFormButton.tsx?raw";
+import { default as CategorySelector_6_2_1 } from "../Components/Module_6/6.2.1/CategorySelector.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
+import { default as JobForm_6_2_Example } from "../Components/Module_6/6.2/JobForm";
+import { default as JobForm_6_2_1_Example } from "../Components/Module_6/6.2.1/JobForm";
 
 function Module_6() {
   return (
@@ -170,22 +174,30 @@ function Module_6() {
               skills.
             </p>
 
-            <div className="border border-black rounded">
-              <CodeExample component={JobForm_6_1_1} />
-              <JobForm_6_1_1_Example />
-            </div>
+            <CodeExample component={JobForm_6_1_1} />
+            <JobForm_6_1_1_Example />
           </div>
         }
       />
       {/* 6.2 */}
       <CourseSectionComponent
         title="Add CSS to Selected Category"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobFormButton_6_2} />
+            <JobForm_6_2_Example />
+          </div>
+        }
       />
       {/* 6.2.1 */}
       <CourseSectionComponent
         title="Practical Activity - Enhance User Interface with Dynamic Category Selection"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={CategorySelector_6_2_1} />
+            <JobForm_6_2_1_Example />
+          </div>
+        }
       />
       {/* 6.3 */}
       <CourseSectionComponent

@@ -31,6 +31,7 @@ import { default as ScheduledTaskForms_6_4_1_Example } from "../Components/Modul
 import { default as ScheduledTaskForms_6_5_1_Example } from "../Components/Module_6/6.5.1/ScheduledTaskForms";
 import { default as Button_6_6_Example } from "../Components/Module_6/6.6/ButtonExample";
 import { default as ResponsiveCardComponentExample } from "../Components/Module_6/6.6.1/ResponsiveCardComponent";
+import { default as InVestMe } from "../Components/Module_6/6.7/InVestMe";
 
 function Module_6() {
   const cardData = [
@@ -476,7 +477,15 @@ function Module_6() {
         }
       />
       {/* 6.7 */}
-      <CourseSectionComponent title="Practice Project" children={<div></div>} />
+      <CourseSectionComponent
+        title="Practice Project"
+        children={
+          <div>
+            <img src="/Module_6_PracticeProject.png"></img>
+            <InVestMe />
+          </div>
+        }
+      />
       {/* 6.7.1 */}
       <CourseSectionComponent
         title="Practical Activity - Create a Header Component for an Investment Calculator App"

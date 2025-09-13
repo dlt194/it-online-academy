@@ -19,6 +19,7 @@ import { default as JobManager_6_5_1 } from "../Components/Module_6/6.5.1/JobMan
 import { default as Button_6_6 } from "../Components/Module_6/6.6/Button.tsx?raw";
 import { default as ButtonExample_6_6 } from "../Components/Module_6/6.6/ButtonExample.tsx?raw";
 import { default as ResponsiveCardComponent } from "../Components/Module_6/6.6.1/ResponsiveCardComponent.tsx?raw";
+import { default as Header_6_7_1 } from "../Components/Module_6/6.7.1/Header.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
@@ -31,7 +32,8 @@ import { default as ScheduledTaskForms_6_4_1_Example } from "../Components/Modul
 import { default as ScheduledTaskForms_6_5_1_Example } from "../Components/Module_6/6.5.1/ScheduledTaskForms";
 import { default as Button_6_6_Example } from "../Components/Module_6/6.6/ButtonExample";
 import { default as ResponsiveCardComponentExample } from "../Components/Module_6/6.6.1/ResponsiveCardComponent";
-import { default as InVestMe } from "../Components/Module_6/6.7/InVestMe";
+import { default as InVestMeExample_6_7 } from "../Components/Module_6/6.7/InVestMe";
+import { default as InVestMeExample_6_7_1 } from "../Components/Module_6/6.7.1/InVestMe";
 
 function Module_6() {
   const cardData = [
@@ -482,14 +484,19 @@ function Module_6() {
         children={
           <div>
             <img src="/Module_6_PracticeProject.png"></img>
-            <InVestMe />
+            <InVestMeExample_6_7 />
           </div>
         }
       />
       {/* 6.7.1 */}
       <CourseSectionComponent
         title="Practical Activity - Create a Header Component for an Investment Calculator App"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={Header_6_7_1} />
+            <InVestMeExample_6_7_1 />
+          </div>
+        }
       />
     </>
   );

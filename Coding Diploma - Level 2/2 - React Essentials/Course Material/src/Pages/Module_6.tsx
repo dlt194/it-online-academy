@@ -7,11 +7,15 @@ import { default as FormButton_6_1 } from "../Components/Module_6/6.1/FormButton
 import { default as JobForm_6_1_1 } from "../Components/Module_6/6.1.1/JobForm.tsx?raw";
 import { default as JobFormButton_6_2 } from "../Components/Module_6/6.2/JobFormButton.tsx?raw";
 import { default as CategorySelector_6_2_1 } from "../Components/Module_6/6.2.1/CategorySelector.tsx?raw";
+import { default as JobForm_6_3 } from "../Components/Module_6/6.3/JobForm.tsx?raw";
+import { default as JobManager_6_3_1 } from "../Components/Module_6/6.3.1/JobManager.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
 import { default as JobForm_6_2_Example } from "../Components/Module_6/6.2/JobForm";
 import { default as JobForm_6_2_1_Example } from "../Components/Module_6/6.2.1/JobForm";
+import { default as ScheduledTaskForms_6_3_Example } from "../Components/Module_6/6.3/ScheduledTaskForms";
+import { default as ScheduledTaskForms_6_3_1_Example } from "../Components/Module_6/6.3.1/ScheduledTaskForms";
 
 function Module_6() {
   return (
@@ -202,12 +206,131 @@ function Module_6() {
       {/* 6.3 */}
       <CourseSectionComponent
         title="Display Jobs in App"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobForm_6_3} />
+            <ScheduledTaskForms_6_3_Example />
+          </div>
+        }
       />
       {/* 6.3.1 */}
       <CourseSectionComponent
         title="Practical Activity - Implement a Job Management UI with React"
-        children={<div></div>}
+        children={
+          <div>
+            <p className="mb-4">
+              <strong className="mr-2">Objective:</strong>
+              Create a React application that allows users to add jobs with
+              different statuses and categories, and display them in organised
+              columns.
+            </p>
+
+            <p className="mb-4">
+              <strong className="mr-2">Remember:</strong>
+              The importance of using state to manage dynamic data in React. How
+              to use props to pass data between components. The concept of
+              filtering and mapping arrays in React. The use of conditional
+              rendering to display content based on state.
+            </p>
+
+            <strong className="mr-2">Instructions:</strong>
+            <ul className="list-decimal ml-6 mb-4 space-y-2">
+              <li>
+                Create a new React component called <code>JobManager</code>.
+              </li>
+              <li>
+                Inside the component, create a state variable called{" "}
+                <code>jobs</code> using the <code>useState</code> hook to store
+                an array of job objects.
+              </li>
+              <li>
+                Create three columns to represent different job statuses:{" "}
+                <code>Need to Complete</code>, <code>In Progress</code>, and{" "}
+                <code>Completed</code>.
+              </li>
+              <li>
+                Implement a form that allows users to add new jobs with the
+                following fields:
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>Job activity (text input)</li>
+                  <li>
+                    Category (multiple selection, e.g., <code>Read Emails</code>
+                    , <code>Send Emails</code>, <code>Web Parsing</code>)
+                  </li>
+                  <li>
+                    Status (dropdown: <code>Need to Complete</code>,{" "}
+                    <code>In Progress</code>, <code>Completed</code>)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Create a function to add new jobs to the <code>jobs</code> state
+                when the form is submitted.
+              </li>
+              <li>
+                Implement a <code>JobColumn</code> component that receives props
+                for <code>title</code>, <code>status</code>, and{" "}
+                <code>jobs</code>. This component should filter and display jobs
+                based on their status.
+              </li>
+              <li>
+                Create a <code>JobCard</code> component to display individual
+                job details, including the activity and categories.
+              </li>
+              <li>
+                Use the <code>map</code> function to render <code>JobCard</code>{" "}
+                components within each <code>JobColumn</code>.
+              </li>
+              <li>
+                Implement a basic styling to make the UI visually appealing and
+                easy to understand.
+              </li>
+            </ul>
+
+            <strong className="mr-2">Bonus Challenges:</strong>
+            <ul className="list-disc ml-6 mb-4 space-y-2">
+              <li>Add the ability to edit existing jobs.</li>
+              <li>
+                Implement drag-and-drop functionality to move jobs between
+                columns.
+              </li>
+              <li>
+                Add a search feature to filter jobs based on activity or
+                category.
+              </li>
+            </ul>
+
+            <p className="mb-4">
+              <strong className="mr-2">Summary:</strong>
+              This activity reinforces the concepts of state management in
+              React, component composition, and conditional rendering. It
+              provides hands-on experience in creating a dynamic UI that
+              responds to user input and manages complex data structures.
+            </p>
+
+            <ul className="list-disc ml-6 mb-4 space-y-1">
+              <li>
+                Creating and managing state with <code>useState</code> hook
+              </li>
+              <li>Passing props between parent and child components</li>
+              <li>Filtering and mapping arrays to render dynamic content</li>
+              <li>Implementing form handling in React</li>
+              <li>Creating reusable components for better code organization</li>
+              <li>
+                Applying basic styling to create an intuitive user interface
+              </li>
+            </ul>
+
+            <p className="mb-4">
+              Once you have achieved the desired result with your code you can
+              add your code to your GitHub profile to showcase your React
+              skills.
+            </p>
+
+            <CodeExample component={JobManager_6_3_1} />
+            <ScheduledTaskForms_6_3_1_Example />
+          </div>
+        }
       />
       {/* 6.4 */}
       <CourseSectionComponent title="Deleting Jobs" children={<div></div>} />

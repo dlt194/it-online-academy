@@ -1,0 +1,93 @@
+.headtop {
+  display: flex;
+  align-items: center;
+}
+
+.headtop > img {
+  margin-right: 10px;
+}
+
+.formheader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 4px solid #ccc;
+}
+
+.job_input {
+  font-size: 23px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.formheader > form {
+  width: 60%;
+}
+
+.bottomline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job_status_container {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.job_status {
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #ccc;
+  width: 135px;
+  height: 30px;
+  padding: 0px 5px;
+  margin: 5px;
+}
+
+.submit_data {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: brown;
+  color: #fff;
+  padding: 4px 20px;
+}
+
+.submit_data:hover {
+  background-color: darkred;
+}
+
+.formdetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.tag:hover {
+  background-color: #e0e0e0;
+}
+
+.tag-active {
+  background-color: #2b7fff !important; /* stronger override */
+  color: white !important;
+  border-color: #2b7fff;
+}

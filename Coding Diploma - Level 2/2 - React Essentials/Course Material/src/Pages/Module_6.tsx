@@ -16,6 +16,9 @@ import { default as JobCard_6_4_1 } from "../Components/Module_6/6.4.1/JobCard.t
 import { default as JobColumn_6_4_1 } from "../Components/Module_6/6.4.1/JobColumn.tsx?raw";
 import { default as DeleteJob_6_4_1 } from "../Components/Module_6/6.4.1/DeleteJob.tsx?raw";
 import { default as JobManager_6_5_1 } from "../Components/Module_6/6.5.1/JobManager.tsx?raw";
+import { default as Button_6_6 } from "../Components/Module_6/6.6/Button.tsx?raw";
+import { default as ButtonExample_6_6 } from "../Components/Module_6/6.6/ButtonExample.tsx?raw";
+import { default as ResponsiveCardComponent } from "../Components/Module_6/6.6.1/ResponsiveCardComponent.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
@@ -26,8 +29,28 @@ import { default as ScheduledTaskForms_6_3_1_Example } from "../Components/Modul
 import { default as ScheduledTaskForms_6_4_Example } from "../Components/Module_6/6.4/ScheduledTaskForms";
 import { default as ScheduledTaskForms_6_4_1_Example } from "../Components/Module_6/6.4.1/ScheduledTaskForms";
 import { default as ScheduledTaskForms_6_5_1_Example } from "../Components/Module_6/6.5.1/ScheduledTaskForms";
+import { default as Button_6_6_Example } from "../Components/Module_6/6.6/ButtonExample";
+import { default as ResponsiveCardComponentExample } from "../Components/Module_6/6.6.1/ResponsiveCardComponent";
 
 function Module_6() {
+  const cardData = [
+    {
+      title: "React Development",
+      description:
+        "Learn how to build web applications with React and Tailwind CSS.",
+      buttonText: "Learn More",
+      imageUrl:
+        "https://pluspng.com/img-png/react-logo-png-react-js-logo-history-design-history-and-evolution-5500x3094.png",
+    },
+    {
+      title: "Tailwind CSS Mastery",
+      description: "Master the art of rapid UI development with Tailwind CSS.",
+      buttonText: "Explore",
+      imageUrl:
+        "https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp",
+    },
+  ];
+
   return (
     <>
       {/* 6.1 */}
@@ -423,13 +446,34 @@ function Module_6() {
       />
       {/* 6.6 */}
       <CourseSectionComponent
-        title="Tail Wind CSS with Props"
-        children={<div></div>}
+        title="TailWind CSS with Props"
+        children={
+          <div>
+            <CodeExample component={Button_6_6} />
+            <CodeExample component={ButtonExample_6_6} />
+
+            <Button_6_6_Example />
+          </div>
+        }
       />
       {/* 6.6.1 */}
       <CourseSectionComponent
         title="Practical Activity - Create a Responsive Card Component using React and Tailwind CSS"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={ResponsiveCardComponent} />
+            <div className="container mx-auto p-4">
+              <h1 className="text-3xl font-bold text-center mb-8">
+                My Card Application
+              </h1>
+              <div className="flex flex-wrap justify-center">
+                {cardData.map((card, index) => (
+                  <ResponsiveCardComponentExample key={index} {...card} />
+                ))}
+              </div>
+            </div>
+          </div>
+        }
       />
       {/* 6.7 */}
       <CourseSectionComponent title="Practice Project" children={<div></div>} />

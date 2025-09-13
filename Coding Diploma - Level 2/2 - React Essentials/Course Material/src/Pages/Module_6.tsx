@@ -9,6 +9,12 @@ import { default as JobFormButton_6_2 } from "../Components/Module_6/6.2/JobForm
 import { default as CategorySelector_6_2_1 } from "../Components/Module_6/6.2.1/CategorySelector.tsx?raw";
 import { default as JobForm_6_3 } from "../Components/Module_6/6.3/JobForm.tsx?raw";
 import { default as JobManager_6_3_1 } from "../Components/Module_6/6.3.1/JobManager.tsx?raw";
+import { default as DeleteJob_6_4 } from "../Components/Module_6/6.4/DeleteJob.tsx?raw";
+
+import { default as JobManager_6_4_1 } from "../Components/Module_6/6.4.1/JobManager.tsx?raw";
+import { default as JobCard_6_4_1 } from "../Components/Module_6/6.4.1/JobCard.tsx?raw";
+import { default as JobColumn_6_4_1 } from "../Components/Module_6/6.4.1/JobColumn.tsx?raw";
+import { default as DeleteJob_6_4_1 } from "../Components/Module_6/6.4.1/DeleteJob.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
@@ -16,6 +22,8 @@ import { default as JobForm_6_2_Example } from "../Components/Module_6/6.2/JobFo
 import { default as JobForm_6_2_1_Example } from "../Components/Module_6/6.2.1/JobForm";
 import { default as ScheduledTaskForms_6_3_Example } from "../Components/Module_6/6.3/ScheduledTaskForms";
 import { default as ScheduledTaskForms_6_3_1_Example } from "../Components/Module_6/6.3.1/ScheduledTaskForms";
+import { default as ScheduledTaskForms_6_4_Example } from "../Components/Module_6/6.4/ScheduledTaskForms";
+import { default as ScheduledTaskForms_6_4_1_Example } from "../Components/Module_6/6.4.1/ScheduledTaskForms";
 
 function Module_6() {
   return (
@@ -333,11 +341,33 @@ function Module_6() {
         }
       />
       {/* 6.4 */}
-      <CourseSectionComponent title="Deleting Jobs" children={<div></div>} />
+      <CourseSectionComponent
+        title="Deleting Jobs"
+        children={
+          <div>
+            <CodeExample
+              component={
+                "const handleDelete = (id: number) => {\nsetJobs((prev) => prev.filter((job) => job.id !== id));\n};"
+              }
+            />
+            <CodeExample component={DeleteJob_6_4} />
+            <ScheduledTaskForms_6_4_Example />
+          </div>
+        }
+      />
       {/* 6.4.1 */}
       <CourseSectionComponent
         title="Practical Activity - Implement Delete Functionality and Form Reset in a React Job Management App"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobManager_6_4_1} />
+            <CodeExample component={JobColumn_6_4_1} />
+            <CodeExample component={JobCard_6_4_1} />
+            <CodeExample component={DeleteJob_6_4_1} />
+
+            <ScheduledTaskForms_6_4_1_Example />
+          </div>
+        }
       />
       {/* 6.5 */}
       <CourseSectionComponent title="Use Effect Jobs" children={<div></div>} />

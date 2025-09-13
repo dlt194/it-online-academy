@@ -15,6 +15,7 @@ import { default as JobManager_6_4_1 } from "../Components/Module_6/6.4.1/JobMan
 import { default as JobCard_6_4_1 } from "../Components/Module_6/6.4.1/JobCard.tsx?raw";
 import { default as JobColumn_6_4_1 } from "../Components/Module_6/6.4.1/JobColumn.tsx?raw";
 import { default as DeleteJob_6_4_1 } from "../Components/Module_6/6.4.1/DeleteJob.tsx?raw";
+import { default as JobManager_6_5_1 } from "../Components/Module_6/6.5.1/JobManager.tsx?raw";
 
 import { default as AppForm_6_1_Example } from "../Components/Module_6/6.1/AppForm";
 import { default as JobForm_6_1_1_Example } from "../Components/Module_6/6.1.1/JobForm";
@@ -24,6 +25,7 @@ import { default as ScheduledTaskForms_6_3_Example } from "../Components/Module_
 import { default as ScheduledTaskForms_6_3_1_Example } from "../Components/Module_6/6.3.1/ScheduledTaskForms";
 import { default as ScheduledTaskForms_6_4_Example } from "../Components/Module_6/6.4/ScheduledTaskForms";
 import { default as ScheduledTaskForms_6_4_1_Example } from "../Components/Module_6/6.4.1/ScheduledTaskForms";
+import { default as ScheduledTaskForms_6_5_1_Example } from "../Components/Module_6/6.5.1/ScheduledTaskForms";
 
 function Module_6() {
   return (
@@ -370,11 +372,54 @@ function Module_6() {
         }
       />
       {/* 6.5 */}
-      <CourseSectionComponent title="Use Effect Jobs" children={<div></div>} />
+      <CourseSectionComponent
+        title="Use Effect Jobs"
+        children={
+          <div>
+            <ul className="pl-6 list-disc">
+              <li>
+                Perform side effects in components and lets you synchronise
+                component with an external system
+              </li>
+              <li>
+                These are performed with an external system such as:
+                <ul className="pl-8 list-disc">
+                  <li>Fetching data from an API</li>
+                  <li>Directly updating DOM</li>
+                  <li>Timer functions (setTimeOut)</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>
+              Using useEffect with Local Storage in a ReactJS Todo Application
+            </h3>
+            <ul className="pl-6 list-disc">
+              <li>
+                Local Storage is featured in browsers helping to store data on
+                the local machine
+              </li>
+              <li>
+                Data is accessed by Web Applications, even if you close the
+                browser
+              </li>
+            </ul>
+            <CodeExample
+              component={
+                "import { useEffect, useState } from 'react'\n\nconst prevJobs = localStorage.getItem('jobs')\n\nconst App = () => {\nconst initialJobState = prevJobs ?JSON.parse(prevJob) : [];\nconst [jobs, setJobs ] = useState(initialJobState)\n\nuseEffect(() => {\n  localStorage.setItem('jobs', JSON.stringify(jobs))\n}, [jobs])"
+              }
+            />
+          </div>
+        }
+      />
       {/* 6.5.1 */}
       <CourseSectionComponent
         title="Practical Activity - Implement Local Storage Persistence with useEffect in a React Job Management App"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={JobManager_6_5_1} />
+            <ScheduledTaskForms_6_5_1_Example />
+          </div>
+        }
       />
       {/* 6.6 */}
       <CourseSectionComponent

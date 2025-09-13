@@ -8,11 +8,12 @@ interface Job {
   status: string;
 }
 
-const prevJobs = localStorage.getItem("jobs");
-
 function JobManager() {
-  const initialJobState = prevJobs ? JSON.parse(prevJobs) : [];
-  const [jobs, setJobs] = useState<Job[]>(initialJobState);
+  const [jobs, setJobs] = useState<Job[]>(() => {
+    const savedJobs = localStorage.getItem("jobs");
+    return savedJobs ? JSON.parse(savedJobs) : [];
+  });
+
   const [activity, setActivity] = useState("");
   const [categories, setCategories] = useState<string[]>([]);
   const [status, setStatus] = useState("Need to Complete");
@@ -49,6 +50,11 @@ function JobManager() {
 
   const handleDelete = (id: number) => {
     setJobs((prev) => prev.filter((job) => job.id !== id));
+  };
+
+  const clearAllJobs = () => {
+    setJobs([]);
+    localStorage.removeItem("jobs");
   };
 
   return (
@@ -116,6 +122,9 @@ function JobManager() {
           jobs={jobs}
           onDelete={handleDelete}
         />
+      </div>
+      <div className="flex justify-center m-2">
+        <button onClick={clearAllJobs}>Clear all Jobs</button>
       </div>
     </div>
   );

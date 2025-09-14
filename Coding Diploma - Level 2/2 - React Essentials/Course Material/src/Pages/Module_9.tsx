@@ -8,6 +8,9 @@ import { default as Header_9_1_1 } from "../Components/Module_9/9.1.1/components
 import { default as MovieReview_9_1_1 } from "../Components/Module_9/9.1.1/MovieReview.tsx?raw";
 import { default as MovieReview_9_1_1_Example } from "../Components/Module_9/9.1.1/MovieReview";
 
+import { default as MovieReview_9_2 } from "../Components/Module_9/9.2/MovieReview.tsx?raw";
+import { default as MovieReview_9_2_Example } from "../Components/Module_9/9.2/MovieReview";
+
 function Module_9() {
   return (
     <>
@@ -33,7 +36,15 @@ function Module_9() {
         }
       />
       {/* 9.2 */}
-      <CourseSectionComponent title="Adding Headers" children={<div></div>} />
+      <CourseSectionComponent
+        title="Adding Headers"
+        children={
+          <div>
+            <CodeExample component={MovieReview_9_2} />
+            <MovieReview_9_2_Example />
+          </div>
+        }
+      />
       {/* 9.3 */}
       <CourseSectionComponent
         title="Adding Components"

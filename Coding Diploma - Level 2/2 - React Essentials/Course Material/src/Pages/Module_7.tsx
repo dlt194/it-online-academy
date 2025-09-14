@@ -16,6 +16,9 @@ import { default as InVestMe_7_2_1 } from "../Components/Module_7/7.2.1/InVestMe
 import { default as DataTable_7_3 } from "../Components/Module_7/7.3/DataTable.tsx?raw";
 import { default as DataTable_7_3_Example } from "../Components/Module_7/7.3/DataTable";
 
+import { default as Output_7_3_1 } from "../Components/Module_7/7.3.1/Output.tsx?raw";
+import { default as InVestMe_7_3_1 } from "../Components/Module_7/7.3.1/InVestMe";
+
 function Module_7() {
   return (
     <>
@@ -72,7 +75,12 @@ function Module_7() {
       {/* 7.3.1 */}
       <CourseSectionComponent
         title="Practical Activity: Implementing an Investment Calculator Table"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={Output_7_3_1} />
+            <InVestMe_7_3_1 />
+          </div>
+        }
       />
       {/* 7.4 */}
       <CourseSectionComponent

@@ -7,6 +7,12 @@ import { default as InputAndBinding_7_1_Example } from "../Components/Module_7/7
 import { default as UserInput_7_1_1 } from "../Components/Module_7/7.1.1/UserInput.tsx?raw";
 import { default as InVestMe_7_1_1 } from "../Components/Module_7/7.1.1/InVestMe";
 
+import { default as OutputResults_7_2 } from "../Components/Module_7/7.2/OutputResults.tsx?raw";
+import { default as InputAndBinding_7_2_Example } from "../Components/Module_7/7.2/InputAndBinding";
+
+import { default as Output_7_2_1 } from "../Components/Module_7/7.2.1/Output.tsx?raw";
+import { default as InVestMe_7_2_1 } from "../Components/Module_7/7.2.1/InVestMe";
+
 function Module_7() {
   return (
     <>
@@ -33,12 +39,22 @@ function Module_7() {
       {/* 7.2 */}
       <CourseSectionComponent
         title="Handling Output Results"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={OutputResults_7_2} />
+            <InputAndBinding_7_2_Example />
+          </div>
+        }
       />
       {/* 7.2.1 */}
       <CourseSectionComponent
         title="Practical Activity: Create an Output Component for the Investment Calculator App"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={Output_7_2_1} />
+            <InVestMe_7_2_1 />
+          </div>
+        }
       />
       {/* 7.3 */}
       <CourseSectionComponent

@@ -19,6 +19,9 @@ import { default as DataTable_7_3_Example } from "../Components/Module_7/7.3/Dat
 import { default as Output_7_3_1 } from "../Components/Module_7/7.3.1/Output.tsx?raw";
 import { default as InVestMe_7_3_1 } from "../Components/Module_7/7.3.1/InVestMe";
 
+import { default as Report_7_4 } from "../Components/Module_7/7.4/Report.tsx?raw";
+import { default as Report_7_4_Example } from "../Components/Module_7/7.4/Report";
+
 function Module_7() {
   return (
     <>
@@ -84,8 +87,13 @@ function Module_7() {
       />
       {/* 7.4 */}
       <CourseSectionComponent
-        title="Generating Report"
-        children={<div></div>}
+        title="Generating Reports"
+        children={
+          <div>
+            <CodeExample component={Report_7_4} />
+            <Report_7_4_Example />
+          </div>
+        }
       />
       {/* 7.4.1 */}
       <CourseSectionComponent

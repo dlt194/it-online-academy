@@ -13,6 +13,9 @@ import { default as InputAndBinding_7_2_Example } from "../Components/Module_7/7
 import { default as Output_7_2_1 } from "../Components/Module_7/7.2.1/Output.tsx?raw";
 import { default as InVestMe_7_2_1 } from "../Components/Module_7/7.2.1/InVestMe";
 
+import { default as DataTable_7_3 } from "../Components/Module_7/7.3/DataTable.tsx?raw";
+import { default as DataTable_7_3_Example } from "../Components/Module_7/7.3/DataTable";
+
 function Module_7() {
   return (
     <>
@@ -59,7 +62,12 @@ function Module_7() {
       {/* 7.3 */}
       <CourseSectionComponent
         title="Displaying Data in Table"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={DataTable_7_3} />
+            <DataTable_7_3_Example />
+          </div>
+        }
       />
       {/* 7.3.1 */}
       <CourseSectionComponent

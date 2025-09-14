@@ -1,13 +1,19 @@
+import { CourseSectionComponent } from "../Components/CourseSectionComponent";
+import CodeExample from "../Components/CodeExample";
+
 function Module_9() {
   return (
     <>
-      <section className="bg-white rounded-lg shadow p-6 space-y-6">
-        <h2 className="text-xl font-semibold border-b pb-2"></h2>
-        <div className="prose max-w-none">
-          <p></p>
-        </div>
-      </section>
-      ;
+      {/* 9.1 */}
+      <CourseSectionComponent title="" children={<div></div>} />
+      {/* 9.1.1 */}
+      <CourseSectionComponent title="" children={<div></div>} />
+      {/* 9.2 */}
+      <CourseSectionComponent title="" children={<div></div>} />
+      {/* 9.3 */}
+      <CourseSectionComponent title="" children={<div></div>} />
+      {/* 9.4 */}
+      <CourseSectionComponent title="" children={<div></div>} />
     </>
   );
 }

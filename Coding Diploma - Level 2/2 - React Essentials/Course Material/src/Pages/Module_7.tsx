@@ -22,6 +22,9 @@ import { default as InVestMe_7_3_1 } from "../Components/Module_7/7.3.1/InVestMe
 import { default as Report_7_4 } from "../Components/Module_7/7.4/Report.tsx?raw";
 import { default as Report_7_4_Example } from "../Components/Module_7/7.4/Report";
 
+import { default as Report_7_4_1 } from "../Components/Module_7/7.4.1/Report.tsx?raw";
+import { default as InVestMe_7_4_1 } from "../Components/Module_7/7.4.1/InVestMe";
+
 function Module_7() {
   return (
     <>
@@ -98,7 +101,12 @@ function Module_7() {
       {/* 7.4.1 */}
       <CourseSectionComponent
         title="Practical Activity: Enhancing the Investment Calculator"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={Report_7_4_1} />
+            <InVestMe_7_4_1 />
+          </div>
+        }
       />
       {/* 7.5 */}
       <CourseSectionComponent

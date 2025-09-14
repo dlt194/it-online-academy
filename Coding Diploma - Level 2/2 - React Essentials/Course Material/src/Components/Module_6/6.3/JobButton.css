@@ -1,4 +1,4 @@
-button {
+.job-button {
   background-color: red;
   border: 1px solid red;
   color: #fff;
@@ -10,7 +10,7 @@ button {
   align-items: center;
 }
 
-button:hover {
+.job-button:hover {
   background-color: darkred;
   border: 1px solid darkred;
 }

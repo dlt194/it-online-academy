@@ -1,22 +1,24 @@
 import { calculateInvestmentResults } from "./utils/investment";
 import { generatePdf } from "./utils/generatePDF";
 
-const Report = () => {
-  const input = {
-    initialInvestment: 10000,
-    annualInvestment: 1200,
-    expectedReturn: 15,
-    duration: 5,
+interface ReportProps {
+  userInput: {
+    initialInvestment: number;
+    annualInvestment: number;
+    expectedReturn: number;
+    duration: number;
   };
+}
 
-  const resultData = calculateInvestmentResults(input);
+const Report = ({ userInput }: ReportProps) => {
+  const resultData = calculateInvestmentResults(userInput);
 
   const handleGenerate = () => {
     generatePdf({
-      begInvestment: input.initialInvestment,
-      annInvestment: input.annualInvestment,
-      returnInv: input.expectedReturn,
-      yearInv: input.duration,
+      begInvestment: userInput.initialInvestment,
+      annInvestment: userInput.annualInvestment,
+      returnInv: userInput.expectedReturn,
+      yearInv: userInput.duration,
       resultData,
     });
   };

@@ -108,16 +108,6 @@ function Module_7() {
           </div>
         }
       />
-      {/* 7.5 */}
-      <CourseSectionComponent
-        title="Debugging (Browser & Breakpoint)"
-        children={<div></div>}
-      />
-      {/* 7.5.1 */}
-      <CourseSectionComponent
-        title="Practical Activity: Debugging in React"
-        children={<div></div>}
-      />
     </>
   );
 }

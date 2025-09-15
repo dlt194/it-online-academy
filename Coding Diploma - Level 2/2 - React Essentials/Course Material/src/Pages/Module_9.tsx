@@ -15,6 +15,11 @@ import { default as Movies_9_3 } from "../Components/Module_9/9.3/components/Mov
 import { default as MovieReview_9_3 } from "../Components/Module_9/9.3/MovieReview.tsx?raw";
 import { default as MovieReview_9_3_Example } from "../Components/Module_9/9.3/MovieReview";
 
+import { default as WatchMovies_9_4 } from "../Components/Module_9/9.4/components/Movies/WatchMovies.tsx?raw";
+import { default as Movies_9_4 } from "../Components/Module_9/9.4/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_9_4 } from "../Components/Module_9/9.4/MovieReview.tsx?raw";
+import { default as MovieReview_9_4_Example } from "../Components/Module_9/9.4/MovieReview";
+
 function Module_9() {
   return (
     <>
@@ -63,7 +68,14 @@ function Module_9() {
       {/* 9.4 */}
       <CourseSectionComponent
         title="Creating Movie Display Components"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={WatchMovies_9_4} />
+            <CodeExample component={Movies_9_4} />
+            <CodeExample component={MovieReview_9_4} />
+            <MovieReview_9_4_Example />
+          </div>
+        }
       />
     </>
   );

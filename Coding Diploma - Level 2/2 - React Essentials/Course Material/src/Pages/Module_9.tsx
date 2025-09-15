@@ -11,6 +11,10 @@ import { default as MovieReview_9_1_1_Example } from "../Components/Module_9/9.1
 import { default as MovieReview_9_2 } from "../Components/Module_9/9.2/MovieReview.tsx?raw";
 import { default as MovieReview_9_2_Example } from "../Components/Module_9/9.2/MovieReview";
 
+import { default as Movies_9_3 } from "../Components/Module_9/9.3/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_9_3 } from "../Components/Module_9/9.3/MovieReview.tsx?raw";
+import { default as MovieReview_9_3_Example } from "../Components/Module_9/9.3/MovieReview";
+
 function Module_9() {
   return (
     <>
@@ -48,7 +52,13 @@ function Module_9() {
       {/* 9.3 */}
       <CourseSectionComponent
         title="Adding Components"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={Movies_9_3} />
+            <CodeExample component={MovieReview_9_3} />
+            <MovieReview_9_3_Example />
+          </div>
+        }
       />
       {/* 9.4 */}
       <CourseSectionComponent

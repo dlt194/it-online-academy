@@ -6,6 +6,11 @@ import { default as Movies_10_2 } from "../Components/Module_10/10.2/components/
 import { default as MovieReview_10_2 } from "../Components/Module_10/10.2/MovieReview.tsx?raw";
 import { default as MovieReview_10_2_Example } from "../Components/Module_10/10.2/MovieReview";
 
+import { default as WatchMovies_10_3 } from "../Components/Module_10/10.3/components/Movies/WatchMovies.tsx?raw";
+import { default as Movies_10_3 } from "../Components/Module_10/10.3/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_10_3 } from "../Components/Module_10/10.3/MovieReview.tsx?raw";
+import { default as MovieReview_10_3_Example } from "../Components/Module_10/10.3/MovieReview";
+
 function Module_10() {
   return (
     <>
@@ -96,7 +101,14 @@ function Module_10() {
       {/* 10.3 */}
       <CourseSectionComponent
         title="Practice Exercise"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={WatchMovies_10_3} />
+            <CodeExample component={Movies_10_3} />
+            <CodeExample component={MovieReview_10_3} />
+            <MovieReview_10_3_Example />
+          </div>
+        }
       />
       {/* 10.4 */}
       <CourseSectionComponent

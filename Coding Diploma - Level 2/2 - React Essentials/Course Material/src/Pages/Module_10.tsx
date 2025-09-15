@@ -16,6 +16,12 @@ import { default as Movies_10_4 } from "../Components/Module_10/10.4/components/
 import { default as MovieReview_10_4 } from "../Components/Module_10/10.4/MovieReview.tsx?raw";
 import { default as MovieReview_10_4_Example } from "../Components/Module_10/10.4/MovieReview";
 
+import { default as FilterMovies_10_5 } from "../Components/Module_10/10.5/components/Movies/FilterMovies.tsx?raw";
+import { default as WatchMovies_10_5 } from "../Components/Module_10/10.5/components/Movies/WatchMovies.tsx?raw";
+import { default as Movies_10_5 } from "../Components/Module_10/10.5/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_10_5 } from "../Components/Module_10/10.5/MovieReview.tsx?raw";
+import { default as MovieReview_10_5_Example } from "../Components/Module_10/10.5/MovieReview";
+
 function Module_10() {
   return (
     <>
@@ -143,7 +149,15 @@ function Module_10() {
       {/* 10.5 */}
       <CourseSectionComponent
         title="Adding Reusable Components"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={FilterMovies_10_5} />
+            <CodeExample component={WatchMovies_10_5} />
+            <CodeExample component={Movies_10_5} />
+            <CodeExample component={MovieReview_10_5} />
+            <MovieReview_10_5_Example />
+          </div>
+        }
       />
     </>
   );

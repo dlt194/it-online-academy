@@ -1,6 +1,11 @@
 import { CourseSectionComponent } from "../Components/CourseSectionComponent";
 import CodeExample from "../Components/CodeExample";
 
+import { default as WatchMovies_10_2 } from "../Components/Module_10/10.2/components/Movies/WatchMovies.tsx?raw";
+import { default as Movies_10_2 } from "../Components/Module_10/10.2/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_10_2 } from "../Components/Module_10/10.2/MovieReview.tsx?raw";
+import { default as MovieReview_10_2_Example } from "../Components/Module_10/10.2/MovieReview";
+
 function Module_10() {
   return (
     <>
@@ -79,7 +84,14 @@ function Module_10() {
       {/* 10.2 */}
       <CourseSectionComponent
         title="API Key & Methods to Access API"
-        children={<div></div>}
+        children={
+          <div>
+            <CodeExample component={WatchMovies_10_2} />
+            <CodeExample component={Movies_10_2} />
+            <CodeExample component={MovieReview_10_2} />
+            <MovieReview_10_2_Example />
+          </div>
+        }
       />
       {/* 10.3 */}
       <CourseSectionComponent

@@ -1,6 +1,20 @@
-import React from "react";
+import { useEffect } from "react";
 
 const WatchMovies = () => {
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  const fetchMovies = async () => {
+    const res = await fetch(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
+    );
+
+    const data = await res.json();
+
+    console.log(data);
+  };
+
   return (
     <a
       href=""

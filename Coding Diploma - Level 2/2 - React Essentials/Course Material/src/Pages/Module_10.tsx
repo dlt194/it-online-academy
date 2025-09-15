@@ -11,6 +11,11 @@ import { default as Movies_10_3 } from "../Components/Module_10/10.3/components/
 import { default as MovieReview_10_3 } from "../Components/Module_10/10.3/MovieReview.tsx?raw";
 import { default as MovieReview_10_3_Example } from "../Components/Module_10/10.3/MovieReview";
 
+import { default as WatchMovies_10_4 } from "../Components/Module_10/10.4/components/Movies/WatchMovies.tsx?raw";
+import { default as Movies_10_4 } from "../Components/Module_10/10.4/components/Movies/Movies.tsx?raw";
+import { default as MovieReview_10_4 } from "../Components/Module_10/10.4/MovieReview.tsx?raw";
+import { default as MovieReview_10_4_Example } from "../Components/Module_10/10.4/MovieReview";
+
 function Module_10() {
   return (
     <>
@@ -113,7 +118,27 @@ function Module_10() {
       {/* 10.4 */}
       <CourseSectionComponent
         title="Filtering & Sorting"
-        children={<div></div>}
+        children={
+          <div>
+            <ul className="list-disc pl-6">
+              <li>
+                Filtering: In React, filtering is the process of displaying a
+                subset of items from a list based on a certain criteria. For
+                example, only showing movies that have a rating above a certain
+                threshold
+              </li>
+              <li>
+                Sorting: Sorting refers to ordering items in a list based on a
+                specific attribute, such as sorting movies by their release date
+                or rating
+              </li>
+            </ul>
+            <CodeExample component={WatchMovies_10_4} />
+            <CodeExample component={Movies_10_4} />
+            <CodeExample component={MovieReview_10_4} />
+            <MovieReview_10_4_Example />
+          </div>
+        }
       />
       {/* 10.5 */}
       <CourseSectionComponent

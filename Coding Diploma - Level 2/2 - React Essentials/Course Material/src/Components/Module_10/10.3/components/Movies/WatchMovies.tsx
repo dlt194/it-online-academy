@@ -57,6 +57,7 @@ const WatchMovies = () => {
           key={movie.id}
           href={`https://www.themoviedb.org/movie/${movie.id}`}
           className="w-72 h-96 m-3 overflow-hidden rounded-xl bg-gray-900 text-white relative shadow-lg hover:scale-105 transition"
+          target="_blank"
         >
           <img
             className="w-full h-3/4 object-cover"

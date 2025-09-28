@@ -648,6 +648,18 @@ ORDER BY hire_date DESC;
             This query returns the top 5 rows based on the hire_date in
             descending order.
           </p>
+          <br />
+          <hr className="py-2" />
+          <p>
+            The LIMIT and OFFSET clauses are essential for controlling the
+            number of rows returned by a query, which is particularly useful for
+            implementing pagination in applications.
+          </p>
+          <p>
+            Different SQL databases may have variations in syntax, but the basic
+            concept remains the same: LIMIT restricts the number of rows, and
+            OFFSET specifies the starting point for the rows to be returned.
+          </p>
         </div>
       </section>
     </>

@@ -18,7 +18,7 @@ function App() {
       <header className="bg-blue-600 text-white p-4 shadow-md">
         <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between">
           {/* Title */}
-          <h1 className="text-2xl font-bold mb-3 md:mb-0">SQL Essentials</h1>
+          <h1 className="text-2xl font-bold mb-3 md:mb-0">Python Essentials</h1>
 
           {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-2">

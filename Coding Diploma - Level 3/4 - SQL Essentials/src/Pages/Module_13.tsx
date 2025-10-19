@@ -6,6 +6,23 @@ function Module_13() {
           Final Assessment and Certification
         </h2>
         <div className="prose max-w-none">
+          <ul className="list-decimal pl-6">
+            <li>
+              Write a query to find the total sales amount for each product.
+            </li>
+            <li>Update the price of a specific product in the database.</li>
+
+            <li>
+              Write a query to retrieve all customer feedback with a rating
+              above 4.
+            </li>
+
+            <li>
+              Create a new table to store archived sales data and transfer
+              records from the existing sales table that are older than one
+              year.
+            </li>
+          </ul>
           <code className="text-sm">
             <pre className="bg-gray-100 p-4 rounded"></pre>
           </code>

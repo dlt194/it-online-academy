@@ -10,11 +10,14 @@ Features:
 - Simple IDs for editing/deleting
 - Optional fields: category and rating (bonus)
 
-Project structure (create this):
+## Project structure (create this):
+
 .
-├─ recipe_manager.py
-└─ data/
-└─ recipes.json (auto-created on first save)
+├── data
+│   └── recipes.json
+├── recipe_manager.py
+├── utilities
+│   └── utils.py
 
 Usage:
-python recipe_manager.py
+python recipe_manager.py or python3 recipe_manager.py

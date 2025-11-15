@@ -6,14 +6,14 @@ DATA_DIR = "data"
 DATA_FILE = os.path.join(DATA_DIR, "recipes.json")
 
 
-def _ensure_storage():
-    """Ensure the data directory exists."""
+def ensure_storage():
+    # Ensure the data directory exists.
     os.makedirs(DATA_DIR, exist_ok=True)
 
 
 def load_recipes():
-    """Load recipes from JSON file. Return [] if missing or invalid."""
-    _ensure_storage()
+    # Load recipes from JSON file
+    ensure_storage()
     if not os.path.exists(DATA_FILE):
         return []
     try:
@@ -37,8 +37,8 @@ def load_recipes():
 
 
 def save_recipes(recipes):
-    """Save recipes list to JSON file."""
-    _ensure_storage()
+    # Save recipes list to JSON file.
+    ensure_storage()
     try:
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(recipes, f, ensure_ascii=False, indent=2)
@@ -47,8 +47,8 @@ def save_recipes(recipes):
 
 
 def save_recipes(recipes):
-    """Save recipes list to JSON file."""
-    _ensure_storage()
+    # Save recipes list to JSON file.
+    ensure_storage()
     try:
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(recipes, f, ensure_ascii=False, indent=2)
@@ -57,24 +57,24 @@ def save_recipes(recipes):
 
 
 def gen_id() -> str:
-    """Generate a short unique ID."""
+    # Generate a short unique ID.
     return uuid.uuid4().hex[:8]
 
 
 def print_recipe(recipe):
-    """Pretty print a recipe."""
+    # Pretty print a recipe.
     print("-" * 50)
     print(f"ID:         {recipe['id']}")
     print(f"Title:      {recipe['title']}")
-    print(f"Author:     {recipe.get('author', '—')}")
-    print(f"Category:   {recipe.get('category', '—')}")
+    print(f"Author:     {recipe.get('author', '-')}")
+    print(f"Category:   {recipe.get('category', '-')}")
     rating = recipe.get("rating")
-    print(f"Rating:     {rating if rating is not None else '—'}")
+    print(f"Rating:     {rating if rating is not None else '-'}")
     print("\nIngredients:")
     for i, item in enumerate(recipe.get("ingredients", []), 1):
         print(f"  {i}. {item}")
     print("\nInstructions:")
-    print(recipe.get("instructions", "—"))
+    print(recipe.get("instructions", "-"))
     print("-" * 50)
 
 
@@ -86,16 +86,16 @@ def find_recipe_by_id(recipes, recipe_id):
 
 
 def prompt_nonempty(prompt):
-    """Prompt until non-empty input is given (stripped)."""
+    # Prompt until valid entry is provided.
     while True:
         s = input(prompt).strip()
         if s:
             return s
-        print("Please enter a non-empty value.")
+        print("Please enter a valid value.")
 
 
 def prompt_optional(prompt, default):
-    """Prompt allowing empty to keep default (if provided)."""
+    # Prompt allowing empty to keep default (if provided).
     s = input(prompt).strip()
     if s == "" and default is not None:
         return default

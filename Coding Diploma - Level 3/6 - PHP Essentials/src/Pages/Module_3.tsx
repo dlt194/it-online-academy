@@ -1,6 +1,8 @@
 import CodeExample from "../Components/CodeExample";
 import SectionComponent from "../Components/SectionComponent";
 
+import activity_3 from "../../PHP Files/Activity 3 - Simple PHP Password Checker/index.php?raw";
+
 function Module_3() {
   return (
     <>
@@ -120,7 +122,7 @@ Hello Dan!
         />
       </SectionComponent>
       <SectionComponent title="Activity 3: Simple PHP Password Checker">
-        <CodeExample component={``} language="php" />
+        <CodeExample component={activity_3} language="php" />
       </SectionComponent>
     </>
   );

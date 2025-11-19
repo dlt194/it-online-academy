@@ -1,10 +1,14 @@
+import CodeExample from "../Components/CodeExample";
+import SectionComponent from "../Components/SectionComponent";
+
+import activity_9 from "../../PHP Files/Activity 9 - PHP Functions - Library Management System/index.php?raw";
+
 function Module_9() {
   return (
     <>
-      <section className="bg-white rounded-lg shadow p-6 space-y-6">
-        <h2 className="text-xl font-semibold border-b pb-2"></h2>
-        <div className="prose max-w-none"></div>
-      </section>
+      <SectionComponent title="">
+        <CodeExample component={activity_9} language="php" />
+      </SectionComponent>
     </>
   );
 }

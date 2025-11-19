@@ -1,0 +1,71 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #f3f4f6;
+  padding: 2rem;
+}
+
+.cart-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.summary {
+  margin-top: 1.5rem;
+}
+
+.summary p {
+  margin: 0.25rem 0;
+}
+
+.summary strong {
+  font-weight: 600;
+}
+
+.highlight {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.warning {
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.order-number {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
